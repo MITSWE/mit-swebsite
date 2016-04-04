@@ -1,0 +1,167 @@
+/* @font-face {
+  font-family: Gotham-Bold;
+  src: url("../font/Gotham/GothamHTF-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: Gotham-Light;
+  src: url("../font/Gotham/GothamHTF-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: Gotham-Thin;
+  src: url("../font/Gotham/GothamHTF-Thin.otf") format("opentype");
+}
+@font-face {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 100;
+  src: local('Raleway Thin'), local('Raleway-Thin'), url(http://themes.googleusercontent.com/static/fonts/raleway/v7/RJMlAoFXXQEzZoMSUteGWLO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+} */
+
+body {
+  margin: 0;
+  padding: 0;
+/*   font-family: 'Gotham-Bold'; */
+}
+
+/* a {
+  text-decoration: none;
+}
+ */
+div.navbar {
+  position: fixed;
+  top: 0;
+  height: 100px;
+  width: 100%;
+  min-width: 700px;
+
+  background-color: #fff;
+  opacity: 0.95;
+  border-bottom: 1px solid #E6E6E6;
+
+  z-index: 100;
+}
+/* div.navbar-logo {
+  height: 90px;
+  float: left;
+  padding-top: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+} */
+/*#logo{
+  height: 80px;
+}*/
+
+div.navbar-title a {
+  color: lightgray;
+}
+/*div.navbar-tall {
+  float:left;
+  font-size: 30px;
+  margin-top: -6px;
+  margin-left: -8px;
+}*/
+/* div.nav-link {
+  height: 100px;
+  float: right;
+  padding: 50px 15px 0px 15px;
+  margin-top: -7.5px;
+  font-size:13px;
+} */
+/*div.nav-link a {
+  color: #656565;
+}*/
+div.nav-link a:hover {
+  opacity: 0.7
+}
+div.page-content {
+  width: 100%;
+  margin-top: 75px;
+}
+
+#primary_nav_wrap
+{
+  margin-top:15px
+}
+
+#primary_nav_wrap ul
+{
+  list-style:none;
+  position:relative;
+  float:right;
+  margin:0;15px0px15px;
+}
+
+#primary_nav_wrap ul a
+{
+  /* display:block; */
+  /* color: antiquewhite; */
+  text-decoration:none;
+  font-weight:700;
+  font-size:13px;
+  line-height:32px;
+  padding:0 15px;
+}
+
+#primary_nav_wrap ul li
+{
+  position:relative;
+  float:left;
+/*   margin:0;
+  padding-left:5px;
+  padding-right: 5px; */
+}
+
+#primary_nav_wrap ul li.current-menu-item
+{
+  color: gold;
+  border-radius:5px;
+}
+/* 
+#primary_nav_wrap ul li:hover
+{
+  background:#B0B0B0;
+]} */
+
+#primary_nav_wrap ul ul
+{
+  display:none;
+  position:absolute;
+  top:100%;
+  left:0;
+  background:#fff;
+}
+
+#primary_nav_wrap ul ul li
+{
+  float:none;
+  width:175px
+}
+
+#primary_nav_wrap ul ul a
+{
+  padding-top:10px;
+  line-height:120%;
+}
+
+#primary_nav_wrap ul ul ul
+{
+  top:0;
+  left:100%
+}
+
+#primary_nav_wrap ul li:hover > ul
+{
+  display:block
+}
+
+footer{
+  /*position: fixed;*/
+  bottom: 0;
+}
+
+
+
+/* FONT DECLARATIONS */
+/* div.home-subtext, div.welcome-subtext, div.exec-position, div.board-overview-text, div.announcement-content, div.form-description, div.section-body {
+  font-family: 'Gotham-Light'
+} */

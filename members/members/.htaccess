@@ -1,0 +1,3 @@
+AuthType SSLCert
+Require afsgroup system:mitswe-members-moira
+ErrorDocument 401 /__scripts/needcerts
