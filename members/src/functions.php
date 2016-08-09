@@ -184,13 +184,13 @@ function site_header()
 		<meta name="keywords" content="MIT SWE, MIT, Society of Women Engineers, MIT Society of Women Engineers" />
 		<meta name="description" content="Massachusetts Institute of Technology Society of Women Engineers is te largest diversity student organization on campus and aims to inspire younger generations about engineering, encourage the notion of diversity in engineering, and determine and advocate for the needs of women engineers at MIT and in the professional world." />
 		<!-- global styles -->
-		<link rel="stylesheet" href="../css/bootstrap.css">
-		<link rel="stylesheet" href="../css/footer-distributed.css">
+		<link rel="stylesheet" href="../../css/bootstrap.css">
+		<link rel="stylesheet" href="../../css/footer-distributed.css">
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
-		<link rel="stylesheet" href="../css/mt-global.css">
-<!-- 		page specific styles -->
-		<link rel="stylesheet" href="css/styles_outreach_home.css">
+		<link rel="stylesheet" href="../../css/mt-global.css">
+		<!-- page specific styles -->
+		<link rel="stylesheet" href="../css/styles_members.css">
 
 		<!-- Google Analytics !--> 
 		<script type="text/javascript"> 
@@ -212,7 +212,7 @@ function site_header()
 	<header class="siteHeader  strip">
 	    <div class="wrapper">
 	        <!-- Logo -->
-	        <a href="../home/index.html" class="branding"><img src="../images/SWE_Logo_MIT-horz.png" alt="(MITSWE) SWE Logo"></a>
+	        <a href="../../index.html" class="branding"><img src="../../images/SWE_Logo_MIT-horz.png" alt="(MITSWE) SWE Logo"></a>
 
 	         <!-- Primary site Nav -->
 	        <a href="#siteNav" class="hamburger  js-menuLink">
@@ -237,27 +237,27 @@ function site_header()
 		       	<!-- Web Hosting -->
 		        <!--  About -->
 		        <li class="navItem  hasDropdown  js-hasDropdown">
-		            <a class="js-dropdownTrigger" href="../about/about.html"><span>About</span></a>
+		            <a class="js-dropdownTrigger" href="../../about/"><span>About</span></a>
 
 		            <div class="navDropdown">
 		                <ul class="nav  nav--stacked" style="clear:both">
-		                    <li class="navItem"><a href="../about/board.html">MIT SWE Leadership</a></li>
-		                    <li class="navItem"><a href="../about/nationalswemembership.html">National SWE</a></li>
+		                    <li class="navItem"><a href="../../about/board.html">MIT SWE Leadership</a></li>
+		                    <li class="navItem"><a href="../../about/nationalswemembership.html">National SWE</a></li>
 		                </ul>
 		            </div>
 		        </li>
 
 		        <!-- Outreach -->
 		        <li class="navItem  hasDropdown  js-hasDropdown ">
-		            <a class="js-dropdownTrigger" href="../outreach/outreach_home.html"><span >Outreach</span></a>
+		            <a class="js-dropdownTrigger" href="../../outreach/"><span >Outreach</span></a>
 
 					 <div class="navDropdown">
 		                <ul class="nav  nav--stacked">
-		                    <li class="navItem"><a href="../outreach/elementary_school.html">Elementary School</a></li> 
-		                    <li class="navItem"><a href="../outreach/middle_school.html">Middle School</a></li> 
-		                    <li class="navItem"><a href="../outreach/high_school.html">High School</a></li> 
-		                    <li class="navItem"><a href="../outreach/special_events.html">Special Events</a></li>
-		                    <li class="navItem"><a href="../outreach/resources.html">Resources</a></li>  
+		                    <li class="navItem"><a href="../../outreach/elementary_school.html">Elementary School</a></li> 
+		                    <li class="navItem"><a href="../../outreach/middle_school.html">Middle School</a></li> 
+		                    <li class="navItem"><a href="../../outreach/high_school.html">High School</a></li> 
+		                    <li class="navItem"><a href="../../outreach/special_events.html">Special Events</a></li>
+		                    <li class="navItem"><a href="../../outreach/resources.html">Resources</a></li>  
 
 		                </ul>
 		            </div>
@@ -307,32 +307,32 @@ function site_header()
 
 		        <!-- Corporate -->
 		        <li class="navItem hasDropdown  js-hasDropdown">
-		            <a class="js-dropdownTrigger" href="../corporate/corporate.html"><span>Corporate</span></a>
+		            <a class="js-dropdownTrigger" href="../../corporate/"><span>Corporate</span></a>
 		            <div class="navDropdown">
 		                <ul class="nav  nav--stacked">
-		                    <li class="navItem"><a href="../corporate/banquet.html">Career Fair Banquet</a></li>
+		                    <li class="navItem"><a href="../../corporate/banquet.html">Career Fair Banquet</a></li>
 		                </ul>
 		            </div>
 		        </li>
 
 		        <!-- Calendar -->
 		        <li class="navItem ">
-		            <a href="../calendar/calendar.html"><span>Calendar</span></a>
+		            <a href="../../calendar/"><span>Calendar</span></a>
 		        </li>
 
 		        <!--  News -->
 		        <li class="navItem ">
-		            <a href="../news/news.html"><span>News</span></a>
+		            <a href="../../news/"><span>News</span></a>
 		        </li>
 
 		        <!-- Contact Us -->
 		        <li class="navItem ">
-		            <a href="../contact/contact.html"><span>Contact Us</span></a>
+		            <a href="../../contact/contact.html"><span>Contact Us</span></a>
 		        </li>		        
 
 				<!-- Members Only -->
 		        <li class="navItem  hasDropdown  js-hasDropdown">
-		            <a class="js-dropdownTrigger" href="../members/members.html"><span>For Members</span></a>
+		            <a class="js-dropdownTrigger" href="../../members/members.html"><span>For Members</span></a>
 		            <div class="navDropdown">
 		                <ul class="nav  nav--stacked">
 		                    <li class="navItem"><a href="../members/members/section_resources.html"><span>Section Resources</span></a></li>
