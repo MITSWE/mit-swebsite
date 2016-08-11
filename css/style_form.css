@@ -1,6 +1,6 @@
 h1, h2 {
   font-weight: 700;
-  color: #FFF;
+  color: #333;
   font-weight: 700;
   font-size: 4em;
   margin: 0;
@@ -194,8 +194,9 @@ h1, h2 {
 /*   font-size: 90%; */
 }
 
-input, select, textarea {
-  color: #FFF;
+input, textarea, select {
+  color: #333;
+  margin: 5px;
 }
 
 .input.message {

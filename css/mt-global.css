@@ -47,7 +47,9 @@ button,input{line-height:normal}
 
 button,select{text-transform:none}
 
-button,html input[type=button],input[type=submit],input[type=reset]{-webkit-appearance:button;cursor:pointer}
+button,html input[type=button],input[type=reset]{-webkit-appearance:button;cursor:pointer}
+
+input[type=submit]{-webkit-appearance:button;cursor:pointer;-webkit-box-sizing:border-box;padding:5;background-color:#282B2D;color:#fff;font-size:20px}
 
 button[disabled],html input[disabled]{cursor:default}
 
