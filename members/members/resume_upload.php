@@ -107,14 +107,20 @@ $page_title = "Resume Upload";
 site_header();
 
 ?>
-<script type = "text/javascript" src = "<?php echo $prepath;?>/src/scripts.js" /></script> 
-<script type = "text/javascript" src = "<?php echo $prepath;?>/ajaxcore/prototype.js" /></script> <!-- include standard prototype library -->
-<script type = "text/javascript" src = "<?php echo $prepath;?>/ajaxcore/AjaxCore.js" /></script><!-- include AjaxCore library --> 
 
+<!--
+<script type = "text/javascript" src = "<?php echo $prepath;?>/src/scripts.js" /></script> 
+<script type = "text/javascript" src = "<?php echo $prepath;?>/ajaxcore/prototype.js" /></script> include standard prototype library
+<script type = "text/javascript" src = "<?php echo $prepath;?>/ajaxcore/AjaxCore.js" /></script> include AjaxCore library
+-->
+
+<div class="learn-more">
+  <div class="form-container">
+  	<h2 class="centered">Resume Upload</h2>
+  	<center>
 <?
 
 print_mainform();
 
-
-//include ("$prepath/src/footer.php");	
-?>	
+include ("$prepath/src/footer.php");
+?>

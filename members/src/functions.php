@@ -180,15 +180,16 @@ function site_header()
 
 <head>
 		<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
-		<title>MIT SWE | Outreach Home</title>
+		<title>MIT SWE | Resume Upload</title>
 		<meta name="keywords" content="MIT SWE, MIT, Society of Women Engineers, MIT Society of Women Engineers" />
 		<meta name="description" content="Massachusetts Institute of Technology Society of Women Engineers is te largest diversity student organization on campus and aims to inspire younger generations about engineering, encourage the notion of diversity in engineering, and determine and advocate for the needs of women engineers at MIT and in the professional world." />
 		<!-- global styles -->
 		<link rel="stylesheet" href="../../css/bootstrap.css">
 		<link rel="stylesheet" href="../../css/footer-distributed.css">
-		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
 		<link rel="stylesheet" href="../../css/mt-global.css">
+		<link rel="stylesheet" href="../../css/style_form.css">
 		<!-- page specific styles -->
 		<link rel="stylesheet" href="../css/styles_members.css">
 
@@ -332,10 +333,10 @@ function site_header()
 
 				<!-- Members Only -->
 		        <li class="navItem  hasDropdown  js-hasDropdown">
-		            <a class="js-dropdownTrigger" href="../../members/members.html"><span>For Members</span></a>
+		            <a class="js-dropdownTrigger" href="../members.html"><span>For Members</span></a>
 		            <div class="navDropdown">
 		                <ul class="nav  nav--stacked">
-		                    <li class="navItem"><a href="../members/members/section_resources.html"><span>Section Resources</span></a></li>
+		                    <li class="navItem"><a href="../members/section_resources.html"><span>Section Resources</span></a></li>
 		                    <li class="navItem"><a href="http://swe.mit.edu/wiki"><span>Board Wiki</span></a></li>
 		                </ul>
 		            </div>
@@ -353,7 +354,7 @@ function site_header()
 	    </div> <!-- /.wrapper -->
 	    <div class="navDropdown--background offPage"></div> 
  
-</header> <!-- /.siteHeader --> 
+	</header> <!-- /.siteHeader --> 
 
 <?php	
 
@@ -394,28 +395,24 @@ function print_mainform()
 	?>
 	<form method='POST' enctype="multipart/form-data" action="<?php echo $self; if($_SERVER['QUERY_STRING']>' '){echo '?'.$_SERVER['QUERY_STRING'];} ?>">
 	
-	<h4>Your Information (All Fields Required)</h4>
-	<div id='input_box'>
-	<table><tr>
-		<td><b>First/Last Name:<b></td><td><input type='text' name='firstname' value='<?php echo $student_firstname;?>'> <input type='text' name='lastname' value='<?php echo $student_lastname;?>'></td></tr>
-		<td><b>Email:</b></td><td><input type='text' name='student_email' value='<?php echo $student_email;?>'></td></tr>
-		<td>Major:</td><td><?php	print_department_dropdown($student_dept);?> </td>
-		<td>Degree:</td><td><?php	print_degree_dropdown($student_degree);?> </td>
-		<td>Graduating Year:</td><td><input type='text' name='student_year' value='<?php echo $student_year;?>'></td></tr>
-		<td>Desired Job Type:</td><td><?php	print_jobtype_selection($student_jobtype);?> </td>
-		</tr>
-	</table>
-	</div>
 	
-	<h4>Upload Resume</h4>
-	<div id='input_box'>	
-	<table><tr>
-		<td><b>Resume:</b></td><td><input type="hidden" name="MAX_FILE_SIZE" value="2000000" />
-			<input type="file" name="resume_file" size="30" /> <span class="form_detail">2 MB max (PDF)</span><br>
+	<div id='input_box'>
+	<table>
+		<tr><td><b>All Fields Required<b></td><td></tr>
+		<tr><td>First Name:</td><td><input type='text' name='firstname' value='<?php echo $student_firstname;?>'></td></tr>
+		<tr><td>Last Name:</td><td><input type='text' name='lastname' value='<?php echo $student_lastname;?>'></td></tr>
+		<tr><td>Email:</td><td><input type='text' name='student_email' value='<?php echo $student_email;?>'></td></tr>
+		<tr><td>Major:</td><td><?php print_department_dropdown($student_dept);?> </td></tr>
+		<tr><td>Degree:</td><td><?php print_degree_dropdown($student_degree);?> </td></tr>
+		<tr><td>Graduation Year:</td><td><?php print_year_dropdown($student_year);?> </td></tr>
+		<tr><td>Desired Job Type:</td><td><?php	print_jobtype_dropdown($student_jobtype);?> </td></tr>
+		<tr><td>Upload Resume PDF: </td><td><input type="hidden" name="MAX_FILE_SIZE" value="2000000" />
+			<input type="file" name="resume_file" size="30" /> <span class="form_detail">Title Format: FirstLast.pdf (Max Size 2MB)</span><br>
 		</td></tr>
 	</table>
 	</div>
-	<input type='submit' value='Submit Your Information' name='submit'>
+	
+	<input type='submit' value='Submit' name='submit'>
 	</form>
 	<?php
 }
@@ -423,12 +420,11 @@ function print_mainform()
 function print_department_dropdown($dept)
 {
 	?>
-	
-	<tr><td>
+
 	<?php
 
-	echo "Department:</td><td><select name=\"student_dept\"><option value=''></option>";
-	$sql = "SELECT name,abbreviation FROM degrees ORDER BY sort_order";
+	echo "<select name=\"student_dept\"><option value=''></option>";
+	$sql = "SELECT name,abbreviation FROM departments ORDER BY sort_order";
 	$res = db_query($sql);
 	while ($row = db_fetch_array($res)){
   		echo '<option value="'.$row[1].'"';
@@ -437,19 +433,15 @@ function print_department_dropdown($dept)
     	echo '>'.$row[0].'&nbsp;</option>';
 	}
 	echo "</select>";
-
-	echo "</td>";
-	echo "</tr>";
 }
 
 function print_degree_dropdown($degree)
 {
 	?>
-	
-	<tr><td>
+
 	<?php
-	echo "Degree:</td><td> <select name=\"student_degree\"><option value=''></option>";
-	$sql = "SELECT name,abbreviation FROM departments ORDER BY sort_order";
+	echo "<select name=\"student_degree\"><option value=''></option>";
+	$sql = "SELECT name,abbreviation FROM degrees ORDER BY sort_order";
 	$res = db_query($sql);
 	while ($row = db_fetch_array($res)){
   		echo '<option value="'.$row[1].'"';
@@ -457,20 +449,16 @@ function print_degree_dropdown($degree)
 	   		echo ' selected="selected" ';
   		echo '>'.$row[0].'&nbsp;</option>';
 	}
-	echo "</select><br>";
-	
-	echo "</td>";
-	echo "</tr>";
+	echo "</select>";
 }
 
 function print_year_dropdown($year)
 {
 	?>
 	
-	<tr><td>
 	<?php	
 	
-	echo "Graduation Year:</td><td><select name=\"student_year\"><option value=''></option>";
+	echo "<select name=\"student_year\"><option value=''></option>";
 	$year = date("Y");
 	for ($i=-1;$i<6;$i++){
 	  echo '<option value="'.($year+$i).'"';
@@ -478,18 +466,14 @@ function print_year_dropdown($year)
 	  echo '>'.($year+$i).'&nbsp;</option>';
 	}
 	echo "</select>";
-
-	echo "</td>";
-	echo "</tr>";
 }
 
 function print_jobtype_dropdown($jobtype)
 {	
 	?>
-	
-	<tr><td>
+
 	<?php
-	echo "Jobtypes:</td><td><select name=\"student_jobtype\"><option value=''></option>";
+	echo "<select name=\"student_jobtype\"><option value=''></option>";
 	$sql = "SELECT name,abbreviation FROM jobtypes ORDER BY sort_order";
 	$res = db_query($sql);
 	
@@ -500,9 +484,6 @@ function print_jobtype_dropdown($jobtype)
   		echo '>'.$row[0].'&nbsp;</option>';
 	}
 	echo "</select>";
-	
-	echo "</td>";
-	echo "</tr>";
 }
 
 function user_form_selected($table,$result,$username)
