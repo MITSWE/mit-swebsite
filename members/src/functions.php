@@ -401,7 +401,7 @@ function print_mainform()
 		<tr><td><b>All Fields Required<b></td><td></tr>
 		<tr><td>First Name:</td><td><input type='text' name='firstname' value='<?php echo $student_firstname;?>'></td></tr>
 		<tr><td>Last Name:</td><td><input type='text' name='lastname' value='<?php echo $student_lastname;?>'></td></tr>
-		<tr><td>Email:</td><td><input type='text' name='student_email' value='<?php echo $student_email;?>'></td></tr>
+		<tr><td>Email:</td><td><input type='text' name='email' value='<?php echo $student_email;?>'></td></tr>
 		<tr><td>Major:</td><td><?php print_department_dropdown($student_dept);?> </td></tr>
 		<tr><td>Degree:</td><td><?php print_degree_dropdown($student_degree);?> </td></tr>
 		<tr><td>Graduation Year:</td><td><?php print_year_dropdown($student_year);?> </td></tr>
@@ -423,7 +423,7 @@ function print_department_dropdown($dept)
 
 	<?php
 
-	echo "<select name=\"student_dept\"><option value=''></option>";
+	echo "<select name=\"department\"><option value=''></option>";
 	$sql = "SELECT name,abbreviation FROM departments ORDER BY sort_order";
 	$res = db_query($sql);
 	while ($row = db_fetch_array($res)){
@@ -440,7 +440,7 @@ function print_degree_dropdown($degree)
 	?>
 
 	<?php
-	echo "<select name=\"student_degree\"><option value=''></option>";
+	echo "<select name=\"degree\"><option value=''></option>";
 	$sql = "SELECT name,abbreviation FROM degrees ORDER BY sort_order";
 	$res = db_query($sql);
 	while ($row = db_fetch_array($res)){
@@ -458,7 +458,7 @@ function print_year_dropdown($year)
 	
 	<?php	
 	
-	echo "<select name=\"student_year\"><option value=''></option>";
+	echo "<select name=\"year\"><option value=''></option>";
 	$year = date("Y");
 	for ($i=-1;$i<6;$i++){
 	  echo '<option value="'.($year+$i).'"';
@@ -473,7 +473,7 @@ function print_jobtype_dropdown($jobtype)
 	?>
 
 	<?php
-	echo "<select name=\"student_jobtype\"><option value=''></option>";
+	echo "<select name=\"jobtype\"><option value=''></option>";
 	$sql = "SELECT name,abbreviation FROM jobtypes ORDER BY sort_order";
 	$res = db_query($sql);
 	
