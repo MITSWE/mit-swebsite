@@ -20,8 +20,8 @@
 					<a href="http://swe.mit.edu/corporate/">Corporate</a>
 					<a href="http://swe.mit.edu/calendar/">Calendar</a>
 					<a href="http://swe.mit.edu/news/">News</a>
-					<a href="http://swe.mit.edu/contact/contact.html">Contact</a>
-					<a href="http://swe.mit.edu/members/members.html">Members Only</a>
+					<a href="http://swe.mit.edu/contact/">Contact</a>
+					<a href="http://swe.mit.edu/members/">Members Only</a>
 				</p>
 
 				<p>MIT Society of Women Engineers &copy; 2016</p>
