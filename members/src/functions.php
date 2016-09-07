@@ -291,7 +291,7 @@ function site_header()
 
 				<!-- Members Only -->
 		        <li class="navItem  hasDropdown  js-hasDropdown">
-		            <a class="js-dropdownTrigger" href="http://swe.mit.edu/members/members.html"><span>For Members</span></a>
+		            <a class="js-dropdownTrigger" href="http://swe.mit.edu/members/"><span>For Members</span></a>
 		            <div class="navDropdown">
 		                <ul class="nav  nav--stacked">
 		                    <li class="navItem"><a href="../../members/section_resources"><span>Section Resources</span></a></li>
