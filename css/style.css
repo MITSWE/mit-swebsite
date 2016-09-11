@@ -1,26 +1,10 @@
-/* @font-face {
-  font-family: Gotham-Bold;
-  src: url("../font/Gotham/GothamHTF-Bold.otf") format("opentype");
-}
-@font-face {
-  font-family: Gotham-Light;
-  src: url("../font/Gotham/GothamHTF-Light.otf") format("opentype");
-}
-@font-face {
-  font-family: Gotham-Thin;
-  src: url("../font/Gotham/GothamHTF-Thin.otf") format("opentype");
-}
-@font-face {
-  font-family: Raleway;
-  font-style: normal;
-  font-weight: 100;
-  src: local('Raleway Thin'), local('Raleway-Thin'), url(http://themes.googleusercontent.com/static/fonts/raleway/v7/RJMlAoFXXQEzZoMSUteGWLO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
-} */
-
 body {
   margin: 0;
   padding: 0;
-/*   font-family: 'Gotham-Bold'; */
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+  color: #2b3e51;
+  background-color: #ffffff;
 }
 
 /* a {
