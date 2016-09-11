@@ -182,7 +182,7 @@ function site_header()
 		<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
 		<title>MIT SWE | Resume Upload</title>
 		<meta name="keywords" content="MIT SWE, MIT, Society of Women Engineers, MIT Society of Women Engineers" />
-		<meta name="description" content="Massachusetts Institute of Technology Society of Women Engineers is te largest diversity student organization on campus and aims to inspire younger generations about engineering, encourage the notion of diversity in engineering, and determine and advocate for the needs of women engineers at MIT and in the professional world." />
+		<meta name="description" content="Massachusetts Institute of Technology Society of Women Engineers is the largest diversity student organization on campus and aims to inspire younger generations about engineering, encourage the notion of diversity in engineering, and determine and advocate for the needs of women engineers at MIT and in the professional world." />
 		<!-- global styles -->
 		<link rel="stylesheet" href="../../css/bootstrap.css">
 		<link rel="stylesheet" href="../../css/footer-distributed.css">
@@ -213,7 +213,7 @@ function site_header()
 	<header class="siteHeader  strip">
 	    <div class="wrapper">
 	        <!-- Logo -->
-	        <a href="../../index.html" class="branding"><img src="../../images/SWE_Logo_MIT-horz.png" alt="(MITSWE) SWE Logo"></a>
+	        <a href="http://swe.mit.edu/home/" class="branding"><img src="../../images/SWE_Logo_MIT-horz.png" alt="(MITSWE) SWE Logo"></a>
 
 	         <!-- Primary site Nav -->
 	        <a href="#siteNav" class="hamburger  js-menuLink">
@@ -229,7 +229,7 @@ function site_header()
 		       <!--  <li class="navItem  navItem--supportNumber">
 		                            <a class="supportNumber" href="tel:+18775784000">877.578.4000</a>
 		                    </li> -->
-<!-- 		        <li class="navItem  navItem--login">
+		        <!-- <li class="navItem  navItem--login">
 		            <a class="loginLink" href="https://ac.mediatemple.net/login.mt?redirect=home.mt"><span>Members Only</span></a>
 		        </li> -->
 		        <!-- END: Only visible on mobile -->
@@ -238,111 +238,71 @@ function site_header()
 		       	<!-- Web Hosting -->
 		        <!--  About -->
 		        <li class="navItem  hasDropdown  js-hasDropdown">
-		            <a class="js-dropdownTrigger" href="../../about/"><span>About</span></a>
+		            <a class="js-dropdownTrigger" href="http://swe.mit.edu/about/"><span>About</span></a>
 
 		            <div class="navDropdown">
 		                <ul class="nav  nav--stacked" style="clear:both">
-		                    <li class="navItem"><a href="../../about/board.html">MIT SWE Leadership</a></li>
-		                    <li class="navItem"><a href="../../about/nationalswemembership.html">National SWE</a></li>
+		                    <li class="navItem"><a href="http://swe.mit.edu/about/board">MIT SWE Leadership</a></li>
+		                    <li class="navItem"><a href="http://swe.mit.edu/about/national_swe_membership">National SWE</a></li>
 		                </ul>
 		            </div>
 		        </li>
 
 		        <!-- Outreach -->
 		        <li class="navItem  hasDropdown  js-hasDropdown ">
-		            <a class="js-dropdownTrigger" href="../../outreach/"><span >Outreach</span></a>
+		            <a class="js-dropdownTrigger" href="http://swe.mit.edu/outreach/"><span >Outreach</span></a>
 
 					 <div class="navDropdown">
 		                <ul class="nav  nav--stacked">
-		                    <li class="navItem"><a href="../../outreach/elementary_school.html">Elementary School</a></li> 
-		                    <li class="navItem"><a href="../../outreach/middle_school.html">Middle School</a></li> 
-		                    <li class="navItem"><a href="../../outreach/high_school.html">High School</a></li> 
-		                    <li class="navItem"><a href="../../outreach/special_events.html">Special Events</a></li>
-		                    <li class="navItem"><a href="../../outreach/resources.html">Resources</a></li>  
+		                    <li class="navItem"><a href="http://swe.mit.edu/outreach/elementary_school">Elementary School</a></li> 
+		                    <li class="navItem"><a href="http://swe.mit.edu/outreach/middle_school">Middle School</a></li> 
+		                    <li class="navItem"><a href="http://swe.mit.edu/outreach/high_school">High School</a></li> 
+		                    <li class="navItem"><a href="http://swe.mit.edu/outreach/special_events">Special Events</a></li>  
+		                    <li class="navItem"><a href="http://swe.mit.edu/outreach/resources">Resources</a></li>
 
 		                </ul>
 		            </div>
-
-<!-- 			        <div class="navDropdown  navDropdown--twoUp  navDropdown--pinnedLeft">
-			        <div class="navDropdown-column">
-	                    <a href="outreach_general_info.html"><h5 class="navDropdown-heading navDropdown-heading--select u-textAllcaps">Program List</h5></a>
-	                    <ul class="nav  nav--stacked">
-	                        <li class="navItem"><a href="https://www.facebook.com/swe.mit/app/124010307747329/">Sign up to Volunteer!</a></li>                      	                        
-	                    </ul>
-                    
-	                    <h5 class="navDropdown-heading  u-textAllcaps">Elementary School</h5>
-	                    <ul class="nav  nav--stacked ">
-	                        <li class="navItem"><a href="girl_scouts.html">Girl Scouts</a></li>
-	                    </ul>
-	                
-	                    <h5 class="navDropdown-heading  u-textAllcaps">Middle School</h5>
-	                    <ul class="nav  nav--stacked">
-	                        <li class="navItem"><a href="dorchesterymca.html">Dorchester YMCA&nbsp;&nbsp;&nbsp;</a></li>
-
-	                        <li class="navItem"><a href="keys.html">KEYs &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     </a></li>
-	                        <li class="navItem"><a href="helloworld.html">#helloworld&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </a></li>
-	                        <li class="navItem"><a href="#">GIFTS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-	                        <li class="navItem"><a href="codeit/index.html">CodeIt! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-	                    </ul>
-	                </div>
-
-	               	<div class="navDropdown-column">
-	                    <h5 class="navDropdown-heading  u-textAllcaps">High School</h5>
-	                    <ul class="nav  nav--stacked">
-
-	                        <li class="navItem"><a href="college_connection.html">College Connection&nbsp;&nbsp;&nbsp;</a></li>
-	                        <li class="navItem"><a href="levelup.html">Level Up</a></li>
-	                        <li class="navItem"><a href="wise.html">Women in Science and Engineering (WiSE)</a></li>
-	                        <li class="navItem"><a href="essaycontest.html">Exploring STEM Essay Contest</a></li>
-	                        <li class="navItem"><a href="hsprojectgrants.html">HS Project Grants</a></li>
-	                        <li class="navItem"><a href="hsengineeringchats.html">Engineering Chats</a></li>
-	                        <li class="navItem"><a href="careersinstem.html">Careers in STEM</a></li>	                        	                        
-	                    </ul>
-	                    <h5 class="navDropdown-heading  u-textAllcaps">Special Events</h5>
-	                    <ul class="nav  nav--stacked">
-	                        <li class="navItem"><a href="https://www.eventbrite.com/e/cambridge-science-festival-tickets-21828463522?ref=ebapi?aff=eventbistro">Cambridge Science Festival</a></li>
-	                        <li class="navItem"><a href="#">USASEF</a></li>                       	                        
-	                    </ul>
-	                </div> -->
 		        </li>
-
 		        <!-- Corporate -->
 		        <li class="navItem hasDropdown  js-hasDropdown">
-		            <a class="js-dropdownTrigger" href="../../corporate/"><span>Corporate</span></a>
+		            <a class="js-dropdownTrigger" href="http://swe.mit.edu/corporate/"><span>Corporate</span></a>
 		            <div class="navDropdown">
 		                <ul class="nav  nav--stacked">
-		                    <li class="navItem"><a href="../../corporate/banquet.html">Career Fair Banquet</a></li>
+		                    <li class="navItem"><a href="http://swe.mit.edu/corporate/banquet">Career Fair Banquet</a></li>
+		                    <li class="navItem"><a href="http://swe.mit.edu/corporate/resume_database">Resume Database</a></li>
 		                </ul>
 		            </div>
 		        </li>
 
 		        <!-- Calendar -->
 		        <li class="navItem ">
-		            <a href="../../calendar/"><span>Calendar</span></a>
+		            <a href="http://swe.mit.edu/calendar/"><span>Calendar</span></a>
 		        </li>
 
 		        <!--  News -->
 		        <li class="navItem ">
-		            <a href="../../news/"><span>News</span></a>
+		            <a href="http://swe.mit.edu/news/"><span>News</span></a>
 		        </li>
 
 		        <!-- Contact Us -->
 		        <li class="navItem ">
-		            <a href="../../contact/contact.html"><span>Contact Us</span></a>
+		            <a href="http://swe.mit.edu/contact/"><span>Contact Us</span></a>
 		        </li>		        
 
 				<!-- Members Only -->
 		        <li class="navItem  hasDropdown  js-hasDropdown">
-		            <a class="js-dropdownTrigger" href="../members.html"><span>For Members</span></a>
+		            <a class="js-dropdownTrigger" href="http://swe.mit.edu/members/"><span>For Members</span></a>
 		            <div class="navDropdown">
 		                <ul class="nav  nav--stacked">
-		                    <li class="navItem"><a href="../members/section_resources.html"><span>Section Resources</span></a></li>
+		                    <li class="navItem"><a href="../../members/section_resources"><span>Section Resources</span></a></li>
+		                    <li class="navItem"><a href="../../members/resume_upload"><span>Resume Upload</span></a></li>
 		                    <li class="navItem"><a href="http://swe.mit.edu/wiki"><span>Board Wiki</span></a></li>
 		                </ul>
 		            </div>
 		        </li>
 		    </ul>
 		</nav>
+
 
 <!-- 
         <div id="siteNav" class="navbar  primaryNav rightNav">
@@ -353,7 +313,8 @@ function site_header()
         </div>
 	    </div> <!-- /.wrapper -->
 	    <div class="navDropdown--background offPage"></div> 
- 
+
+
 	</header> <!-- /.siteHeader --> 
 
 <?php	
@@ -401,7 +362,7 @@ function print_mainform()
 		<tr><td><b>All Fields Required<b></td><td></tr>
 		<tr><td>First Name:</td><td><input type='text' name='firstname' value='<?php echo $student_firstname;?>'></td></tr>
 		<tr><td>Last Name:</td><td><input type='text' name='lastname' value='<?php echo $student_lastname;?>'></td></tr>
-		<tr><td>Email:</td><td><input type='text' name='student_email' value='<?php echo $student_email;?>'></td></tr>
+		<tr><td>Email:</td><td><input type='text' name='email' value='<?php echo $student_email;?>'></td></tr>
 		<tr><td>Major:</td><td><?php print_department_dropdown($student_dept);?> </td></tr>
 		<tr><td>Degree:</td><td><?php print_degree_dropdown($student_degree);?> </td></tr>
 		<tr><td>Graduation Year:</td><td><?php print_year_dropdown($student_year);?> </td></tr>
@@ -423,7 +384,7 @@ function print_department_dropdown($dept)
 
 	<?php
 
-	echo "<select name=\"student_dept\"><option value=''></option>";
+	echo "<select name=\"department\"><option value=''></option>";
 	$sql = "SELECT name,abbreviation FROM departments ORDER BY sort_order";
 	$res = db_query($sql);
 	while ($row = db_fetch_array($res)){
@@ -440,7 +401,7 @@ function print_degree_dropdown($degree)
 	?>
 
 	<?php
-	echo "<select name=\"student_degree\"><option value=''></option>";
+	echo "<select name=\"degree\"><option value=''></option>";
 	$sql = "SELECT name,abbreviation FROM degrees ORDER BY sort_order";
 	$res = db_query($sql);
 	while ($row = db_fetch_array($res)){
@@ -458,7 +419,7 @@ function print_year_dropdown($year)
 	
 	<?php	
 	
-	echo "<select name=\"student_year\"><option value=''></option>";
+	echo "<select name=\"year\"><option value=''></option>";
 	$year = date("Y");
 	for ($i=-1;$i<6;$i++){
 	  echo '<option value="'.($year+$i).'"';
@@ -473,7 +434,7 @@ function print_jobtype_dropdown($jobtype)
 	?>
 
 	<?php
-	echo "<select name=\"student_jobtype\"><option value=''></option>";
+	echo "<select name=\"jobtype\"><option value=''></option>";
 	$sql = "SELECT name,abbreviation FROM jobtypes ORDER BY sort_order";
 	$res = db_query($sql);
 	
