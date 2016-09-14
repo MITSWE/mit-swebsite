@@ -370,6 +370,7 @@ function print_mainform()
 		<tr><td>Upload Resume PDF: </td><td><input type="hidden" name="MAX_FILE_SIZE" value="2000000" />
 			<input type="file" name="resume_file" size="30" /> <span class="form_detail">Title Format: FirstLast.pdf (Max Size 2MB)</span><br>
 		</td></tr>
+		<tr><td>Would you like your resume <br>to be visible to other MIT SWE <br>National Members in a Sample <br>Resume Folder that will be <br>available on our website?</td><td><?php	print_visible_dropdown($student_visible);?> </td></tr>
 	</table>
 	</div>
 	
@@ -426,6 +427,24 @@ function print_year_dropdown($year)
 	  if($student_year === ((string)($year+$i))){ echo ' selected="selected" ';}
 	  echo '>'.($year+$i).'&nbsp;</option>';
 	}
+	echo "</select>";
+}
+
+function print_visible_dropdown($visible)
+{
+	?>
+	
+	<?php	
+	
+	$listnoyes = array("No","Yes");
+	echo "<select name=\"visible\"><option value=''></option>";
+	
+	for ($i=0;$i<2;$i++){
+		echo '<option value="'.$listnoyes[$i].'"';
+		if($student_visible == $listnoyes[$i]){ echo ' selected="selected" ';}
+		echo '>'.$listnoyes[$i].'&nbsp;</option>';
+	}
+	
 	echo "</select>";
 }
 

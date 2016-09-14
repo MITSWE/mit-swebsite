@@ -22,6 +22,8 @@ if($_POST['submit'])
 	$student['degree'] = $_POST['degree'];
 	$student['year'] = $_POST['year'];
 	$student['jobtype'] = $_POST['jobtype'];
+	$student['visible'] = 0;
+	if($_POST['visible'] == "Yes") { $student['visible'] = 1; }
 		
 	// Handle file upload
 	if($_FILES['resume_file']['name']!="")
