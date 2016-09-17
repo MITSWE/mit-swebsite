@@ -1,5 +1,4 @@
 <?php
-//$server_root="http://swe.scripts.mit.edu"; 
 $server_root="http://swe.mit.edu/"; 
 date_default_timezone_set('America/New_York');
 
@@ -15,15 +14,16 @@ function protect_employer_page($refer_path)
 		}
 		else
 		{
-			$_SESSION['feedback'] = "Error: Please enter a valid username";
-			header("location: $server_root"."/resumedb/");
+			echo "Error: Please enter a valid username";
+			//header("location: $server_root"."/corporate/resume_database");
 			exit;		
 		}
 	}
 	else
 	{
-		$_SESSION['feedback'] = "Error: Please login first";
-		header("location: $server_root"."/resumedb/");
+		?>
+		<meta http-equiv="refresh" content="0; url=http://swe.mit.edu/corporate/resume_database"/>
+		<?php
 		exit;	
 	}
 	
@@ -35,9 +35,6 @@ function session_defaults()
 	$_SESSION['logged'] = false;
 	$_SESSION['uid']='0';
 	$_SESSION['username'] = '';
-	$_SESSION['userlevel']="";
-	$_SESSION['cookie'] = 0;
-	$_SESSION['remember'] = false;	
 }
 
 class User{
@@ -46,23 +43,18 @@ class User{
 	var $table='';
 	var $username='';
 	
-	function User($table)
-	{
-		$this->table = $table;
-		$this->_checkSession();	
-		if($_SESSION['logged'])
-		{
-			$this->_checkSession();	
-		}
-		else if(isset($_COOKIE['SWEwebLogin']))
-		{
-			$this->_checkRemembered($_COOKIE['SWEwebLogin']);
-		}
-	}
+	//function User($table)
+	//{
+	//	$this->table = $table;
+	//	$this->_checkSession();	
+	//	if($_SESSION['logged'])
+	//	{
+	//		$this->_checkSession();	
+	//	}
+	//}
 	
-	function _checkLogin($username,$password,$remember)
+	function _checkLogin($username,$password)
 	{
-		//echo "$username<br>$password<br>$remember";
 		$username = mysql_real_escape_string($username);
 		$password = mysql_real_escape_string(md5($password));
 		$sql = "select * from $this->table where username='$username' and password='$password'";
@@ -70,7 +62,7 @@ class User{
 		
 		if(!empty($row))
 		{
-			$this->_setSession($row,$remember);
+			//$this->_setSession($row);
 			return true;
 		}
 		else
@@ -81,75 +73,31 @@ class User{
 		}			
 	}
 	
-	function _setSession(&$values,$remember,$init=true)
+	function _setSession(&$values,$init=true)
 	{
 		$this->id = $values['s_users_id'];
 		$_SESSION['uid'] = $this->id;
 		$_SESSION['username']= htmlspecialchars($values['username']);
-		$_SESSION['cookie']=$values['cookie'];
 		$_SESSION['logged']=true;
-		if($remember)
-			$this->_updateCookie($values['cookie'],true);
-		if($init)
-		{
-			$session = mysql_real_escape_string(session_id());
-			$ip = mysql_real_escape_string($_SERVER['REMOTE_ADDR']);
-			$sql = "update $this->table set session='$session', ip='$ip' where s_users_id=$this->id";
-			db_query($sql);	
-		}
-		if($values['access'] == "admin")
-			$_SESSION['admin']=true;
-		else
-			$_SESSION['admin']=false;
-		if($values['e_users_id'] != "")
-			$_SESSION['userlevel'] = "employer";
-		else if ($values['s_users_id'] != "")
-			$_SESSION['userlevel'] = "student";
 		
-	}
-	
-	function _updateCookie($cookie,$save)
-	{
-		$_SESSION['cookie'] = $cookie;
-		//If the cookie from the DB is blank, generate a new one, and update the db:
-		if(strlen($_SESSION['cookie'])<32)
-		{
-			$new_cookie = random_hash();
-			$sql = "update $this->table set cookie='$new_cookie' where username='".$_SESSION['username']."'";
-			//echo $sql;
-			db_query($sql);	
-		}
-		if($save)
-		{
-			$cookie = serialize(array($_SESSION['username'],$cookie));
-			setcookie('SWEwebLogin',$cookie, time()+31104000);
-		}	
-	}
-	
-	function _checkRemembered($cookie)
-	{
-		list($username,$cookie) = @unserialize($cookie);	
-		if(!$username or !$cookie) return;
-		$username = mysql_real_escape_string($username);
-		$cookie = mysql_real_escape_string($cookie);
-		$sql = "select * from $this->table where username=$username and cookie=$cookie";
-		$row=db_getRow($sql);
-		if(!empty($row))
-		{
-			$this->_setSession($result,true);
-		}
+		//if($init)
+		//{
+		//	$session = mysql_real_escape_string(session_id());
+		//	$ip = mysql_real_escape_string($_SERVER['REMOTE_ADDR']);
+		//	$sql = "update $this->table set session='$session', ip='$ip' where s_users_id=$this->id";
+		//	db_query($sql);	
+		//}
 	}
 	
 	function _checkSession()
 	{
 		$username = mysql_real_escape_string($_SESSION['username']);
-		$cookie = mysql_real_escape_string($_SESSION['cookie']);
 		$session = mysql_real_escape_string(session_id());
 		$ip = mysql_real_escape_string($_SERVER['REMOTE_ADDR']);
-		$sql = "select * from $this->table where username='$username' and cookie='$cookie' and session = '$session' and ip='$ip'";
+		$sql = "select * from $this->table where username='$username' and session='$session' and ip='$ip'";
 		$row = db_getRow($sql);
 		if(!empty($row))
-			$this->_setSession($row,false,false);	
+			$this->_setSession($row,false);	
 		else
 			$this->_logout();
 	}
