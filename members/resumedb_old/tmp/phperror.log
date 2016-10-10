@@ -1,0 +1,10 @@
+[14-Oct-2008 15:01:01] PHP Fatal error:  (swe) AjaxCore error: getValue cannot find variable name a in /afs/athena.mit.edu/activity/s/swe/web_scripts/ajaxcore/AjaxCore.class.php on line 338
+[14-Oct-2008 16:05:24] PHP Parse error:  (swe) syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in /afs/athena.mit.edu/activity/s/swe/web_scripts/admin/student_admin.php on line 119
+[14-Oct-2008 16:05:57] PHP Notice:  (swe) Undefined variable: page_title in /afs/athena.mit.edu/activity/s/swe/web_scripts/src/functions.php on line 431
+[14-Oct-2008 16:06:13] PHP Notice:  (swe) Undefined variable: page_title in /afs/athena.mit.edu/activity/s/swe/web_scripts/src/functions.php on line 431
+[14-Oct-2008 16:06:29] PHP Notice:  (swe) Undefined variable: page_title in /afs/athena.mit.edu/activity/s/swe/web_scripts/src/functions.php on line 431
+[14-Oct-2008 16:06:31] PHP Notice:  (swe) Undefined variable: page_title in /afs/athena.mit.edu/activity/s/swe/web_scripts/src/functions.php on line 431
+[14-Oct-2008 16:07:03] PHP Notice:  (swe) Undefined variable: page_title in /afs/athena.mit.edu/activity/s/swe/web_scripts/src/functions.php on line 431
+[14-Oct-2008 16:07:04] PHP Notice:  (swe) Undefined variable: page_title in /afs/athena.mit.edu/activity/s/swe/web_scripts/src/functions.php on line 431
+[14-Oct-2008 16:07:29] PHP Notice:  (swe) Undefined variable: page_title in /afs/athena.mit.edu/activity/s/swe/web_scripts/src/functions.php on line 431
+[14-Oct-2008 16:07:30] PHP Notice:  (swe) Undefined variable: page_title in /afs/athena.mit.edu/activity/s/swe/web_scripts/src/functions.php on line 431

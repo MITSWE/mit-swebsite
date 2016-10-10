@@ -1,0 +1,200 @@
+#menu {
+width: 100%;
+float: right;
+font:normal 12px verdana;
+position:absolute;
+top:130;
+left:10;
+z-index:10;
+}
+
+#menu ul {
+list-style: none;
+margin: 0;
+padding: 0;
+width: 10em; 
+float: left;
+font:normal 12px verdana;
+}
+
+#menu a, #menu h2 {
+display: block;
+border:0;
+margin: 0;
+padding: 2px 3px;
+font:normal 12px verdana;
+}
+
+#menu h2 {
+color: #5E5E5E;
+font:normal 12px verdana;
+}
+
+#menu a {
+text-decoration: none;
+color: #777;
+background: white;
+padding: 5px;
+border: 0;
+font-family: verdana;
+}
+
+#menu a:hover {
+color: #008000;
+}
+
+#menu li {position: relative;}
+
+#menu ul ul {
+position: absolute;
+z-index: 500;
+}
+
+#menu ul ul ul {
+position: absolute;
+top: 0;
+left: 100%;
+}
+
+div#menu ul ul {
+display: none;
+}
+
+div#menu ul li:hover ul ul,
+div#menu ul ul li:hover ul ul
+{display: none;}
+
+div#menu ul li:hover ul,
+div#menu ul ul li:hover ul,
+div#menu ul ul ul li:hover ul
+{display: block;}
+
+
+
+
+#linkbar a:link {
+     color: green; font-size: 15px; font-family: verdana; text-align:center;font-weight:bold;
+     background-color: transparent;
+     text-decoration: none;
+}
+
+
+#linkbar a:hover {
+     color: #CCCC00;font-size: 15px; font-family: verdana; text-align:center;font-weight:bold;
+     background-color: transparent;
+     text-decoration: none;
+}
+
+
+#linkbar a:visited {
+     color: green; font-size: 15px; font-family: verdana; text-align:center; font-weight:bold;
+     background-color: transparent;
+     text-decoration: none;
+}
+
+a:link {
+     color:#CCCC00; font-size: 15px; font-family: arial; text-align:center;font-weight:bold;
+     background-color: transparent;
+     text-decoration: none;
+}
+
+
+a:hover {
+     color: green; font-size: 15px; font-family: arial; text-align:center;font-weight:bold;
+     background-color: transparent;
+     text-decoration: none;
+}
+
+
+a:visited {
+     color: #CCCC00; font-size: 15px; font-family: arial; text-align:center;font-weight:bold;
+     background-color: transparent;
+     text-decoration: none;
+}
+
+div.float{float:left;width:220;margin-right:10px;}
+div.float p{text-align:center;font-size:13px;font-family:verdana;}
+div.container{padding:10px;padding-left:0;margin:20px;margin-left:0;}
+div.spacer{clear:both;}
+
+ol{list-style-type: circle;color: black; font-size: 13px; font-family: verdana;}
+ul{color: black; font-size: 13px; font-family: verdana;margin-right:20px;}
+tr{color: black; font-size: 13px; font-family: verdana;}
+th{color: black; font-size: 13px; font-family: verdana;}
+
+#header{position:absolute; top:10; border:gray 1px solid; border-bottom:0; border-right:0;z-index:1;padding:5px;width:800;height:160;background-image: 
+url('gray.JPG');background-repeat: repeat;}
+#resume_menu{-moz-box-sizing:border-box;box-sizing:border-box;position:relative; top:165;text-align:right; border:gray 1px solid; border-bottom:0; border-right:0; border-left:0;z-index:1;padding:0px;width:800;height:20;}
+#main{-moz-box-sizing:border-box;box-sizing:border-box;position:relative;top:140;border:2px solid gray;margin-top:50;padding:10px;width:788;z-index:0;}
+#maincontent{-moz-box-sizing:border-box;box-sizing:border-box;position:relative;padding:10px;z-index:6; width:97%;}
+#subcontent{-moz-box-sizing:border-box;box-sizing:border-box;position:relative;background-color:#E3E3E3; margin-top:5;padding:10px;width:340;z-index:3;z-index:0;color: black; font-size: 13px; font-family: verdana;padding-right:10px;}
+#pic{-moz-box-sizing:border-box;box-sizing:border-box;position:relative;z-index:2;width:200;height:380;}
+#linkbar{-moz-box-sizing:border-box;box-sizing:border-box;background-color: #E3E3E3; width:220;padding:10px;padding-top:20px;margin-top:0;margin:40px;margin-right:0;margin-top:0;right:30px;float:right;}
+span.error{color:red;font-size:10px;font-family:verdana;font-weight:bold;}
+span.okay{color:green;font-size:10px;font-family:verdana;font-weight:bold;}
+span.required{color:red;font-size:10px;font-family:verdana;font-weight:bold;}
+span.message {color:black;font-size:10px;font-family:verdana;font-weight:normal;}
+.admin_emails {color:black;font-size:10px;font-family:verdana;font-weight:normal;border:1px solid;padding:5px;}
+H1 {color: green; font-size: 30px; font-weight:bold; font-family: verdana; text-align:center;}
+H3 {color: green; font-size: 20px; font-family: arial; text-align:left;}
+H4 {color: green; font-size: 17px; font-family: verdana; text-align:left;}
+H5 {color: black; font-size: 13px; font-family: verdana; text-align:left;}
+H6 {color: green; font-size: 19px; font-family: verdana; text-align:left;}
+H7 {color: black; font-size: 17px; font-family: verdana; text-align:right;}
+H8 {color: black; font-weight: bold; font-size: 40px; font-family: verdana; text-align:left;}
+f2 {color: black; font-size: 15px; font-family: verdana;}
+p {color: black; font-size: 13px; font-family: verdana;}
+p4 {color: black; font-size: 15px; font-family: verdana;position:relative;padding:10px;}
+
+g1 {color: gray; font-size: 13px; font-family: arial; text-align:left;}
+
+H4.error_feedback{
+color:#333;
+margin:10px 0;
+font-size:0.8em;
+border:1px dotted #333;
+background-color:#ff6;
+padding:1em;
+}
+
+div#input_box{
+border:1px solid;
+background-color:PaleGoldenrod;
+width:80%;
+margin: 10px 0;
+padding: 10px 10px;
+font:normal 12px verdana;
+}
+
+#hor-minimalist-b
+{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	background: #fff;
+	margin: 0px;
+	width: 700px;
+	border-collapse: collapse;
+	text-align: left;
+}
+#hor-minimalist-b th
+{
+	font-size: 14px;
+	font-weight: normal;
+	color: #336600;
+	padding: 10px 8px;
+	border-bottom: 2px solid #000;
+}
+#hor-minimalist-b td
+{
+	border-bottom: 1px solid #ccc;
+	color: #754400;
+	padding: 6px 8px;
+}
+#hor-minimalist-b tbody tr:hover td
+{
+	color: #009;
+}
+
+
+
+

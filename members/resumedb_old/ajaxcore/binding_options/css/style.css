@@ -1,0 +1,236 @@
+body
+{
+	background-color:#ffffff;
+	margin: 0 auto;
+	padding: 0px;
+	text-align: center;
+	min-width: 780px;
+	width: 780px;	
+}
+
+a:link	
+{
+	color: #105289; 
+}
+a:visited	
+{
+	color: #105289; 
+}
+a:hover	
+{
+	color: #D31141; 
+}
+a:active	
+{
+	color: #368AD2; 
+}
+
+#wrap {
+	text-align: left;
+	width: 780px;
+}
+
+div.title {
+	background-color: #E1EBF2;
+	color: #4F4F4F;
+	padding: 0 10px;
+	margin: 5px 0;
+	font-size: 0.7em;
+	font-weight:bold;
+	line-height:15px;
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+}
+
+p.title a {
+	vertical-align: middle;
+	clear: both;
+}
+
+.title span.corners-top {
+	margin: 0 -10px 0px -10px;
+}
+
+.title span.corners-bottom {
+	margin: 0px -10px 0 -10px;
+}
+
+div.footer {
+	background-color: #CADCEB;
+	color: #4F4F4F;
+	padding: 0 10px;
+	margin: 5px 0;
+	font-size: 0.6em;
+	line-height:15px;
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	text-align:center;
+}
+
+p.footer a {
+	vertical-align: middle;
+	clear: both;
+}
+
+.footer span.corners-top {
+	margin: 0 -10px 0px -10px;
+}
+
+.footer span.corners-bottom {
+	margin: 0px -10px 0 -10px;
+}
+
+div.content {
+	background-color: #E1EBF2;
+	color: #4F4F4F;
+	padding: 0 10px 0 10px;
+	font-size: 0.7em;
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+}
+
+p.content a {
+	vertical-align: middle;
+	clear: both;
+}
+
+.content span.corners-top {
+	margin: 0 -10px 0px -10px;
+}
+
+.content span.corners-bottom {
+	margin: 0px -10px 0 -10px;
+}
+
+.bar
+{
+	margin: 0 0 0 -30;
+	min-height: 80px;
+	color: #666666;
+	border-right: 1px solid #FFFFFF;
+	width: 240px;
+	float: left;
+	display: inline;
+	font-size: 1.12em;
+	font-weight:bold;
+	line-height: 22px;
+	font-family: "Trebuchet MS", Verdana, Helvetica, Arial, sans-serif;
+}
+
+.bar h2
+ {
+	/* .prebody requires a different h3 format - so change it here */
+	font-size: 1.1em;
+	padding: 0 0 0 10px;
+	margin: 0 0 0.3em 0 !important;
+	text-transform: none;
+	border: none;
+	color: #A8BDCF;
+	font-family: "Trebuchet MS", Verdana, Helvetica, Arial, sans-serif;
+	line-height: 125%;
+}
+
+.bar h3 
+{
+	/* .prebody requires a different h3 format - so change it here */
+	font-size: 1.2em;
+	padding: 2px 0 0 0;
+	margin: 0 0 0.3em 0;
+	text-transform: none;
+	border: none;
+	color: #7D878F;
+	font-family: "Trebuchet MS", Verdana, Helvetica, Arial, sans-serif;
+	line-height: 125%;
+}
+
+.main
+{
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+	line-height: 1.48em;
+	color: #333333;
+	width: 500px;
+	float: right;
+	clear: both;
+			
+}
+
+.main h2
+{
+	color: #333333;
+	font-size:12px;
+}
+
+.main th
+{
+	font-size: 0.8em;
+	
+}
+
+.signature
+{
+	font-size:12px;
+	color: #105289; 
+}
+
+.main td
+{
+	font-size: 0.8em;
+}
+
+.main h3
+{
+	font-size: 1.4em;
+	color:#BED1E2;
+	text-align: right;
+}
+
+.description
+{
+	padding-bottom:20px;
+}
+
+
+span.corners-top, span.corners-bottom, span.corners-top span, span.corners-bottom span {
+	font-size: 1px;
+	line-height: 1px;
+	display: block;
+	height: 5px;
+	background-repeat: no-repeat;
+}
+
+span.corners-top {
+	background-image: none;
+	background-position: 0 0;
+	margin: 0 -5px;
+}
+
+span.corners-top span {
+	background-image: none;
+	background-position: 100% 0;
+}
+
+span.corners-bottom {
+	background-image: none;
+	background-position: 0 100%;
+	margin: 0 -5px;
+	clear: both;
+}
+
+span.corners-bottom span {
+	background-image: none;
+	background-position: 100% 100%;
+}
+
+span.corners-top {
+	background-image: url("../images/corners_left.png");
+}
+
+span.corners-top span {
+	background-image: url("../images/corners_right.png");
+}
+
+span.corners-bottom {
+	background-image: url("../images/corners_left.png");
+}
+
+span.corners-bottom span {
+	background-image: url("../images/corners_right.png");
+}
