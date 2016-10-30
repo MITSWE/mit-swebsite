@@ -136,7 +136,7 @@
 	  	<h4 style="font-size: 30px; text-align: center"><span style="color: #20bc7e;"><strong>SWE Board</strong></span></h4><br><br>
 	  	<?php
 
-		include_once 'database.php';
+		include_once 'database.sql';
 
 		$query = "SELECT * FROM exec2016"; 
 			 
