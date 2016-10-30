@@ -7,6 +7,10 @@
 /**
  * Database `swe+board`
  */
+$sys_dbhost='sql.mit.edu';
+$sys_dbuser='swe';
+$sys_dbpasswd='zam52fin';
+$sys_dbname='swe+resumedb';
 
 /* `swe+board`.`board` */
 $board = array(
