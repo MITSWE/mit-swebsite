@@ -5,6 +5,8 @@ include "$prepath/src/database.php";
 include "$prepath/src/functions.php";
 $self = $_SERVER['PHP_SELF'];
 
+// $_SESSION['logged'] = False;
+
 if(!$_SESSION['logged'])
 {
 	session_defaults();
@@ -22,11 +24,18 @@ if(isset($_POST['submit']))
 {
 	if(!$_SESSION['logged'])
 	{
+		//$_SESSION['feedback'] = "You've entered the wrong Username or Password. Please try again.";
+		//echo "<table>";
 		echo "Incorrect password.  Please try again.";
+		//echo "</table>";
 	}
 }	
 
 site_header();
+
+?>
+<div style="height:15vh"></div>
+<?
 
 if($_SESSION['logged'])
 {
@@ -35,8 +44,9 @@ if($_SESSION['logged'])
 <?php
 }
 else
-{
-	echo "<form name='login' method='POST' action='$self'>";
+{	
+	echo "<h2>Employee Portal Login:</h2>";
+	echo "<form name='login' method='POST' action='$self' style='margin-left:5vw;''>";
 	echo "<table>";
 	echo "<tr><td>Username:</td><td><input type='text' name='username'></td></tr>";
 	echo "<tr><td>Password:</td><td><input type='password' name='password'> <input type='submit' name='submit' value='Submit'></td></tr>";
