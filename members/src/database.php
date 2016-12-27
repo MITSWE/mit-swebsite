@@ -13,20 +13,12 @@ $sys_dbuser='swe';
 $sys_dbpasswd='zam52fin';
 $sys_dbname='swe+resumedb';
 */
-$sys_dbhost='sql.mit.edu';
-$sys_dbuser='swe';
-$sys_dbpasswd='zam52fin';
-$sys_dbname='swe+resumedb';
 
 
-function db_connect() {
-	global $sys_dbhost,$sys_dbuser,$sys_dbpasswd;
-	$conn = mysql_connect($sys_dbhost,$sys_dbuser,$sys_dbpasswd);
-	if (!$conn) {
-		echo mysql_error();
-	}
-	return $conn;
-}
+$dbh = mysql_connect('sql.mit.edu', 'swe', 'zam52fin')
+		or die('Could not connect: ' . mysql_error() . '<br />');
+
+mysql_select_db("swe+board") or die("No database selected.");
 
 function db_query($qstring,$print=0) {
 	global $sys_dbname;

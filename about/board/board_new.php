@@ -137,23 +137,11 @@
 	  <div class="container">
 	  	<h4 style="font-size: 30px; text-align: center"><span style="color: #20bc7e;"><strong>SWE Board</strong></span></h4><br><br>
 	  	<?php
-            $sys_dbhost='sql.mit.edu';
-            $sys_dbuser='swe';
-            $sys_dbpasswd='zam52fin';
-            $sys_dbname='swe+board';
+            $dbh = mysql_connect('sql.mit.edu', 'swe', 'zam52fin')or die('Could not connect: ' . mysql_error() . '<br />');
 
-            function db_connect() {
-               global $sys_dbhost,$sys_dbuser,$sys_dbpasswd;
-                $conn = mysql_connect($sys_dbhost,$sys_dbuser,$sys_dbpasswd);
-               if (!$conn) {
-                   echo mysql_error();
-               }
-               return $conn;
-            }
-          
-            db_connect();
+            mysql_select_db("swe+board") or die("No database selected.");
             
-          
+            include_once 'database.php';
 
             $query = "SELECT * FROM exec2016"; 
 
@@ -162,7 +150,7 @@
             while($row = mysql_fetch_array($result)){
 
                 echo "<a href=\"#TB_inline?height=240&width=310&inlineId=" . $row['first'] . $row['last'] . $row['year'].  "\" class=\"thickbox\">";
-
+	
                 echo "<div class=\"phototext-div100\" onmouseover=\"this.className='phototext-div70'\" onmouseout=\"this.className='phototext-div100'\" style=\"margin: 14px; float: left; background: black url(photos/". $row['file'] .") no-repeat center center;\";>";
                 echo "<span id=\"phototext-span\">" . $row['first']. "</span><br>";
                 echo "</div>";
