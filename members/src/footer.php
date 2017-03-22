@@ -24,7 +24,7 @@
 					<a href="http://swe.mit.edu/members/">Members Only</a>
 				</p>
 
-				<p>MIT Society of Women Engineers &copy; 2016</p>
+				<p>MIT Society of Women Engineers &copy; 2017</p>
 			</div>
 
 		</footer>
