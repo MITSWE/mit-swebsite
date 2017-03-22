@@ -190,7 +190,7 @@ function site_header()
 
 		            <div class="navDropdown">
 		                <ul class="nav  nav--stacked" style="clear:both">
-		                    <li class="navItem"><a href="http://swe.mit.edu/about/board">MIT SWE Leadership</a></li>
+		                    <li class="navItem"><a href="http://swe.mit.edu/about/board">Board Members</a></li>
 		                    <li class="navItem"><a href="http://swe.mit.edu/about/national_swe_membership">National SWE</a></li>
 		                </ul>
 		            </div>

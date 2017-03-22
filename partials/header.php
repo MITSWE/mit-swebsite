@@ -53,7 +53,7 @@
 		            <div class="navDropdown">
 		                <ul class="nav  nav--stacked" style="clear:both">
 		                    <li class="navItem"><a href="../about/about.html">About MIT SWE</a></li>
-		                    <li class="navItem"><a href="../about/board.html">MIT SWE Leadership</a></li>
+		                    <li class="navItem"><a href="../about/board.html">Board Members</a></li>
 		                    <li class="navItem"><a href="../about/nationaswemembership.html">National SWE</a></li>
 		                </ul>
 		            </div>
