@@ -275,7 +275,7 @@ select::-ms-expand{display:none}
 .navItem a{color:#f4f4f4;letter-spacing:1px;text-decoration:none;vertical-align:middle;line-height:75px;padding:0 30px 0 20px;-webkit-transition:all .1s linear;-moz-transition:all .1s linear;-o-transition:all .1s linear;-ms-transition:all .1s linear;transition:all .1s linear}
 .navItem a.isActive,.navItem a:hover{color:#8b7493;}
 .hasDropdown>a{content: " +";position:relative}
-.hasDropdown>a:after{content:"  +";font-weight:300px;position:absolute;top:-1px;right:17px;display:block;font-size:16px;color:grey}
+.hasDropdown>a:after{content:" \2228";font-weight:300px;position:absolute;top:-1px;right:17px;display:block;font-size:11px;color:grey}
 .primaryNav .navItem--login,.primaryNav .navItem--supportNumber{display:none}
 .no-js .navDropdown{display: inline-block;height:0;-webkit-transition:opacity .3s linear;-moz-transition:opacity .3s linear;-o-transition:opacity .3s linear;-ms-transition:opacity .3s linear;transition:opacity .3s linear;-webkit-opacity:0;-moz-opacity:0;opacity:0}
 .no-js .primaryNav li:hover .navDropdown{height:auto;-webkit-opacity:1;-moz-opacity:1;opacity:1}
