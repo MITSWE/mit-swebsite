@@ -15,6 +15,14 @@ h1 {
    line-height: 15.4px;
    color: #00b0ff;
  }
+
+ h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+ }
+
  p {
    font-family: 'Open Sans';
    font-size: 16px;
@@ -87,6 +95,83 @@ h1 {
 .learn-more a {
   color: #00b0ff;
 }
+
+/* MEMBER IMAGES */
+.member-container {
+  position: relative;
+  width: 200px;
+  height: 270px;
+  margin-left: 5px;
+}
+
+.member-image {
+  display: block;
+  width:200px;
+  width:200px;
+}
+
+.member-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  width: 200px;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #000000;
+}
+
+.member-container:hover .member-overlay {
+  opacity: 0.8;
+}
+
+/*.member-text {
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}*/
+
+.member-text {
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.board-pos {
+  color: grey;
+  font-size: 14px;
+}
+
+.member-info {
+  background-color: #f1edf2;
+  padding: 5px;
+  height: 50px;
+  width: 200px;
+  text-align: center;
+}
+
+.crop {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.crop img {
+    width: 250px;
+    height: 250px;
+    margin: -20px 0 0 -30px;
+}
+
+
 
 /*
 footer{
