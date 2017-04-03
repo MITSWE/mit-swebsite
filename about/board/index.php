@@ -133,9 +133,40 @@
       </div>
     </div>
 
+    <style>
+    .people-container {
+    	width:96vw;
+    	margin-right: 2vw;
+    	margin-left: 2vw;
+    }
+    .person {
+    	display: inline-block;
+    	width: 28vw;
+    	height: 28vw;
+    	margin: 2vw;
+    }
+
+	.person-photo-container {
+		width: 18vw;
+    	height: 18vw;
+    	margin-right: 5vw;
+    	margin-left: 5vw;
+	}
+
+    .person-photo {
+    	width: 18vw;
+    	height: 18vw;
+    }
+    .person-info {
+    	height: 14vw;
+    }
+    </style>
+
     <div class="learn-more">
-	  <div class="container">
+
+	  <div class="people-container">
 	  	<h4 style="font-size: 30px; text-align: center"><span style="color: #20bc7e;"><strong>SWE Board</strong></span></h4><br><br>
+	  	<div class="person-container">
 	  	<?php
             $dbh = mysql_connect('sql.mit.edu', 'swe', 'zam52fin')or die('Could not connect: ' . mysql_error() . '<br />');
 
@@ -143,140 +174,26 @@
             
             include_once 'database.php';
 
-            $query = "SELECT * FROM exec2016"; 
+            $query = "SELECT * FROM board2017"; 
 
             $result = mysql_query($query) or die(mysql_error());
 
             while($row = mysql_fetch_array($result)){
 
-                echo "<a href=\"#TB_inline?height=240&width=310&inlineId=" . $row['first'] . $row['last'] . $row['year'].  "\" class=\"thickbox\">";
-	
-                echo "<div class=\"phototext-div100\" onmouseover=\"this.className='phototext-div70'\" onmouseout=\"this.className='phototext-div100'\" style=\"margin: 14px; float: left; background: black url(photos/". $row['file'] .") no-repeat center center;\";>";
-                echo "<span id=\"phototext-span\">" . $row['first']. "</span><br>";
-                echo "</div>";
+            	$file_name = str_replace(" ", "_", $row['name']).".jpg";
 
-                echo "</a>";
-                echo "<div id=\"" . $row['first'] . $row['last'] . $row['year']. "\" style=\"display:none\">"; 
+            	$s = "<div class='person'>";
+            	$s .= "<div class='person-photo-container'><img class = 'person-photo' src='../board_pics/".$file_name."''></div>";
+            	$s .= "<div class='person-info'>".$row['name']."<br/>";
+            	$s .= "Group: ".$row['group']."</br>";
+            	$s .= $row['position']."</br>";
+            	$s .= " Major: ".$row['major']."<br/>";
+            	$s .= $row['fact']."</div></div>";
 
-                echo "<div style=\"float: left; width: 150px; height: 230px;\"><img src=\"photos/" . $row['file'] . "\" width=150></div>";
-                echo "<div style=\"float: right; width: 150px; line-height: 1.4em; color: #444444; font-size: 13px;\"><span class=\"date\">" . $row['first']. " ". $row['last']. "." . "</span><br />";
-                echo "<b>Position:</b> " . $row['position'] . "<br />";
-                echo "<b>Year: </b>" . $row['year']. "<br /><b>Course: </b>". $row['course'] . "<br />";
-                echo "<b>Fun fact: </b>". $row['fact'] . "</div>";
-
-                //echo "<p style=\"text-align:center\"><a onclick=\"tb_remove()\" style=\"\"/>close</p> ";
-                echo "</div>"; 
-                //echo "<br /><br />";
-
+                echo $s;
             }
 		?>
-		<div class="row">
-                  <div class="col-md-2">
-                        <h3>Exec</h3>
-                        <p>President:<br>Lynn Takeshita<br>
-                        <br>
-			Administrative Officer:<br>Erin Hong<br>
-                        <br>
-			Financial Officer:<br>Michelle Tai<br>
-			<br>
-			Technology Officer:<br>Lisette Tellez<br>
-                        <br>
-			VP Outreach:<br>Emma Castanos<br>
-                        <br>
-			VP Outreach:<br>Teresa de Figueiredo<br>
-                        <br>
-			VP Campus Relations:<br>Joanna Han<br>
-                        <br>
-			VP Corporate:<br>Christiane Adcock<br>
-			<br>
-                        VP Membership:<br>Marisa Rozzi
-                        </p>
-                  </div>
-	  	  <div class="col-md-2">
-			<h3>Outreach</h3>
-			<p>Middle School Outreach Chairs:<br>
-			Jeanie Pearson<br>
-			Victoria Dean<br>
-			<br>
-			High School Outreach Chairs:<br>
-			Allison Nguyen<br>
-			Ana Maria Vargas<br>
-			Shivani	Chauhan<br>
-			<br>
-			WiSE Chairs:<br>
-			Avira Som<br>
-			Zareen Choudhury<br>
-			<br>
-			Girl Scouts Outreach Chairs:<br>
-			Ellen O'Connell<br>
-			Rebecca Grekin<br>
-			<br>
-			KEYS Chairs:<br>
-			Celine Qiu<br>
-			Hannah Thel<br>
-			Rebecca Gallivan<br>
-			<br>
-			Off-Campus Education Chairs:<br>
-			Jennifer McCleary<br>
-			Joy Yu<br>
-			Reva Ranka<br>
-			<br>
-			Events Outreach Coordinators:<br>
-			Jenny Xu<br>
-			Margaret Bertoni<br>
-			<br>
-			Festival Chairs:<br>
-			Monica Pham<br>
-			Yanisa Techagumthorn<br>
-			<br>
-			CodeIt Chair:<br>
-			Kelsey Wong</p>
-		  </div>
-		  <div class="col-md-2">
-			<h3>Campus Relations</h3>
-			<p>Marketing and Media Coordinators:<br>
-			Amanda Wu<br>
-			Chaaru Deb<br>
-			<br>
-			Campus Representatives:<br>
-			Liz Cox<br>
-			Kerrie Greene<br>
-			<br>
-			Department Liaisons:<br>
-			Jae Hyun Kim<br>
-			Morgan Matranga</p>
-	     	  </div>
-		  <div class="col-md-2">
-			<h3>Career Development</h3>
-			<p>Career Development Chairs:<br>
-			Alisha Saxena<br>
-			Amy Huang<br>
-			Katherine Wang<br>
-			Siena Scigliuto<br>
-			Stephanie Chou</p>
-		  </div>
-		  <div class="col-md-2">
-			<h3>Membership</h3>
-			<p>Membership Development Chairs:<br>
-			Geneva Werner<br>
-			Michele Miao<br>
-			<br>
-			Internal Mentorship Chairs:<br>
-			Hannah Huynh<br>
-			Jessica Chen<br>
-			<br>
-			External Relations Chairs:<br>
-			Judy Wang<br>
-			Sophie Blackburn</p>
-		  </div>
-		  <div class="col-md-2">
-                        <h3>Technology</h3>
-                        <p>Technology Chairs:<br>
-                        Baula Xu<br>
-                        Nancy Hung</p>
-                  </div>		  
-	    </div>
-	  </div>
+		</div>
 	</div>
 
 </div></div></td></tr>
