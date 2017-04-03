@@ -3,7 +3,7 @@
 
 <head>
 		<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
-		<title>MIT SWE | National SWE Membership</title>
+		<title>MIT SWE | Board </title>
 		<meta name="keywords" content="MIT SWE, MIT, Society of Women Engineers, MIT Society of Women Engineers" />
 		<meta name="description" content="Massachusetts Institute of Technology Society of Women Engineers is the largest diversity student organization on campus and aims to inspire younger generations about engineering, encourage the notion of diversity in engineering, and determine and advocate for the needs of women engineers at MIT and in the professional world." />
 		<!-- global styles -->
@@ -12,8 +12,9 @@
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
 		<link rel="stylesheet" href="../../css/mt-global.css">
-<!-- 		page specific styles -->
-		<link rel="stylesheet" href="../css/styles_nationalswemembership.css">
+<!-- 		page specific styles -->	
+		<link rel="stylesheet" href="../css/styles_board.css">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
 </head>
 
@@ -129,67 +130,74 @@
 
     <div class="jumbotron">
       <div class="container">
-        <h1>National SWE Membership</h1>
-        <p>Registering as a national SWE member will broaden and enrich your SWE experience! As a registered national SWE member at MIT, you gain access to members-only events including leadership experiences, scholarships, career opportunities, social events,  support systems, and more. It is also important to join SWE as a national member because only then can you be recognized as a SWE member by MIT, SWE, and outside employers. Additionally, only registered national SWE members can run for SWE Board and Exec positions within MIT SWE.</p>
-        <a href="http://societyofwomenengineers.swe.org/membership/benefits-a-discounts">Learn more on the National SWE website.</a>
       </div>
-    </div> 
+    </div>
+
+    <style>
+    .people-container {
+    	width:96vw;
+    	margin-right: 2vw;
+    	margin-left: 2vw;
+    }
+    .person {
+    	display: inline-block;
+    	width: 28vw;
+    	height: 28vw;
+    	margin: 2vw;
+    }
+
+	.person-photo-container {
+		width: 18vw;
+    	height: 18vw;
+    	margin-right: 5vw;
+    	margin-left: 5vw;
+	}
+
+    .person-photo {
+    	width: 18vw;
+    	height: 18vw;
+    }
+    .person-info {
+    	height: 14vw;
+    }
+    </style>
 
     <div class="learn-more">
-	  <div class="container">
-	  	<h2 class="centered">FAQs</h2>
-		<div id="left" style="float:left">
-			<div id="margins">
-			<!-- Body -->
 
-			<h3>Why Join National SWE?</h3>
+	  <div class="people-container">
+	  	<h4 style="font-size: 30px; text-align: center"><span style="color: #20bc7e;"><strong>SWE Board</strong></span></h4><br><br>
+	  	<div class="person-container">
+	  	<?php
+            $dbh = mysql_connect('sql.mit.edu', 'swe', 'zam52fin')or die('Could not connect: ' . mysql_error() . '<br />');
 
-			 <p>National SWE also offers additional benefits to 
-			members, including:
-				<ul>			                    
-					<li>Access to a huge network of SWE professional members for networking or advice</li>			          
-					<li>Access to a job and resume database with over 18,000 postings</li>			          
-					<li>Access to over $500,000 in scholarships</li>			          
-					<li>Faculty/student socials and networking events</li>			          
-					<li>Recruiter/student networking events</li>			          
-					<li>Company plant tours</li>			          
-					<li>Professional and personal development workshops</li>					  
-					<li>Member-only seminars, webinars, and speaker events</li>					  
-					<li>Social events with other SWE Collegiate Sections</li>					  
-					<li>Mentoring and networking events with SWE Professional Sections</li>				  	  
-					<li>Support systems - peer groups, mentors, advisors, industry leaders</li>
-					<li>Section programs including speaker events, seminars, and leadership opportunities</li>			          
-					<li>SWE Magazine subscription</li>					
-					<li>SWE Career Center for internship and full-time employment search and career planning</li>
-					<li>SWE National and Regional Conferences
-					</li>
-					<li>Community events, leadership opportunities, SWE competitions, and more!</li>
-				</ul>
-			</p>
+            mysql_select_db("swe+board") or die("No database selected.");
+            
+            include_once 'database.php';
 
-			<h3>What Does National Membership Cost?</h3>
+            $query = "SELECT * FROM board2017"; 
 
-			<p> MIT SWE will pay for 50% of the national SWE membership fee. Membership options are:
-			1 year membership | Pay upfront: $20 | Cost to you: $10
-				5 year  membership | Pay upfront: $50 | Cost to you: $25
-				(5 years = [4 year or until graduation] + 1 year professional)
-			</p>
+            $result = mysql_query($query) or die(mysql_error());
 
-			<h3>How Does One Sign Up?</h3>
+            while($row = mysql_fetch_array($result)){
 
-			<p>
-				<ol>
-					<li>Click <a href="http://societyofwomenengineers.swe.org/">here</a> to go to the national SWE website. Click "Join" under the "Membership" tab.</li>
-					<li>Make sure to register for the MIT (F059) section and use your MIT email address.</li>
-					<li>Please forward your membership confirmation to both
-					<a href="mailto:swe-vp-membership@mit.edu">swe-vp-membership@mit.edu</a> and <a href="mailto:swe-treasurer@mit.edu">swe-treasurer@mit.edu</a> to ensure you will be reimbursed and added to the mailing list.</li>
-				</ol>
-			</p>
+            	$file_name = str_replace(" ", "_", $row['name']).".jpg";
+
+            	$s = "<div class='person'>";
+            	$s .= "<div class='person-photo-container'><img class = 'person-photo' src='../board_pics/".$file_name."''></div>";
+            	$s .= "<div class='person-info'>".$row['name']."<br/>";
+            	$s .= "Group: ".$row['group']."</br>";
+            	$s .= $row['position']."</br>";
+            	$s .= " Major: ".$row['major']."<br/>";
+            	$s .= $row['fact']."</div></div>";
+
+                echo $s;
+            }
+		?>
 		</div>
-	  </div>
 	</div>
 
-	
+</div></div></td></tr>
+
 
 	<div id="footer">
 		<footer class="footer-distributed">
