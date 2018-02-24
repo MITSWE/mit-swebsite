@@ -47,6 +47,84 @@
   color: #00b0ff;
 }
 
+.learn-more h2.centered_with_image{
+  font-family: 'Shift', sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;  
+}
+
+.learn-more h4 {
+  font-family: 'Shift', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #1D153C;
+}
+
+.learn-more p {
+  font-size: 14px;
+  color: black;
+}
+
+.shadow-panel {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+#leftpanel{
+  background-color:#9269b8;
+  position: relative;
+  float:left;
+  display: flex;
+  /*margin-top: 100px;*/
+  width: 100%;
+  padding: 10px 20px 10px 20px;
+  font-size: 1.2em;
+  border: none;
+  height: 100%;
+  /*margin-left:-100px;*/
+  flex-direction: column;
+  align-self: flex-start;
+}
+
+#rightpanel{
+  background-color:#9269b8;
+  position: relative;
+  float:right;
+  right:0;
+  display: flex;
+  /*margin-top: 100px;*/
+  width: 100%;
+  padding: 10px 20px 10px 20px;
+  font-size: 1.2em;
+  border: none;
+  height: 100%;
+  /*margin-left:-100px;*/
+  flex-direction: column;
+  margin-right: 0;
+  justify-content: space-between;
+}
+
+.container {
+    margin-right: 0;
+     margin-left: 0; 
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+}
+
+#google-form{
+  display: flex;
+  justify-content: center;
+  align-self: flex-end;
+  height:400px;
+}
+
+#form-title{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
 /*
 footer{
   position: fixed;
