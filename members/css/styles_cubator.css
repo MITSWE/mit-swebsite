@@ -112,14 +112,15 @@ body{
      padding-right: 0;
      padding-left: 0;
      width: 100%;
-  -webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
-     background-image: url("swecubatorbkg.jpg");
+      background: url(https://image.ibb.co/fp5tkx/Screen_Shot_2018_02_24_at_3_41_13_PM.png) no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+     /*background-image: url("https://image.ibb.co/fp5tkx/Screen_Shot_2018_02_24_at_3_41_13_PM.png");
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    /*background-color:#9999ab;*/
+    background-attachment: fixed;*/
+    background-color:#9999ab;
 }
 
 #google-form{
@@ -159,16 +160,12 @@ h1{
 }
 
 .text-container{
+  font-size: 30px;
   padding-left: 100px;
   padding-right: 100px;
-  padding-top: 10px;
+  padding-top:10px;
   color: white;
 }
-
-.font30{
-  font-size: 30px;
-}
-
 
 /*
 footer{
