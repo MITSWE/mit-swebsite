@@ -25,6 +25,7 @@
 
 .learn-more {
   background-color: #f7f7f7;
+  padding-bottom: 10em
 }
 
 .learn-more h2.centered{
@@ -32,7 +33,7 @@
   font-size: 25px;
   font-weight: bold;
   text-align: center;
-  padding-bottom: 25px;
+  
 }
 
 .learn-more h3 {
@@ -62,4 +63,10 @@
 .learn-more p {
   font-size: 14px;
   color: black;
+}
+
+#footer{
+    bottom: 0px;
+    position: fixed;
+    width: 100vw;
 }
