@@ -63,3 +63,9 @@
   font-size: 14px;
   color: black;
 }
+
+#footer{
+  bottom: 0px;
+  position: fixed;
+  width: 100vw;
+}
