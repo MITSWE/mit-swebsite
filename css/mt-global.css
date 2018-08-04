@@ -79,7 +79,7 @@ del{text-decoration:line-through}
 
 .text-input:active,.text-input:focus,textarea:active,textarea:focus{cursor:text;outline:0}
 
-body{margin:0;background:#fff;color:#333;font-family:BrandonText,"Helvetica Neue",Helvetica,Arial,sans-serif;line-height:1.25; overflow-x:hidden;}
+body{margin:0;background:#f7f7f7;color:#333;font-family:BrandonText,"Helvetica Neue",Helvetica,Arial,sans-serif;line-height:1.25; overflow-x:hidden;}
 
 body.page--inverse{background:#282B2D}
 

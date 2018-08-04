@@ -13,13 +13,14 @@
 
 		<link rel="stylesheet" href="css/mt-global.css">
 <!-- 		page specific styles -->
-    	<link rel="stylesheet" href="home/css/styles_index3.css"
+    	<link rel="stylesheet" href="home/css/styles_index3.css">
 
        
     </head>
 
 <body class="page  page--home">
 
+<div id="resizeFooter" style="min-height: calc(100vh - 200px);">    
 <header class="siteHeader  strip">
 	    <div class="wrapper">
 	        <!-- Logo -->
@@ -32,16 +33,18 @@
 			    <span class="hamburger-bun  hamburger-bun--btm"></span>
 			</a>
 
-		<nav id="siteNav" class="navbar  primaryNav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+		<nav id="siteNav" class="navbar primaryNav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 		    <ul class="primaryNav-list">
 
 		        <!-- START: Only visible on mobile -->
-		       <!--  <li class="navItem  navItem--supportNumber">
+<!--
+		       <li class="navItem  navItem--supportNumber">
 		                            <a class="supportNumber" href="tel:+18775784000">877.578.4000</a>
-		                    </li> -->
-<!-- 		        <li class="navItem  navItem--login">
+		                    </li>
+ 		        <li class="navItem  navItem--login">
 		            <a class="loginLink" href="https://ac.mediatemple.net/login.mt?redirect=home.mt"><span>Members Only</span></a>
-		        </li> -->
+		        </li>
+-->
 		        <!-- END: Only visible on mobile -->
 
 
@@ -115,7 +118,7 @@
 		        </li>
 		    </ul>
 		</nav>
-
+    </div>
 <!-- 
         <div id="siteNav" class="navbar  primaryNav rightNav">
 		    <ul class="nav  headerNav  u-pullRight">
@@ -159,7 +162,7 @@
 	    </div>
 	  </div>
 	</div>
-
+</div>
 	
   
 	
@@ -194,7 +197,17 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
     <script src="js/mt-global.js"></script>
-
+    
+    <script>
+    function navbar() {
+    var x = document.getElementById("siteNav");
+    if (x.className === "collapse navbar-collapse") {
+        x.className = "navbar-collapse";
+    } else {
+        x.className = "collapse navbar-collapse";
+    } 
+   }
+   </script>
 
 	</body>
 </html>

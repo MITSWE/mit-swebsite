@@ -25,7 +25,6 @@
 
 .learn-more {
   background-color: #f7f7f7;
-  padding-bottom: 10em
 }
 
 .learn-more h2.centered{
@@ -67,6 +66,5 @@
 
 #footer{
     bottom: 0px;
-    position: fixed;
     width: 100vw;
 }
