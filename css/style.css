@@ -1,10 +1,11 @@
 body {
+  background-color:#c3b4ce; /* #BDB1C6 */ /*teal: #63b0bb  yellow: #dbc554*/
+  background-image:url("../images/gear-overlay.png");color:#333;
   margin: 0;
   padding: 0;
   font-size: 1.6rem;
   font-family: "Open Sans", sans-serif;
   color: #2b3e51;
-  background-color: #ffffff;
 }
 
 /* a {
@@ -143,9 +144,72 @@ footer{
   bottom: 0;
 }
 
+.tilted-img{
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 40%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 40%, 0 100%);
+  height: 40em;
+}
+
+.tilted-img2{
+  -webkit-clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
+  clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
+  height: 95em;
+}
+
+.tilted-img3{
+  -webkit-clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+  clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+  height: 90em;
+}
+
+.tilted {
+  background: none;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+.tilted:after {
+  background: #7D6890;
+  background-image: url(../images/gear-overlay.png);
+  top: 40%;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: skewY(8.5deg);
+  transform-origin: 90%;
+  z-index: -1;
+}
+
+.tilted-2 {
+  background: #41ade5;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+.tilted-2:after {
+  background: inherit;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: skewY(-1.5deg);
+  transform-origin: 100%;
+  z-index: -1;
+}
+
+.changeColor {
+   background-color: #63b0bb;
+}
+
+.changeColor2 {
+   background-color: #dbc554;
+}
 
 
-/* FONT DECLARATIONS */
-/* div.home-subtext, div.welcome-subtext, div.exec-position, div.board-overview-text, div.announcement-content, div.form-description, div.section-body {
-  font-family: 'Gotham-Light'
-} */
