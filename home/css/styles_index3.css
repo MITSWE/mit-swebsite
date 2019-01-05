@@ -14,6 +14,14 @@
       
 }
 
+h1  {
+  color: #fff;
+  font-size: 48px;  
+  font-family: 'Shift', sans-serif;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
 .jumbotron h1 {
   color: #fff;
   font-size: 48px;  
@@ -21,6 +29,8 @@
   font-weight: bold;
   margin-bottom: 20px;
 }
+
+
 
 .jumbotron p {
   font-size: 20px;
