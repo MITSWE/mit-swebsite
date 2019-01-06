@@ -10,7 +10,7 @@
 .jumbotron .container {
   position: relative;
   top: 0%;
-  left: -5%;
+  left: 0%;
       
 }
 
@@ -30,8 +30,6 @@ h1  {
   margin-bottom: 20px;
 }
 
-
-
  p {
   font-size: 20px;
   color: #fff;
@@ -39,22 +37,37 @@ h1  {
 
  ul {
   font-size: 20px;
-  color: #fff;
+  color: #2b3e51;
+  font-family: 'Open Sans', sans-serif;
 }
 
+h2{
+    font-family: 'Open Sans', sans-serif;
+}
+
+h3{
+    font-size: 22px;
+    font-weight: 600;
+    color: #2b3e51;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a{
+    color: #2b3e51;
+    text-decoration: underline;
+}
+
+/*
 .learn-more h3 {
   font-family: 'Shift', sans-serif;
   font-size: 18px;
   font-weight: bold;
 }
+*/
 
+/*
 .learn-more a {
   color: #00b0ff;
 }
-
-/*
-footer{
-  position: fixed;
-  bottom: 0;
-}
 */
+
