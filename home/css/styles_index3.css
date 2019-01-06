@@ -32,7 +32,12 @@ h1  {
 
 
 
-.jumbotron p {
+ p {
+  font-size: 20px;
+  color: #fff;
+}
+
+ ul {
   font-size: 20px;
   color: #fff;
 }
