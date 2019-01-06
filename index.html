@@ -15,6 +15,16 @@
 		<link rel="stylesheet" href="css/mt-global.css">
 <!-- 		page specific styles -->
     	<link rel="stylesheet" href="home/css/styles_index3.css">
+        <script>
+            function toggleFunction() {
+                var x = document.getElementById("navDemo");
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            }
+        </script>
 
        
     </head>
@@ -38,14 +48,12 @@
 		    <ul class="primaryNav-list">
 
 		        <!-- START: Only visible on mobile -->
-<!--
 		       <li class="navItem  navItem--supportNumber">
 		                            <a class="supportNumber" href="tel:+18775784000">877.578.4000</a>
 		                    </li>
  		        <li class="navItem  navItem--login">
 		            <a class="loginLink" href="https://ac.mediatemple.net/login.mt?redirect=home.mt"><span>Members Only</span></a>
 		        </li>
--->
 		        <!-- END: Only visible on mobile -->
 
 
@@ -133,6 +141,7 @@
 
 
 	</header> <!-- /.siteHeader --> 
+    
 
 
     <div class="jumbotron">
