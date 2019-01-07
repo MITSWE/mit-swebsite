@@ -17,8 +17,11 @@
         <link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/mt-global.css">
 <!-- 		page specific styles -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css">
     	<link rel="stylesheet" href="home/css/styles_index3.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        
+    
 
 
 
@@ -26,130 +29,127 @@
     </head>
 
 <body class="page  page--home">
- 
-<header class="siteHeader  strip">
-	    <div class="wrapper">
-	        <!-- Logo -->
-	        <a href="home/" class="branding"><img src="images/SWE_Logo_MIT-horz.png" alt="(MITSWE) SWE Logo"></a>
+    
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="../home/">
+      <img src="images/SWE_Logo_MIT-horz.png" alt="(MITSWE) SWE Logo">
+    </a>
 
-	         <!-- Primary site Nav -->
-	        <a href="#siteNav" class="hamburger  js-menuLink">
-			    <span class="hamburger-bun  hamburger-bun--top"></span>
-			    <span class="hamburger-patty"></span>
-			    <span class="hamburger-bun  hamburger-bun--btm"></span>
-			</a>
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
 
-		<nav id="siteNav" class="navbar primaryNav" role="navigation">
-		    <ul class="primaryNav-list">
+  <div id="navbarBasic" class="navbar-menu">
+    <div class="navbar-start">
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a href="../about/" style="text-decoration: none" class="navbar-link">
+          ABOUT
+        </a>
 
-		        <!-- START: Only visible on mobile -->
-<!--
-		       <li class="navItem  navItem--supportNumber">
-		                            <a class="supportNumber" href="tel:+18775784000">877.578.4000</a>
-		                    </li>
- 		        <li class="navItem  navItem--login">
-		            <a class="loginLink" href="https://ac.mediatemple.net/login.mt?redirect=home.mt"><span>Members Only</span></a>
-		        </li>
--->
-		        <!-- END: Only visible on mobile -->
-
-
-		       	<!-- Web Hosting -->
-		        <!--  About -->
-		        <li class="navItem  hasDropdown  js-hasDropdown">
-		            <a class="js-dropdownTrigger" href="about/"><span>About</span></a>
-
-		            <div class="navDropdown">
-		                <ul class="nav  nav--stacked" style="clear:both">
-		                    <li class="navItem"><a href="about/board">Board Members</a></li>
-		                    <li class="navItem"><a href="about/national_swe_membership">National SWE</a></li>
-                            <li class="navItem"><a href="https://docs.google.com/presentation/d/18lRfIK9OZiP1JhPdA06w2sTWUmZ7444xUYnCKg9V03A/edit">FAQ</a></li>
-		                </ul>
-		            </div>
-		        </li>
-
-		        <!-- Outreach -->
-		        <li class="navItem  hasDropdown  js-hasDropdown ">
-		            <a class="js-dropdownTrigger" href="outreach/"><span >Outreach</span></a>
-
-					 <div class="navDropdown">
-		                <ul class="nav  nav--stacked">
-		                    <li class="navItem"><a href="outreach/elementary_school">Elementary School</a></li> 
-		                    <li class="navItem"><a href="outreach/middle_school">Middle School</a></li> 
-		                    <li class="navItem"><a href="outreach/high_school">High School</a></li> 
-		                    <li class="navItem"><a href="outreach/special_events">Special Events</a></li> 
-		                    <li class="navItem"><a href="outreach/resources">Resources</a></li> 
-
-		                </ul>
-		            </div>
-		        </li>
-
-		        <!-- Corporate -->
-		        <li class="navItem hasDropdown  js-hasDropdown">
-		            <a class="js-dropdownTrigger" href="corporate/"><span>Corporate</span></a>
-		            <div class="navDropdown">
-		                <ul class="nav  nav--stacked">
-		                    <!-- <li class="navItem"><a href="corporate/banquet">Career Fair Banquet</a></li> -->
-		                    <li class="navItem"><a href="../corporate/resume_database/">Resume Database</a></li>
-		                </ul>
-		            </div>
-		        </li>
-
-		        <!-- Calendar -->
-		        <li class="navItem ">
-		            <a href="calendar/"><span>Calendar</span></a>
-		        </li>
-
-		        <!--  News -->
-		        <li class="navItem ">
-		            <a href="news/"><span>News</span></a>
-		        </li>
-
-		        <!-- Contact Us -->
-		        <li class="navItem ">
-		            <a href="contact/"><span>Contact Us</span></a>
-		        </li>		        
-
-				<!-- Members Only -->
-		        <li class="navItem  hasDropdown  js-hasDropdown">
-		            <a class="js-dropdownTrigger" href="members/"><span>For Members</span></a>
-		            <div class="navDropdown">
-		                <ul class="nav  nav--stacked">
-		                    <li class="navItem"><a href="../members/section_resources">Section Resources</a></li>
-                            <li class="navItem"><a href="../members/workshop_resources">Workshop Resources</a></li>
-		                    <li class="navItem"><a href="../members/resume_database/">Resume Upload</a></li>
-		                    <li class="navItem"><a href="http://swe.mit.edu/members/swecubator/">SWEcubator</a></li>
-		                    <li class="navItem"><a href="http://swe.mit.edu/wiki">Board Wiki</a></li>
-		                </ul>
-		            </div>
-		        </li>
-		    </ul>
-		</nav>
-    </div>
-<!-- 
-        <div id="siteNav" class="navbar  primaryNav rightNav">
-		    <ul class="nav  headerNav  u-pullRight">
-				
-		           
-	        </ul>
+        <div class="navbar-dropdown">
+          <a href="../about/board/" style="text-decoration: none" class="navbar-item">
+            Board Members
+          </a>
+          <a href="../about/national_swe_membership/" style="text-decoration: none" class="navbar-item">
+            National SWE
+          </a>
+          <a href="https://docs.google.com/presentation/d/18lRfIK9OZiP1JhPdA06w2sTWUmZ7444xUYnCKg9V03A/edit" style="text-decoration: none" class="navbar-item">
+            FAQ
+          </a>
         </div>
-	    </div> <!-- /.wrapper -->
-	    <div class="navDropdown--background offPage"></div> 
+      </div>
 
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a href="../outreach/" style="text-decoration: none" class="navbar-link">
+          OUTREACH
+        </a>
 
-	</header> <!-- /.siteHeader --> 
+        <div class="navbar-dropdown">
+          <a href="../outreach/elementary_school" style="text-decoration: none" class="navbar-item">
+            Elementary School
+          </a>
+          <a href="../outreach/middle_school" style="text-decoration: none" class="navbar-item">
+            Middle School
+          </a>
+          <a href="../outreach/high_school" style="text-decoration: none" class="navbar-item">
+            High School
+          </a>
+          <a href="../outreach/special_events" style="text-decoration: none" class="navbar-item">
+            Special Events
+          </a>
+          <a href="../outreach/resources" style="text-decoration: none" class="navbar-item">
+            Resources
+          </a>
+        </div>
+      </div>
+        
+       <div class="navbar-item has-dropdown is-hoverable">
+        <a href="../corporate/" style="text-decoration: none" class="navbar-link">
+          CORPORATE
+        </a>
 
+        <div class="navbar-dropdown">
+          <a href="../corporate/resume_database"style="text-decoration: none" class="navbar-item">
+            Resume Upload
+          </a>
+        </div>
+      </div>
+        
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a href="../members/" style="text-decoration: none" class="navbar-link">
+          MEMBERS
+        </a>
+
+        <div class="navbar-dropdown">
+          <a href="../members/workshop_resources" style="text-decoration: none" class="navbar-item">
+            Workshop Resources
+          </a>
+          <a href="http://swe.mit.edu/members/swecubator/" style="text-decoration: none" class="navbar-item">
+            SWEcubator
+          </a>
+          <a href="http://swe.mit.edu/wiki/" style="text-decoration: none" class="navbar-item">
+            Board Wiki
+          </a>
+        </div>
+      </div>
+        
+      <a href="../calendar/" style="text-decoration: none" class="navbar-item">
+        CALENDAR
+      </a>
+        
+      <a href="../contact/" style="text-decoration: none" class="navbar-item">
+        CONTACT
+      </a>
+
+      
+    </div>
+
+<!--
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-primary">
+            <strong>Sign up</strong>
+          </a>
+          <a class="button is-light">
+            Log in
+          </a>
+        </div>
+      </div>
+    </div>
+-->
+  </div>
+</nav>
+ 
 
     <div class="jumbotron tilted-img" style="background-image: url(./images/big-little.jpg)">
 <!--        <div class="jumbotron tilted-img" style="background-color:#63B0BB;background-image: url(./images/gear-overlay.png)">-->
       <div style="left: -5%;" class="container">
         <img src="./images/SWE_Logo_MIT.png" style="width: 40%;">
-          
-<!--
-        <h1>Aspire. Advance. Achieve.</h1>
-        <p>Join MIT Society of Women Engineers.</p>
-        <a href="about/">Learn More</a>
--->
       </div>
     </div> 
 
