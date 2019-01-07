@@ -1,0 +1,659 @@
+-- MySQL dump 9.11
+--
+-- Host: sql.mit.edu    Database: swe+resumedb
+-- ------------------------------------------------------
+-- Server version	5.0.67-log
+
+--
+-- Table structure for table `append_email`
+--
+
+CREATE TABLE append_email (
+  id int(11) NOT NULL auto_increment,
+  emails text NOT NULL,
+  PRIMARY KEY  (id)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `append_email`
+--
+
+
+--
+-- Table structure for table `degrees`
+--
+
+CREATE TABLE degrees (
+  degrees_id int(10) unsigned NOT NULL auto_increment,
+  `name` varchar(255) NOT NULL default '',
+  abbreviation varchar(10) NOT NULL default '',
+  sort_order int(11) NOT NULL default '0',
+  PRIMARY KEY  (degrees_id),
+  UNIQUE KEY abbreviation (abbreviation),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `degrees`
+--
+
+INSERT INTO degrees VALUES (2,'Masters (SM, MEng, MBA, etc)','masters',2);
+INSERT INTO degrees VALUES (3,'Doctorate (PhD, ScD, etc)','phd',3);
+INSERT INTO degrees VALUES (4,'Other','other',4);
+INSERT INTO degrees VALUES (6,'Bachelors (SB, etc)','bachelors',1);
+
+--
+-- Table structure for table `departments`
+--
+
+CREATE TABLE departments (
+  departments_id int(11) NOT NULL auto_increment,
+  `name` varchar(255) NOT NULL default '',
+  abbreviation varchar(10) NOT NULL default '',
+  sort_order int(11) NOT NULL default '0',
+  PRIMARY KEY  (departments_id),
+  UNIQUE KEY `name` (`name`),
+  UNIQUE KEY abbreviation (abbreviation)
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `departments`
+--
+
+INSERT INTO departments VALUES (1,'Course 1 - Civil and Environmental Engineering','1',1);
+INSERT INTO departments VALUES (2,'Course 2 - Mechanical Engineering','2',2);
+INSERT INTO departments VALUES (3,'Course 3 - Material Science and Engineering','3',3);
+INSERT INTO departments VALUES (4,'Course 4 - Architecture','4',4);
+INSERT INTO departments VALUES (5,'Course 5 - Chemistry','5',5);
+INSERT INTO departments VALUES (6,'Course 6 - Electrical Engineering and Computer Science','6',6);
+INSERT INTO departments VALUES (7,'Course 7 - Biology','7',7);
+INSERT INTO departments VALUES (8,'Course 8 - Physics','8',8);
+INSERT INTO departments VALUES (9,'Course 9 - Brain and Cognitive Sciences','9',9);
+INSERT INTO departments VALUES (10,'Course 10 - Chemical Engineering','10',10);
+INSERT INTO departments VALUES (11,'Course 11 - Urban Studies and Planning','11',11);
+INSERT INTO departments VALUES (12,'Course 12 - Earth, Atmospheric, and Planetary Sciences','12',12);
+INSERT INTO departments VALUES (13,'Course 13 - Ocean Engineering','13',13);
+INSERT INTO departments VALUES (14,'Course 14 - Economics','14',14);
+INSERT INTO departments VALUES (15,'Course 15 - Management','15',15);
+INSERT INTO departments VALUES (16,'Course 16 - Aeronautics and Astronautics','16',16);
+INSERT INTO departments VALUES (17,'Course 17 - Political Science','17',17);
+INSERT INTO departments VALUES (18,'Course 18 - Mathematics','18',18);
+INSERT INTO departments VALUES (19,'Course 20 - Biological Engineering','20',19);
+INSERT INTO departments VALUES (20,'Course 21a - Anthropology','21a',20);
+INSERT INTO departments VALUES (21,'Course 21f - Foreign Languages and Literature','21f',21);
+INSERT INTO departments VALUES (22,'Course 21h - History','21h',22);
+INSERT INTO departments VALUES (23,'Course 21l - Literature','21l',23);
+INSERT INTO departments VALUES (24,'Course 21m - Music and Theater Arts','21m',24);
+INSERT INTO departments VALUES (25,'Course 21w - Writing and Humanistic Studies','21w',25);
+INSERT INTO departments VALUES (26,'Course 22 - Nuclear Science and Engineering','22',26);
+INSERT INTO departments VALUES (27,'Course 24 - Linguistics and Philosophy','24',27);
+INSERT INTO departments VALUES (28,'CMS - Comparative Media Studies','cms',28);
+INSERT INTO departments VALUES (29,'CSB - Computational and Systems Biology','csb',29);
+INSERT INTO departments VALUES (30,'ESD - Engineering Systems Division','esd',30);
+INSERT INTO departments VALUES (31,'HST - Health Sciences and Technology','hst',31);
+INSERT INTO departments VALUES (32,'MAS - Media Arts and Sciences','mas',32);
+INSERT INTO departments VALUES (33,'STS - Science, Technology, and Society','sts',33);
+INSERT INTO departments VALUES (34,'Women\'s Studies Program','wom',34);
+INSERT INTO departments VALUES (35,'CDO - Computation for Design and Optimization','cdo',0);
+INSERT INTO departments VALUES (36,'OR - Operations Research','or',0);
+
+--
+-- Table structure for table `e_companies`
+--
+
+CREATE TABLE e_companies (
+  e_companies_id int(10) unsigned NOT NULL auto_increment,
+  create_date timestamp NOT NULL default CURRENT_TIMESTAMP,
+  `name` varchar(60) NOT NULL default '',
+  division varchar(60) NOT NULL default '',
+  addr1 varchar(60) NOT NULL default '',
+  addr2 varchar(60) NOT NULL default '',
+  city varchar(30) NOT NULL default '',
+  state varchar(5) NOT NULL default '',
+  zip varchar(10) NOT NULL default '',
+  country varchar(60) NOT NULL default '',
+  url varchar(255) NOT NULL default '',
+  size enum('','Small (<50 employees)','Medium (50 - 500 employees)','Large (>500 employees)') NOT NULL default '',
+  description text NOT NULL,
+  bus_underrep enum('n','y') NOT NULL default 'n',
+  bus_finance enum('n','y') NOT NULL default 'n',
+  bus_nonprofit enum('n','y') NOT NULL default 'n',
+  policy_race enum('','y','n') NOT NULL default '',
+  policy_gender enum('','y','n') NOT NULL default '',
+  policy_sexorientation enum('','y','n') NOT NULL default '',
+  policy_color enum('','y','n') NOT NULL default '',
+  policy_disability enum('','y','n') NOT NULL default '',
+  policy_religion enum('','y','n') NOT NULL default '',
+  benefits_samesex enum('','y','n') NOT NULL default '',
+  employ_foreign enum('','y','n') NOT NULL default '',
+  need_wireless enum('','n','y','m') NOT NULL default '',
+  supply_transport enum('','bring','ship') NOT NULL default '',
+  reps_travel enum('','air','car') NOT NULL default '',
+  alum_dinner tinyint(3) unsigned NOT NULL default '0',
+  swe_event tinyint(3) unsigned NOT NULL default '0',
+  class_event tinyint(3) unsigned NOT NULL default '0',
+  special_requests text NOT NULL,
+  will_ship enum('y','n') NOT NULL default 'n',
+  num_packages int(11) NOT NULL default '0',
+  tracking_info text NOT NULL,
+  hotel varchar(60) NOT NULL default '',
+  num_dinner int(11) NOT NULL default '0',
+  resume_only enum('y','n') NOT NULL default 'n',
+  PRIMARY KEY  (e_companies_id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `e_companies`
+--
+
+
+--
+-- Table structure for table `e_companies_degrees`
+--
+
+CREATE TABLE e_companies_degrees (
+  e_companies_degrees_id int(10) unsigned NOT NULL auto_increment,
+  e_companies_id int(10) unsigned NOT NULL default '0',
+  degree varchar(10) NOT NULL default '',
+  PRIMARY KEY  (e_companies_degrees_id),
+  KEY e_companies_id (e_companies_id),
+  KEY degree (degree)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `e_companies_degrees`
+--
+
+
+--
+-- Table structure for table `e_companies_depts`
+--
+
+CREATE TABLE e_companies_depts (
+  e_companies_depts_id int(10) unsigned NOT NULL auto_increment,
+  e_companies_id int(10) unsigned NOT NULL default '0',
+  department varchar(10) NOT NULL default '',
+  PRIMARY KEY  (e_companies_depts_id),
+  KEY e_companies_id (e_companies_id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `e_companies_depts`
+--
+
+
+--
+-- Table structure for table `e_companies_industries`
+--
+
+CREATE TABLE e_companies_industries (
+  e_companies_industries_id int(10) unsigned NOT NULL auto_increment,
+  e_companies_id int(10) unsigned NOT NULL default '0',
+  industry varchar(10) NOT NULL default '',
+  PRIMARY KEY  (e_companies_industries_id),
+  KEY e_companies_id (e_companies_id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `e_companies_industries`
+--
+
+
+--
+-- Table structure for table `e_companies_jobtypes`
+--
+
+CREATE TABLE e_companies_jobtypes (
+  e_companies_jobtypes_id int(10) unsigned NOT NULL auto_increment,
+  e_companies_id int(10) unsigned NOT NULL default '0',
+  jobtype varchar(10) NOT NULL default '',
+  PRIMARY KEY  (e_companies_jobtypes_id),
+  KEY e_companies_id (e_companies_id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `e_companies_jobtypes`
+--
+
+
+--
+-- Table structure for table `e_master_information`
+--
+
+CREATE TABLE e_master_information (
+  id int(10) unsigned NOT NULL auto_increment,
+  e_companies_id int(10) unsigned NOT NULL default '0',
+  create_date timestamp NOT NULL default CURRENT_TIMESTAMP,
+  `name` varchar(60) NOT NULL default '',
+  division varchar(60) NOT NULL default '',
+  addr1 varchar(60) NOT NULL default '',
+  addr2 varchar(60) NOT NULL default '',
+  city varchar(30) NOT NULL default '',
+  state varchar(5) NOT NULL default '',
+  zip varchar(10) NOT NULL default '',
+  country varchar(60) NOT NULL default '',
+  url varchar(255) NOT NULL default '',
+  size enum('','Small (<50 employees)','Medium (50 - 500 employees)','Large (>500 employees)') NOT NULL default '',
+  description text NOT NULL,
+  bus_underrep enum('n','y') NOT NULL default 'n',
+  bus_finance enum('n','y') NOT NULL default 'n',
+  bus_nonprofit enum('n','y') NOT NULL default 'n',
+  employ_foreign enum('','y','n') NOT NULL default '',
+  need_wireless enum('','n','y','m') NOT NULL default '',
+  supply_transport enum('','bring','ship') NOT NULL default '',
+  reps_travel enum('','air','car') NOT NULL default '',
+  alum_dinner tinyint(3) unsigned NOT NULL default '0',
+  swe_event tinyint(3) unsigned NOT NULL default '0',
+  class_event tinyint(3) unsigned NOT NULL default '0',
+  special_requests text NOT NULL,
+  will_ship enum('y','n') NOT NULL default 'n',
+  num_packages int(11) NOT NULL default '0',
+  tracking_info text NOT NULL,
+  hotel varchar(60) NOT NULL default '',
+  num_dinner int(11) NOT NULL default '0',
+  degree text NOT NULL,
+  industry text NOT NULL,
+  major text NOT NULL,
+  research_area text NOT NULL,
+  locations text NOT NULL,
+  full_time_positions text NOT NULL,
+  divisions_hiring text NOT NULL,
+  summer_internship text NOT NULL,
+  num_internships text NOT NULL,
+  add_job_qualifications text NOT NULL,
+  PRIMARY KEY  (id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `e_master_information`
+--
+
+
+--
+-- Table structure for table `e_reps`
+--
+
+CREATE TABLE e_reps (
+  e_reps_id int(10) unsigned NOT NULL auto_increment,
+  e_companies_id int(10) unsigned NOT NULL default '0',
+  email varchar(255) NOT NULL default '',
+  firstname varchar(30) NOT NULL default '',
+  lastname varchar(30) NOT NULL default '',
+  position varchar(30) NOT NULL default '',
+  phone varchar(30) NOT NULL default '',
+  vegetarian enum('n','y') NOT NULL default 'n',
+  alum enum('n','y') NOT NULL default 'n',
+  PRIMARY KEY  (e_reps_id),
+  KEY e_companies_id (e_companies_id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `e_reps`
+--
+
+
+--
+-- Table structure for table `e_users`
+--
+
+CREATE TABLE e_users (
+  e_users_id int(10) unsigned NOT NULL auto_increment,
+  e_companies_id int(10) unsigned NOT NULL default '0',
+  username varchar(255) NOT NULL,
+  `password` varchar(32) character set latin1 collate latin1_bin NOT NULL default '',
+  `session` char(32) NOT NULL,
+  cookie char(32) NOT NULL,
+  ip varchar(15) NOT NULL,
+  confirm_hash varchar(32) character set latin1 collate latin1_bin NOT NULL default '',
+  is_confirmed smallint(6) NOT NULL default '0',
+  firstname varchar(30) NOT NULL default '',
+  lastname varchar(30) NOT NULL default '',
+  phone varchar(30) NOT NULL default '',
+  vegetarian enum('n','y') NOT NULL default 'n',
+  alum enum('n','y') NOT NULL default 'n',
+  PRIMARY KEY  (e_users_id),
+  KEY e_companies_id (e_companies_id)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `e_users`
+--
+
+INSERT INTO e_users VALUES (1,0,'wenliu','3f789218e8c73490ed074cf09a19ba6d','3f789218e8c73490ed074cf09a19ba6d','3f789218e8c73490ed074cf09a19ba6d','18.95.5.32','',1,'','','','n','n');
+
+--
+-- Table structure for table `industries`
+--
+
+CREATE TABLE industries (
+  industries_id int(10) unsigned NOT NULL auto_increment,
+  `name` varchar(255) NOT NULL default '',
+  abbreviation varchar(10) NOT NULL default '',
+  sort_order int(11) NOT NULL default '0',
+  PRIMARY KEY  (industries_id),
+  UNIQUE KEY `name` (`name`),
+  UNIQUE KEY abbreviation (abbreviation)
+) ENGINE=InnoDB AUTO_INCREMENT=63 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `industries`
+--
+
+INSERT INTO industries VALUES (1,'Advertising/Marketing','advmar',1);
+INSERT INTO industries VALUES (2,'Aerospace','aero',2);
+INSERT INTO industries VALUES (3,'Agriculture','agri',3);
+INSERT INTO industries VALUES (4,'Architecture/Urban Planning','archurbn',4);
+INSERT INTO industries VALUES (5,'Arts','arts',5);
+INSERT INTO industries VALUES (6,'Automotive','auto',6);
+INSERT INTO industries VALUES (7,'Banking','bank',7);
+INSERT INTO industries VALUES (8,'Biotech/Pharmaceuticals','biopharm',8);
+INSERT INTO industries VALUES (9,'Business Services','busserv',9);
+INSERT INTO industries VALUES (10,'Chemicals','chem',10);
+INSERT INTO industries VALUES (11,'Communications/Media','commedia',11);
+INSERT INTO industries VALUES (12,'Computers','computer',12);
+INSERT INTO industries VALUES (13,'Construction','construct',13);
+INSERT INTO industries VALUES (14,'Consulting','consult',14);
+INSERT INTO industries VALUES (15,'Consumer Products','consume',15);
+INSERT INTO industries VALUES (16,'Education','education',16);
+INSERT INTO industries VALUES (17,'Electronics','electronic',17);
+INSERT INTO industries VALUES (18,'Energy','energy',18);
+INSERT INTO industries VALUES (19,'Engineering','engineer',19);
+INSERT INTO industries VALUES (20,'Entertainment','entertain',20);
+INSERT INTO industries VALUES (21,'Entrepreneurial/Start-Ups','entreprene',21);
+INSERT INTO industries VALUES (22,'Environment','environ',22);
+INSERT INTO industries VALUES (23,'Fashion','fashion',23);
+INSERT INTO industries VALUES (24,'Financial Services','financial',24);
+INSERT INTO industries VALUES (25,'Food Science','foodscienc',25);
+INSERT INTO industries VALUES (26,'Food Services','foodsvc',26);
+INSERT INTO industries VALUES (27,'Forestry','forestry',27);
+INSERT INTO industries VALUES (28,'Government/Public Administration','government',28);
+INSERT INTO industries VALUES (29,'Healthcare','healthcare',29);
+INSERT INTO industries VALUES (30,'Hotel, Restaurant, Hospitality','hotel',30);
+INSERT INTO industries VALUES (31,'Housing and Urban Development','housing',31);
+INSERT INTO industries VALUES (32,'Information Technology','infotech',32);
+INSERT INTO industries VALUES (33,'Insurance','insurance',33);
+INSERT INTO industries VALUES (34,'International Affairs','intaffair',34);
+INSERT INTO industries VALUES (35,'Internet','internet',35);
+INSERT INTO industries VALUES (36,'Investment Banking','investment',36);
+INSERT INTO industries VALUES (37,'Law','law',37);
+INSERT INTO industries VALUES (38,'Law Enforcement','lawenforce',38);
+INSERT INTO industries VALUES (39,'Manufacturing','manufact',39);
+INSERT INTO industries VALUES (40,'Maritime','maritime',40);
+INSERT INTO industries VALUES (41,'Military and Defense','military',41);
+INSERT INTO industries VALUES (42,'Mining','mining',42);
+INSERT INTO industries VALUES (43,'Museums and Libraries','museum',43);
+INSERT INTO industries VALUES (44,'Natural Resources','natresourc',44);
+INSERT INTO industries VALUES (45,'Non-Profit/Philanthropy','nonprofit',45);
+INSERT INTO industries VALUES (46,'Parks and Recreations','parksrec',46);
+INSERT INTO industries VALUES (47,'Printing and Publishing','printpub',47);
+INSERT INTO industries VALUES (48,'Real Estate','realestate',48);
+INSERT INTO industries VALUES (49,'Religion','religion',49);
+INSERT INTO industries VALUES (50,'Retail/Wholesale','retail',50);
+INSERT INTO industries VALUES (51,'Sciences','sciences',51);
+INSERT INTO industries VALUES (52,'Sports','sports',52);
+INSERT INTO industries VALUES (53,'Staffing and Executive Search','staffing',53);
+INSERT INTO industries VALUES (54,'Telecommunications','telecom',54);
+INSERT INTO industries VALUES (55,'Trade','trade',55);
+INSERT INTO industries VALUES (56,'Transportation','transport',56);
+INSERT INTO industries VALUES (57,'Travel and Tourism','travel',57);
+INSERT INTO industries VALUES (58,'Utilities','utilities',58);
+INSERT INTO industries VALUES (59,'Venture Capital/Principal Investing','venture',59);
+INSERT INTO industries VALUES (60,'Veterinary','veterinary',60);
+INSERT INTO industries VALUES (61,'Waste Management','waste',61);
+INSERT INTO industries VALUES (62,'Other','other',62);
+
+--
+-- Table structure for table `jobtypes`
+--
+
+CREATE TABLE jobtypes (
+  jobtypes_id int(10) unsigned NOT NULL auto_increment,
+  `name` varchar(255) NOT NULL default '',
+  abbreviation varchar(10) NOT NULL default '',
+  sort_order int(11) NOT NULL default '0',
+  PRIMARY KEY  (jobtypes_id),
+  UNIQUE KEY `name` (`name`),
+  UNIQUE KEY abbreviation (abbreviation)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `jobtypes`
+--
+
+INSERT INTO jobtypes VALUES (1,'Full Time','fulltime',1);
+INSERT INTO jobtypes VALUES (2,'Part Time','parttime',2);
+INSERT INTO jobtypes VALUES (3,'Summer Internship','intern',3);
+INSERT INTO jobtypes VALUES (4,'Co-op/Semester intern/externship','coop',4);
+
+--
+-- Table structure for table `page_contents`
+--
+
+CREATE TABLE page_contents (
+  page_id int(10) unsigned NOT NULL auto_increment,
+  page_title varchar(255) NOT NULL default '',
+  page_text longtext NOT NULL,
+  page_url varchar(255) NOT NULL default '',
+  page_section varchar(255) NOT NULL default '',
+  PRIMARY KEY  (page_id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `page_contents`
+--
+
+
+--
+-- Table structure for table `s_resumes`
+--
+
+CREATE TABLE s_resumes (
+  s_resumes_id int(10) unsigned NOT NULL auto_increment,
+  s_users_id int(10) unsigned NOT NULL default '0',
+  file_location varchar(255) NOT NULL,
+  PRIMARY KEY  (s_resumes_id),
+  UNIQUE KEY s_users_id (s_users_id)
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `s_resumes`
+--
+
+INSERT INTO s_resumes VALUES (30,1,'/resumes/2008/wenliu_h7nahgid.pdf');
+INSERT INTO s_resumes VALUES (31,1015,'/resumes/2008/kkuan87_qwlvnf6m.pdf');
+
+--
+-- Table structure for table `s_users`
+--
+
+CREATE TABLE s_users (
+  s_users_id int(10) unsigned NOT NULL auto_increment,
+  access enum('student','admin') NOT NULL,
+  username varchar(255) NOT NULL,
+  `password` varchar(32) character set latin1 collate latin1_bin NOT NULL default '',
+  cookie char(32) NOT NULL,
+  `session` char(32) NOT NULL,
+  ip varchar(15) NOT NULL,
+  confirm_hash varchar(32) character set latin1 collate latin1_bin NOT NULL default '',
+  is_confirmed smallint(6) NOT NULL default '0',
+  firstname varchar(30) NOT NULL default '',
+  lastname varchar(30) NOT NULL default '',
+  citizenship enum('us','perm','intl') default NULL,
+  alt_email varchar(255) NOT NULL,
+  PRIMARY KEY  (s_users_id),
+  KEY s_users_id (s_users_id)
+) ENGINE=InnoDB AUTO_INCREMENT=1016 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `s_users`
+--
+
+INSERT INTO s_users VALUES (2,'student','fiona419','3f789218e8c73490ed074cf09a19ba6d','2a38997667720d2c40bb6b2531f6604d','c118933da7c5bd10c74e2991a71438ab','18.95.5.32','3f789218e8c73490ed074cf09a19ba6d',1,'Fiona','Zhang','intl','');
+INSERT INTO s_users VALUES (3,'admin','tinajro','edbd0effac3fcc98e725920a512881e0','','3791b2d3e82dc42bdf49e077b5e5a3aa','18.245.7.10','3c71f0ef15e8711e70697cea7e742696',1,'','',NULL,'');
+INSERT INTO s_users VALUES (4,'admin','wenliu','3f789218e8c73490ed074cf09a19ba6d','','d3f7434b55b828561364422ddbf7932a','18.60.12.137','cbe8cf8f917d25591a42e4a990052849',1,'Wenhao','Liu','us','wenliu@gmail.com');
+INSERT INTO s_users VALUES (1015,'student','kkuan87','f73ad31f3edfe513a3d5d2bc3fb537e3','','313338e6e30e61ec99f7525f779c98e3','18.19.0.40','893e157e302cd986743447520a6b33ac',1,'Katherine','Kuan','us','');
+
+--
+-- Table structure for table `s_users_degrees`
+--
+
+CREATE TABLE s_users_degrees (
+  s_users_degrees_id int(10) unsigned NOT NULL auto_increment,
+  s_users_id int(10) unsigned NOT NULL default '0',
+  department varchar(10) NOT NULL default '',
+  degree varchar(10) NOT NULL default '',
+  `year` varchar(4) NOT NULL default '',
+  PRIMARY KEY  (s_users_degrees_id),
+  KEY s_users_id (s_users_id),
+  KEY degree (degree),
+  KEY department (department)
+) ENGINE=InnoDB AUTO_INCREMENT=1228 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `s_users_degrees`
+--
+
+INSERT INTO s_users_degrees VALUES (168,0,'5','phd','2007');
+INSERT INTO s_users_degrees VALUES (169,0,'15','masters','2012');
+INSERT INTO s_users_degrees VALUES (201,1,'5','phd','2010');
+INSERT INTO s_users_degrees VALUES (202,1,'15','masters','2009');
+INSERT INTO s_users_degrees VALUES (1222,4,'5','phd','2010');
+INSERT INTO s_users_degrees VALUES (1225,2,'or','bachelors','2012');
+INSERT INTO s_users_degrees VALUES (1226,2,'hst','masters','2012');
+INSERT INTO s_users_degrees VALUES (1227,1015,'6','bachelors','2009');
+
+--
+-- Table structure for table `s_users_events`
+--
+
+CREATE TABLE s_users_events (
+  s_users_events_id int(10) unsigned NOT NULL auto_increment,
+  events_id int(10) unsigned NOT NULL default '0',
+  s_users_id int(10) unsigned NOT NULL default '0',
+  rsvp_time timestamp NOT NULL default CURRENT_TIMESTAMP,
+  PRIMARY KEY  (s_users_events_id),
+  KEY s_users_id (s_users_id),
+  KEY events_id (events_id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `s_users_events`
+--
+
+
+--
+-- Table structure for table `s_users_industries`
+--
+
+CREATE TABLE s_users_industries (
+  s_users_industries_id int(10) unsigned NOT NULL auto_increment,
+  s_users_id int(10) unsigned NOT NULL default '0',
+  industry varchar(10) NOT NULL default '',
+  PRIMARY KEY  (s_users_industries_id),
+  KEY s_users_id (s_users_id),
+  KEY industry (industry)
+) ENGINE=InnoDB AUTO_INCREMENT=403 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `s_users_industries`
+--
+
+INSERT INTO s_users_industries VALUES (275,0,'advmar');
+INSERT INTO s_users_industries VALUES (347,1,'aero');
+INSERT INTO s_users_industries VALUES (348,1,'bank');
+INSERT INTO s_users_industries VALUES (349,1,'biopharm');
+INSERT INTO s_users_industries VALUES (350,1,'chem');
+INSERT INTO s_users_industries VALUES (351,1,'computer');
+INSERT INTO s_users_industries VALUES (388,4,'aero');
+INSERT INTO s_users_industries VALUES (389,4,'bank');
+INSERT INTO s_users_industries VALUES (390,4,'biopharm');
+INSERT INTO s_users_industries VALUES (391,4,'chem');
+INSERT INTO s_users_industries VALUES (392,4,'computer');
+INSERT INTO s_users_industries VALUES (397,2,'archurbn');
+INSERT INTO s_users_industries VALUES (398,2,'arts');
+INSERT INTO s_users_industries VALUES (399,2,'auto');
+INSERT INTO s_users_industries VALUES (400,2,'bank');
+INSERT INTO s_users_industries VALUES (401,1015,'computer');
+INSERT INTO s_users_industries VALUES (402,1015,'engineer');
+
+--
+-- Table structure for table `s_users_jobtypes`
+--
+
+CREATE TABLE s_users_jobtypes (
+  s_users_jobtypes_id int(10) unsigned NOT NULL auto_increment,
+  s_users_id int(10) unsigned NOT NULL default '0',
+  jobtype varchar(10) NOT NULL default '',
+  PRIMARY KEY  (s_users_jobtypes_id),
+  KEY s_users_id (s_users_id),
+  KEY jobtype (jobtype)
+) ENGINE=InnoDB AUTO_INCREMENT=287 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `s_users_jobtypes`
+--
+
+INSERT INTO s_users_jobtypes VALUES (238,0,'parttime');
+INSERT INTO s_users_jobtypes VALUES (267,1,'fulltime');
+INSERT INTO s_users_jobtypes VALUES (282,4,'fulltime');
+INSERT INTO s_users_jobtypes VALUES (283,4,'intern');
+INSERT INTO s_users_jobtypes VALUES (285,2,'fulltime');
+INSERT INTO s_users_jobtypes VALUES (286,1015,'fulltime');
+
+--
+-- Table structure for table `s_users_mangotext`
+--
+
+CREATE TABLE s_users_mangotext (
+  id int(11) NOT NULL auto_increment,
+  s_users_id int(11) NOT NULL default '0',
+  firstname varchar(255) NOT NULL default '',
+  lastname varchar(255) NOT NULL default '',
+  username varchar(255) NOT NULL default '',
+  cell_phone varchar(15) NOT NULL default '',
+  aim_name varchar(30) NOT NULL default '',
+  gtalk_name varchar(30) NOT NULL default '',
+  volunteer enum('y','n') NOT NULL default 'n',
+  PRIMARY KEY  (id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `s_users_mangotext`
+--
+
+
+--
+-- Table structure for table `s_users_onsite`
+--
+
+CREATE TABLE s_users_onsite (
+  id int(11) NOT NULL auto_increment,
+  username varchar(255) NOT NULL default '',
+  `time` timestamp NOT NULL default CURRENT_TIMESTAMP,
+  PRIMARY KEY  (id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `s_users_onsite`
+--
+
+
+--
+-- Table structure for table `s_users_volunteer`
+--
+
+CREATE TABLE s_users_volunteer (
+  s_users_volunteer_id int(10) unsigned NOT NULL auto_increment,
+  s_users_id int(10) unsigned NOT NULL default '0',
+  volunteer_types_id int(10) unsigned NOT NULL default '0',
+  extra_input text NOT NULL,
+  PRIMARY KEY  (s_users_volunteer_id),
+  KEY s_users_id (s_users_id),
+  KEY volunteer_types_id (volunteer_types_id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `s_users_volunteer`
+--
+
+

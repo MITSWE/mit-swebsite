@@ -1,0 +1,93 @@
+
+
+.jumbotron {
+  background-image: url(../images/background_about.png);
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.jumbotron .container {
+  position: relative;
+  top:100px;
+}
+
+.jumbotron h1 {
+  color: #fff;
+  font-size: 48px;  
+  font-family: 'Shift', sans-serif;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.jumbotron p {
+  font-size: 20px;
+  color: #fff;
+}
+
+.learn-more {
+  /*background-color: #f7f7f7;*/
+
+}
+
+.learn-more h2.centered{
+  font-family: 'Shift', sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  
+}
+.learn-more h3 {
+  font-family: 'Shift', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+#creditfooter{
+  color:white;
+}
+
+.learn-more a {
+  font-family: 'Shift', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 20px;
+  color: #5A5377;
+  /* padding-top: 20px; */
+}
+
+.learn-more ul {
+  list-style: none;
+}
+
+.learn-more span.headline {
+  padding-top: 10px;
+  border-bottom: thin solid #5A5377;
+}
+
+.learn-more li {
+  margin-bottom: 30px;
+}
+
+
+.learn-more p {
+  font-family: 'Shift', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+}
+.learn-more a.all-posts {
+  font-size: 12px;
+  float: right;
+}
+
+
+
+/*
+footer{
+  position: fixed;
+  bottom: 0;
+}
+*/
+.snapwidget{
+  text-align:center;
+}

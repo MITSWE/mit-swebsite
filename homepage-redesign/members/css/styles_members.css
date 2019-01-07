@@ -1,0 +1,70 @@
+.jumbotron {
+  background-image: url(../images/background_section_resources.png);
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.jumbotron .container .j{
+  position: relative;
+  top:100px;
+}
+
+.jumbotron h1 {
+  color: #fff;
+  font-size: 48px;  
+  font-family: 'Shift', sans-serif;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.jumbotron p {
+  font-size: 20px;
+  color: #fff;
+}
+
+.learn-more {
+  background-color: #f7f7f7;
+}
+
+.learn-more h2.centered{
+  font-family: 'Shift', sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  
+}
+
+.learn-more h3 {
+  font-family: 'Shift', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.learn-more a {
+  color: #00b0ff;
+}
+
+.learn-more h2.centered_with_image{
+  font-family: 'Shift', sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;  
+}
+
+.learn-more h4 {
+  font-family: 'Shift', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #1D153C;
+}
+
+.learn-more p {
+  font-size: 14px;
+  color: black;
+}
+
+#footer{
+    bottom: 0px;
+    width: 100vw;
+}

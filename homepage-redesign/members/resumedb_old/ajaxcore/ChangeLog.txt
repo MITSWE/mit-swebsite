@@ -1,0 +1,35 @@
+v1.4.0
+    +Added new schema for passing values on the binding methods, which is really string against unescaped chars and works flawlessly using an array where you may choose the variable name and the html element to take the value from
+    Example
+        bindInline("compute_sum",array('a' => "number1", 'b' => "number2")) where a is the variable name, and "number1" is the html element to take the value from.
+            or using static values
+        bindInline("print_static",array('counter' => "hidden_counter", '_static' => $output)) where _static is the variable name ( underscore _ means it's static ) and $output is the value.
+    +Fixed bug with timers and subsequent requests
+    +Added more PHP Custom Errors when illegal values are used in AjaxCore's methods
+    +Added PHP Custom Warning when deprecated methods are used. To keep using the class with deprecated methods, please change the error reporting on the top of the class to E_NONE
+    +Improved overall performance
+    +Added transparent encoding options for param's names and values.
+        setEncodeVars, to encode vars names
+        setEncodeValues, to encode vars values ( default )
+    +Placeholders method's get deprecated, on the will that htmlInner is used for outputting content.
+    +Switched Default class to PHP 5.x, although support for PHP 4.x will remain.
+v1.3.1
+    +Fixed bug with setJSCode using onLoad event
+    +Updated prototype to 1.6.0.2
+v1.3.0
+    +Added support for bookmarking and back button
+    +Fixed problem with escapeJS function pointed in the forums
+v1.2.2
+    +Fixed bug when getting the value of a var using $this->request['variableName'],please use this->getValue("variableName") instead
+    +Added getValue method
+v1.2.1
+    +Added Inline bindings, this new schema allows to attach an AJAX event directly into the definition of the HTML object and allows subsequent bindings upon new content is placed.
+    +New method setOutputHeaders prevents output PHP error "Cannot modify header information - headers already sent by xxx" when not using template engine.
+    +PHP Custom Errors are now triggered upon illegal bindings, with parameters sets to empty or illegal values.
+    +More methods for common things like setting outputting JavaScript code to set up location, windows title.
+    +Fixed error upon setting unescaped strings.
+    +Compatibility with previous versions of AjaxCore.
+    +Updated helpdocs to reflect new changes.
+    +Added this file for quick reference.
+    +Added License file to package.
+

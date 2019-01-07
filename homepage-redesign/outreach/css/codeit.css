@@ -1,0 +1,244 @@
+@CHARSET "ISO-8859-1";
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+@import url(http://fonts.googleapis.com/css?family=Fauna+One);
+@import url(http://fonts.googleapis.com/css?family=Questrial);
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    /* Needed for mobile WebKit */
+    
+    -moz-box-sizing: border-box;
+    /* Needed for Firefox */
+    
+    box-sizing: border-box
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+table {
+    border-spacing: 0;
+}
+fieldset, img {
+    border: 0;
+}
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-weight: normal;
+    font-style: normal;
+}
+strong {
+    font-weight: bold;
+}
+ol, ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+caption, th {
+    text-align: left;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+}
+q:before, q:after {
+    content: '';
+}
+abbr, acronym {
+    border: 0;
+}
+/* Custom CSS
+ * --------------------------------------- */
+
+body {
+    font-family: 'Fauna One', sans-serif;
+    color: #fff;
+}
+.wrap {
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+    position: relative;
+}
+h1 {
+    font-size: 4em;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-family: 'Questrial', sans-serif;
+    font-weight: 400;
+    color: #5d47b6;
+    padding: 20px;
+    border: 1px solid #5d47b6;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+h2 {
+    font-size: 1.6em;
+    line-height: 1.4em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+h6 {
+    text-transform: uppercase;
+    font-family: 'Questrial', sans-serif;
+    font-weight: 600;
+    margin-top: 20px;
+    color: #5d47b6;
+}
+p {
+    font-size: 1em;
+    font-family: 'Fauna One', serif;
+}
+.intro p {
+    width: 50%;
+    margin: 0 auto;
+    font-size: 1.5em;
+}
+.section {
+    text-align: center;
+    min-height: 90vh;
+    min-height: 600px;
+}
+.content {
+    width: 50%;
+    padding-top: 10%;
+    margin: 0 auto;
+}
+/* Backgrounds will cover all the section
+* --------------------------------------- */
+
+#home, #about {
+    background-repeat: no-repeat;
+}
+#home {
+    background: url('http://40.media.tumblr.com/38e8014b6941cf1dd9cf814c57f12942/tumblr_ndyfvm0EwX1tubinno1_1280.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: 10;
+    height: 65vh;
+}
+#homediv {
+    width: 100vw;
+    height: 50vh;
+    background-color: #fff;
+    position: absolute;
+    top: 0px;
+    color: #444;
+}
+
+#about {
+    text-align: left;
+    color: #444;
+}
+.apply {
+    padding: 20px;
+    border: 1px solid #DB630D;
+    color: #fff;
+    font-family: 'Questrial', sans-serif;
+    display: inline-block;
+    background: #FD9F92;
+    transition: 0.4s all;
+}
+a:hover .apply {
+    color: #fff;
+    transition: 0.4s all;
+    background: #5d47b6;
+    border: 1px solid #5d47b6;
+}
+#faq {
+    text-align: left;
+}
+.faq-content {
+    color: #444;
+    width: 80%;
+    padding: 0 0 5% 0;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.faq-section {
+    width: 33.33%;
+    float: left;
+    display: inline-block;
+    padding-right: 2%;
+}
+#sponsors {
+    color: #444;
+}
+/*#sponsors img {
+    height: 5em;
+}*/
+.google {
+    height: 15em;
+}
+.akamai {
+    height: 9em;
+}
+.twitter {
+    height: 6em;
+}
+.delphix {
+    height: 4em;
+    margin-bottom: 1.7em;
+}
+#whycare {
+    background: #5d47b6;
+}
+#whycare h1 {
+    color: #fff;
+}
+#whycare h6 {
+    color: #fff;
+    padding: 0 2% 0 0;
+}
+#whycare a {
+    color: #FD9F92;
+}
+#whycare .content {
+    padding-top: 6%;
+    width: 30%;
+}
+#menu li {
+    float: right;
+    display: inline-block;
+    margin: 10px;
+    color: #000;
+    font-family: 'Questrial', sans-serif;
+}
+#menu li.active {
+    color: #5d47b6;
+}
+#menu li a {
+    text-decoration: none;
+    color: #000;
+    transition: 0.3s all;
+}
+#menu li a:hover {
+    color: #FD9F92;
+    transition: 0.3s all;
+}
+#menu li a, #menu li.active a {
+    padding: 9px 18px;
+    display: block;
+}
+#menu li.active a {
+    color: #5d47b6;
+}
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 40px;
+    z-index: 70;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}

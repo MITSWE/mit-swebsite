@@ -1,0 +1,179 @@
+
+
+body{
+  background-image: url("swecubebkgrd.jpg");
+}
+
+
+.jumbotron {
+  background-image: url(../images/background_section_resources.png);
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.jumbotron .container {
+  position: relative;
+  top:100px;
+}
+
+.jumbotron h1 {
+  color: #fff;
+  font-size: 48px;  
+  font-family: 'Shift', sans-serif;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.jumbotron p {
+  font-size: 20px;
+  color: #fff;
+}
+
+.learn-more {
+  background-color: #f7f7f7;
+}
+
+.learn-more h2.centered{
+  font-family: 'Shift', sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.learn-more h3 {
+  font-family: 'Shift', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.learn-more a {
+  color: #00b0ff;
+}
+
+.learn-more h2.centered_with_image{
+  font-family: 'Shift', sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;  
+}
+
+.learn-more h4 {
+  font-family: 'Shift', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #1D153C;
+}
+
+.learn-more p {
+  font-size: 14px;
+  color: black;
+}
+
+.shadow-panel {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.panel{
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  position: relative;
+  float:left;
+  display: flex;
+  /*margin-top: 100px;*/
+  width: 100%;
+  padding: 10px 20px 20px 20px;
+  font-size: 1.2em;
+  border: none;
+  height: 100%;
+  /*margin-left:-100px;*/
+  flex-direction: column;
+  border-radius: 15px;
+  min-height: 60vh;
+}
+
+.yellow-panel{
+  background-color:#dac874;
+}
+
+.lt-purple-panel{
+  background-color:#816b90;
+}
+
+.dk-purple-panel{
+  background-color:#6c6688;
+
+}
+
+.container {
+    margin-right: 0;
+     margin-left: 0; 
+     padding-right: 0;
+     padding-left: 0;
+     width: 100%;
+  -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+     background-image: url("swecubatorbkg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /*background-color:#9999ab;*/
+}
+
+#google-form{
+  display: flex;
+  justify-content: center;
+  align-self: flex-end;
+  height:500px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top:10px;
+}
+
+#form-title{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+#title{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: black;
+}
+
+.flex-container{
+  display: flex;
+}
+
+h1{
+  width:100%;
+}
+
+#swecubator-logo{
+  height:15vw;
+}
+
+.text-container{
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 10px;
+  color: white;
+}
+
+.font30{
+  font-size: 30px;
+}
+
+
+/*
+footer{
+  position: fixed;
+  bottom: 0;
+}
+*/
+

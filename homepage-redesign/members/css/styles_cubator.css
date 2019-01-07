@@ -1,0 +1,110 @@
+
+
+body{
+  background-image: url("swecubebkgrd.jpg");
+}
+
+
+.shadow-panel {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.panel{
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  position: relative;
+  float:left;
+  display: flex;
+  /*margin-top: 100px;*/
+  width: 100%;
+  padding: 10px 20px 20px 20px;
+  font-size: 1.2em;
+  border: none;
+  height: 100%;
+  /*margin-left:-100px;*/
+  flex-direction: column;
+  border-radius: 15px;
+  min-height: 60vh;
+}
+
+.yellow-panel{
+  background-color:#dac874;
+}
+
+.lt-purple-panel{
+  background-color:#816b90;
+}
+
+.dk-purple-panel{
+  background-color:#6c6688;
+
+}
+
+#swecubator-container {
+    margin-right: 0;
+     margin-left: 0; 
+     padding-right: 0;
+     padding-left: 0;
+     width: 100%;
+      background: url(https://image.ibb.co/fp5tkx/Screen_Shot_2018_02_24_at_3_41_13_PM.png) no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+     /*background-image: url("https://image.ibb.co/fp5tkx/Screen_Shot_2018_02_24_at_3_41_13_PM.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;*/
+    background-color:#9999ab;
+}
+
+#google-form{
+  display: flex;
+  justify-content: center;
+  align-self: flex-end;
+  height:500px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top:10px;
+}
+
+#form-title{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+#title{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: black;
+}
+
+.flex-container{
+  display: flex;
+}
+
+h1{
+  width:100%;
+}
+
+#swecubator-logo{
+  height:15vw;
+}
+
+.text-container{
+  font-size: 30px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top:10px;
+  color: white;
+}
+
+/*
+footer{
+  position: fixed;
+  bottom: 0;
+}
+*/
+

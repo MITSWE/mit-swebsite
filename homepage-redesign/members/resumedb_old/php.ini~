@@ -1,0 +1,4 @@
+extension = pdo.so
+extension = pdo_sqlite.so
+extension = pdo_mysql.so
+date.timezone = 'America/New_York"

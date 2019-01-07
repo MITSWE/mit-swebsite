@@ -1,0 +1,590 @@
+-- MySQL dump 10.11
+--
+-- Host: localhost    Database: swe
+-- ------------------------------------------------------
+-- Server version	5.0.51a-3ubuntu5.1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `append_email`
+--
+
+DROP TABLE IF EXISTS `append_email`;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+CREATE TABLE `append_email` (
+  `id` int(11) NOT NULL auto_increment,
+  `emails` text NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Dumping data for table `append_email`
+--
+
+LOCK TABLES `append_email` WRITE;
+/*!40000 ALTER TABLE `append_email` DISABLE KEYS */;
+/*!40000 ALTER TABLE `append_email` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `degrees`
+--
+
+DROP TABLE IF EXISTS `degrees`;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+CREATE TABLE `degrees` (
+  `degrees_id` int(10) unsigned NOT NULL auto_increment,
+  `name` varchar(255) NOT NULL default '',
+  `abbreviation` varchar(10) NOT NULL default '',
+  `sort_order` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`degrees_id`),
+  UNIQUE KEY `abbreviation` (`abbreviation`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Dumping data for table `degrees`
+--
+
+LOCK TABLES `degrees` WRITE;
+/*!40000 ALTER TABLE `degrees` DISABLE KEYS */;
+INSERT INTO `degrees` VALUES (2,'Masters (SM, MEng, MBA, etc)','masters',2),(3,'Doctorate (PhD, ScD, etc)','phd',3),(4,'Other','other',4),(6,'Bachelors (SB, etc)','bachelors',1);
+/*!40000 ALTER TABLE `degrees` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `departments`
+--
+
+DROP TABLE IF EXISTS `departments`;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+CREATE TABLE `departments` (
+  `departments_id` int(11) NOT NULL auto_increment,
+  `name` varchar(255) NOT NULL default '',
+  `abbreviation` varchar(10) NOT NULL default '',
+  `sort_order` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`departments_id`),
+  UNIQUE KEY `name` (`name`),
+  UNIQUE KEY `abbreviation` (`abbreviation`)
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=latin1;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Dumping data for table `departments`
+--
+
+LOCK TABLES `departments` WRITE;
+/*!40000 ALTER TABLE `departments` DISABLE KEYS */;
+INSERT INTO `departments` VALUES (1,'Course 1 - Civil and Environmental Engineering','1',1),(2,'Course 2 - Mechanical Engineering','2',2),(3,'Course 3 - Material Science and Engineering','3',3),(4,'Course 4 - Architecture','4',4),(5,'Course 5 - Chemistry','5',5),(6,'Course 6 - Electrical Engineering and Computer Science','6',6),(7,'Course 7 - Biology','7',7),(8,'Course 8 - Physics','8',8),(9,'Course 9 - Brain and Cognitive Sciences','9',9),(10,'Course 10 - Chemical Engineering','10',10),(11,'Course 11 - Urban Studies and Planning','11',11),(12,'Course 12 - Earth, Atmospheric, and Planetary Sciences','12',12),(13,'Course 13 - Ocean Engineering','13',13),(14,'Course 14 - Economics','14',14),(15,'Course 15 - Management','15',15),(16,'Course 16 - Aeronautics and Astronautics','16',16),(17,'Course 17 - Political Science','17',17),(18,'Course 18 - Mathematics','18',18),(19,'Course 20 - Biological Engineering','20',19),(20,'Course 21a - Anthropology','21a',20),(21,'Course 21f - Foreign Languages and Literature','21f',21),(22,'Course 21h - History','21h',22),(23,'Course 21l - Literature','21l',23),(24,'Course 21m - Music and Theater Arts','21m',24),(25,'Course 21w - Writing and Humanistic Studies','21w',25),(26,'Course 22 - Nuclear Science and Engineering','22',26),(27,'Course 24 - Linguistics and Philosophy','24',27),(28,'CMS - Comparative Media Studies','cms',28),(29,'CSB - Computational and Systems Biology','csb',29),(30,'ESD - Engineering Systems Division','esd',30),(31,'HST - Health Sciences and Technology','hst',31),(32,'MAS - Media Arts and Sciences','mas',32),(33,'STS - Science, Technology, and Society','sts',33),(34,'Women\'s Studies Program','wom',34),(35,'CDO - Computation for Design and Optimization','cdo',0),(36,'OR - Operations Research','or',0);
+/*!40000 ALTER TABLE `departments` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `e_companies`
+--
+
+DROP TABLE IF EXISTS `e_companies`;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+CREATE TABLE `e_companies` (
+  `e_companies_id` int(10) unsigned NOT NULL auto_increment,
+  `name` varchar(255) default NULL,
+  `expiration` date NOT NULL,
+  `transaction_id` varchar(255) default NULL,
+  `paid_amount` varchar(20) default NULL,
+  `paid_date` varchar(255) NOT NULL,
+  PRIMARY KEY  (`e_companies_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Dumping data for table `e_companies`
+--
+
+LOCK TABLES `e_companies` WRITE;
+/*!40000 ALTER TABLE `e_companies` DISABLE KEYS */;
+INSERT INTO `e_companies` VALUES (3,'Wen\\\'s company','2009-04-19','001','500','2008-10-10'),(4,'NASA','2009-10-25','1001','1000','2008-10-25');
+/*!40000 ALTER TABLE `e_companies` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `e_companies_degrees`
+--
+
+DROP TABLE IF EXISTS `e_companies_degrees`;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+CREATE TABLE `e_companies_degrees` (
+  `e_companies_degrees_id` int(10) unsigned NOT NULL auto_increment,
+  `e_companies_id` int(10) unsigned NOT NULL default '0',
+  `degree` varchar(10) NOT NULL default '',
+  PRIMARY KEY  (`e_companies_degrees_id`),
+  KEY `e_companies_id` (`e_companies_id`),
+  KEY `degree` (`degree`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Dumping data for table `e_companies_degrees`
+--
+
+LOCK TABLES `e_companies_degrees` WRITE;
+/*!40000 ALTER TABLE `e_companies_degrees` DISABLE KEYS */;
+/*!40000 ALTER TABLE `e_companies_degrees` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `e_companies_depts`
+--
+
+DROP TABLE IF EXISTS `e_companies_depts`;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+CREATE TABLE `e_companies_depts` (
+  `e_companies_depts_id` int(10) unsigned NOT NULL auto_increment,
+  `e_companies_id` int(10) unsigned NOT NULL default '0',
+  `department` varchar(10) NOT NULL default '',
+  PRIMARY KEY  (`e_companies_depts_id`),
+  KEY `e_companies_id` (`e_companies_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Dumping data for table `e_companies_depts`
+--
+
+LOCK TABLES `e_companies_depts` WRITE;
+/*!40000 ALTER TABLE `e_companies_depts` DISABLE KEYS */;
+/*!40000 ALTER TABLE `e_companies_depts` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `e_companies_industries`
+--
+
+DROP TABLE IF EXISTS `e_companies_industries`;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+CREATE TABLE `e_companies_industries` (
+  `e_companies_industries_id` int(10) unsigned NOT NULL auto_increment,
+  `e_companies_id` int(10) unsigned NOT NULL default '0',
+  `industry` varchar(10) NOT NULL default '',
+  PRIMARY KEY  (`e_companies_industries_id`),
+  KEY `e_companies_id` (`e_companies_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Dumping data for table `e_companies_industries`
+--
+
+LOCK TABLES `e_companies_industries` WRITE;
+/*!40000 ALTER TABLE `e_companies_industries` DISABLE KEYS */;
+/*!40000 ALTER TABLE `e_companies_industries` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `e_companies_jobtypes`
+--
+
+DROP TABLE IF EXISTS `e_companies_jobtypes`;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+CREATE TABLE `e_companies_jobtypes` (
+  `e_companies_jobtypes_id` int(10) unsigned NOT NULL auto_increment,
+  `e_companies_id` int(10) unsigned NOT NULL default '0',
+  `jobtype` varchar(10) NOT NULL default '',
+  PRIMARY KEY  (`e_companies_jobtypes_id`),
+  KEY `e_companies_id` (`e_companies_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Dumping data for table `e_companies_jobtypes`
+--
+
+LOCK TABLES `e_companies_jobtypes` WRITE;
+/*!40000 ALTER TABLE `e_companies_jobtypes` DISABLE KEYS */;
+/*!40000 ALTER TABLE `e_companies_jobtypes` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `e_master_information`
+--
+
+DROP TABLE IF EXISTS `e_master_information`;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+CREATE TABLE `e_master_information` (
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `e_companies_id` int(10) unsigned NOT NULL default '0',
+  `create_date` timestamp NOT NULL default CURRENT_TIMESTAMP,
+  `name` varchar(60) NOT NULL default '',
+  `division` varchar(60) NOT NULL default '',
+  `addr1` varchar(60) NOT NULL default '',
+  `addr2` varchar(60) NOT NULL default '',
+  `city` varchar(30) NOT NULL default '',
+  `state` varchar(5) NOT NULL default '',
+  `zip` varchar(10) NOT NULL default '',
+  `country` varchar(60) NOT NULL default '',
+  `url` varchar(255) NOT NULL default '',
+  `size` enum('','Small (<50 employees)','Medium (50 - 500 employees)','Large (>500 employees)') NOT NULL default '',
+  `description` text NOT NULL,
+  `bus_underrep` enum('n','y') NOT NULL default 'n',
+  `bus_finance` enum('n','y') NOT NULL default 'n',
+  `bus_nonprofit` enum('n','y') NOT NULL default 'n',
+  `employ_foreign` enum('','y','n') NOT NULL default '',
+  `need_wireless` enum('','n','y','m') NOT NULL default '',
+  `supply_transport` enum('','bring','ship') NOT NULL default '',
+  `reps_travel` enum('','air','car') NOT NULL default '',
+  `alum_dinner` tinyint(3) unsigned NOT NULL default '0',
+  `swe_event` tinyint(3) unsigned NOT NULL default '0',
+  `class_event` tinyint(3) unsigned NOT NULL default '0',
+  `special_requests` text NOT NULL,
+  `will_ship` enum('y','n') NOT NULL default 'n',
+  `num_packages` int(11) NOT NULL default '0',
+  `tracking_info` text NOT NULL,
+  `hotel` varchar(60) NOT NULL default '',
+  `num_dinner` int(11) NOT NULL default '0',
+  `degree` text NOT NULL,
+  `industry` text NOT NULL,
+  `major` text NOT NULL,
+  `research_area` text NOT NULL,
+  `locations` text NOT NULL,
+  `full_time_positions` text NOT NULL,
+  `divisions_hiring` text NOT NULL,
+  `summer_internship` text NOT NULL,
+  `num_internships` text NOT NULL,
+  `add_job_qualifications` text NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Dumping data for table `e_master_information`
+--
+
+LOCK TABLES `e_master_information` WRITE;
+/*!40000 ALTER TABLE `e_master_information` DISABLE KEYS */;
+/*!40000 ALTER TABLE `e_master_information` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `e_reps`
+--
+
+DROP TABLE IF EXISTS `e_reps`;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+CREATE TABLE `e_reps` (
+  `e_reps_id` int(10) unsigned NOT NULL auto_increment,
+  `e_companies_id` int(10) unsigned NOT NULL default '0',
+  `email` varchar(255) NOT NULL default '',
+  `firstname` varchar(30) NOT NULL default '',
+  `lastname` varchar(30) NOT NULL default '',
+  `position` varchar(30) NOT NULL default '',
+  `phone` varchar(30) NOT NULL default '',
+  `vegetarian` enum('n','y') NOT NULL default 'n',
+  `alum` enum('n','y') NOT NULL default 'n',
+  PRIMARY KEY  (`e_reps_id`),
+  KEY `e_companies_id` (`e_companies_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Dumping data for table `e_reps`
+--
+
+LOCK TABLES `e_reps` WRITE;
+/*!40000 ALTER TABLE `e_reps` DISABLE KEYS */;
+/*!40000 ALTER TABLE `e_reps` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `e_users`
+--
+
+DROP TABLE IF EXISTS `e_users`;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+CREATE TABLE `e_users` (
+  `e_users_id` int(10) unsigned NOT NULL auto_increment,
+  `e_companies_id` int(10) unsigned NOT NULL default '0',
+  `username` varchar(255) NOT NULL,
+  `password` varchar(32) character set latin1 collate latin1_bin NOT NULL default '',
+  `session` char(32) NOT NULL,
+  `cookie` char(32) NOT NULL,
+  `ip` varchar(15) NOT NULL,
+  `confirm_hash` varchar(32) character set latin1 collate latin1_bin NOT NULL default '',
+  `is_confirmed` smallint(6) NOT NULL default '0',
+  `firstname` varchar(30) NOT NULL default '',
+  `lastname` varchar(30) NOT NULL default '',
+  `phone` varchar(30) NOT NULL default '',
+  PRIMARY KEY  (`e_users_id`),
+  KEY `e_companies_id` (`e_companies_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Dumping data for table `e_users`
+--
+
+LOCK TABLES `e_users` WRITE;
+/*!40000 ALTER TABLE `e_users` DISABLE KEYS */;
+INSERT INTO `e_users` VALUES (4,3,'wenliu@gmail.com','f4a8814674a6eddf1e61b1b67e1e62bf','','','','5f8be62a4559a745c7b9706b8ecef045',1,'Wenhao','Liu','215-661-2880'),(8,3,'krebnarb@hotmail.com','','','','','b1a858804396e83e087b2632e7d9422a',0,'f','a','1213132132'),(9,0,'zimmer@nasa.gov','','','','','9d44f57ff7929b371c1fc195552d9c90',0,'Michael','Zimmer','616-232-2323');
+/*!40000 ALTER TABLE `e_users` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `industries`
+--
+
+DROP TABLE IF EXISTS `industries`;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+CREATE TABLE `industries` (
+  `industries_id` int(10) unsigned NOT NULL auto_increment,
+  `name` varchar(255) NOT NULL default '',
+  `abbreviation` varchar(10) NOT NULL default '',
+  `sort_order` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`industries_id`),
+  UNIQUE KEY `name` (`name`),
+  UNIQUE KEY `abbreviation` (`abbreviation`)
+) ENGINE=InnoDB AUTO_INCREMENT=63 DEFAULT CHARSET=latin1;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Dumping data for table `industries`
+--
+
+LOCK TABLES `industries` WRITE;
+/*!40000 ALTER TABLE `industries` DISABLE KEYS */;
+INSERT INTO `industries` VALUES (1,'Advertising/Marketing','advmar',1),(2,'Aerospace','aero',2),(3,'Agriculture','agri',3),(4,'Architecture/Urban Planning','archurbn',4),(5,'Arts','arts',5),(6,'Automotive','auto',6),(7,'Banking','bank',7),(8,'Biotech/Pharmaceuticals','biopharm',8),(9,'Business Services','busserv',9),(10,'Chemicals','chem',10),(11,'Communications/Media','commedia',11),(12,'Computers','computer',12),(13,'Construction','construct',13),(14,'Consulting','consult',14),(15,'Consumer Products','consume',15),(16,'Education','education',16),(17,'Electronics','electronic',17),(18,'Energy','energy',18),(19,'Engineering','engineer',19),(20,'Entertainment','entertain',20),(21,'Entrepreneurial/Start-Ups','entreprene',21),(22,'Environment','environ',22),(23,'Fashion','fashion',23),(24,'Financial Services','financial',24),(25,'Food Science','foodscienc',25),(26,'Food Services','foodsvc',26),(27,'Forestry','forestry',27),(28,'Government/Public Administration','government',28),(29,'Healthcare','healthcare',29),(30,'Hotel, Restaurant, Hospitality','hotel',30),(31,'Housing and Urban Development','housing',31),(32,'Information Technology','infotech',32),(33,'Insurance','insurance',33),(34,'International Affairs','intaffair',34),(35,'Internet','internet',35),(36,'Investment Banking','investment',36),(37,'Law','law',37),(38,'Law Enforcement','lawenforce',38),(39,'Manufacturing','manufact',39),(40,'Maritime','maritime',40),(41,'Military and Defense','military',41),(42,'Mining','mining',42),(43,'Museums and Libraries','museum',43),(44,'Natural Resources','natresourc',44),(45,'Non-Profit/Philanthropy','nonprofit',45),(46,'Parks and Recreations','parksrec',46),(47,'Printing and Publishing','printpub',47),(48,'Real Estate','realestate',48),(49,'Religion','religion',49),(50,'Retail/Wholesale','retail',50),(51,'Sciences','sciences',51),(52,'Sports','sports',52),(53,'Staffing and Executive Search','staffing',53),(54,'Telecommunications','telecom',54),(55,'Trade','trade',55),(56,'Transportation','transport',56),(57,'Travel and Tourism','travel',57),(58,'Utilities','utilities',58),(59,'Venture Capital/Principal Investing','venture',59),(60,'Veterinary','veterinary',60),(61,'Waste Management','waste',61),(62,'Other','other',62);
+/*!40000 ALTER TABLE `industries` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `jobtypes`
+--
+
+DROP TABLE IF EXISTS `jobtypes`;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+CREATE TABLE `jobtypes` (
+  `jobtypes_id` int(10) unsigned NOT NULL auto_increment,
+  `name` varchar(255) NOT NULL default '',
+  `abbreviation` varchar(10) NOT NULL default '',
+  `sort_order` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`jobtypes_id`),
+  UNIQUE KEY `name` (`name`),
+  UNIQUE KEY `abbreviation` (`abbreviation`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Dumping data for table `jobtypes`
+--
+
+LOCK TABLES `jobtypes` WRITE;
+/*!40000 ALTER TABLE `jobtypes` DISABLE KEYS */;
+INSERT INTO `jobtypes` VALUES (1,'Full Time','fulltime',1),(2,'Part Time','parttime',2),(3,'Summer Internship','intern',3),(4,'Co-op/Semester intern/externship','coop',4);
+/*!40000 ALTER TABLE `jobtypes` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `page_contents`
+--
+
+DROP TABLE IF EXISTS `page_contents`;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+CREATE TABLE `page_contents` (
+  `page_id` int(10) unsigned NOT NULL auto_increment,
+  `page_title` varchar(255) NOT NULL default '',
+  `page_text` longtext NOT NULL,
+  `page_url` varchar(255) NOT NULL default '',
+  `page_section` varchar(255) NOT NULL default '',
+  PRIMARY KEY  (`page_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Dumping data for table `page_contents`
+--
+
+LOCK TABLES `page_contents` WRITE;
+/*!40000 ALTER TABLE `page_contents` DISABLE KEYS */;
+/*!40000 ALTER TABLE `page_contents` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `s_resumes`
+--
+
+DROP TABLE IF EXISTS `s_resumes`;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+CREATE TABLE `s_resumes` (
+  `s_resumes_id` int(10) unsigned NOT NULL auto_increment,
+  `s_users_id` int(10) unsigned NOT NULL default '0',
+  `file_location` varchar(255) NOT NULL,
+  PRIMARY KEY  (`s_resumes_id`),
+  UNIQUE KEY `s_users_id` (`s_users_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=latin1;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Dumping data for table `s_resumes`
+--
+
+LOCK TABLES `s_resumes` WRITE;
+/*!40000 ALTER TABLE `s_resumes` DISABLE KEYS */;
+INSERT INTO `s_resumes` VALUES (30,1,'/resumes/2008/wenliu_h7nahgid.pdf'),(31,1015,'/resumes/2008/kkuan87_qwlvnf6m.pdf');
+/*!40000 ALTER TABLE `s_resumes` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `s_users`
+--
+
+DROP TABLE IF EXISTS `s_users`;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+CREATE TABLE `s_users` (
+  `s_users_id` int(10) unsigned NOT NULL auto_increment,
+  `access` enum('student','admin') NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(32) character set latin1 collate latin1_bin NOT NULL default '',
+  `cookie` char(32) NOT NULL,
+  `session` char(32) NOT NULL,
+  `ip` varchar(15) NOT NULL,
+  `confirm_hash` varchar(32) character set latin1 collate latin1_bin NOT NULL default '',
+  `is_confirmed` smallint(6) NOT NULL default '0',
+  `firstname` varchar(30) NOT NULL default '',
+  `lastname` varchar(30) NOT NULL default '',
+  `citizenship` enum('us','perm','intl') default NULL,
+  `alt_email` varchar(255) NOT NULL,
+  PRIMARY KEY  (`s_users_id`),
+  KEY `s_users_id` (`s_users_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1017 DEFAULT CHARSET=latin1;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Dumping data for table `s_users`
+--
+
+LOCK TABLES `s_users` WRITE;
+/*!40000 ALTER TABLE `s_users` DISABLE KEYS */;
+INSERT INTO `s_users` VALUES (3,'admin','tinajro','edbd0effac3fcc98e725920a512881e0','','3791b2d3e82dc42bdf49e077b5e5a3aa','18.245.7.10','3c71f0ef15e8711e70697cea7e742696',1,'','',NULL,''),(1015,'student','kkuan87','f73ad31f3edfe513a3d5d2bc3fb537e3','','313338e6e30e61ec99f7525f779c98e3','18.19.0.40','893e157e302cd986743447520a6b33ac',1,'Katherine','Kuan','us',''),(1016,'student','wenliu','3f789218e8c73490ed074cf09a19ba6d','','','','f4312f026ef32a6ac8101780836e819e',0,'','',NULL,'');
+/*!40000 ALTER TABLE `s_users` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `s_users_degrees`
+--
+
+DROP TABLE IF EXISTS `s_users_degrees`;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+CREATE TABLE `s_users_degrees` (
+  `s_users_degrees_id` int(10) unsigned NOT NULL auto_increment,
+  `s_users_id` int(10) unsigned NOT NULL default '0',
+  `department` varchar(10) NOT NULL default '',
+  `degree` varchar(10) NOT NULL default '',
+  `year` varchar(4) NOT NULL default '',
+  PRIMARY KEY  (`s_users_degrees_id`),
+  KEY `s_users_id` (`s_users_id`),
+  KEY `degree` (`degree`),
+  KEY `department` (`department`)
+) ENGINE=InnoDB AUTO_INCREMENT=1232 DEFAULT CHARSET=latin1;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Dumping data for table `s_users_degrees`
+--
+
+LOCK TABLES `s_users_degrees` WRITE;
+/*!40000 ALTER TABLE `s_users_degrees` DISABLE KEYS */;
+INSERT INTO `s_users_degrees` VALUES (168,0,'5','phd','2007'),(169,0,'15','masters','2012'),(201,1,'5','phd','2010'),(202,1,'15','masters','2009'),(1227,1015,'6','bachelors','2009');
+/*!40000 ALTER TABLE `s_users_degrees` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `s_users_industries`
+--
+
+DROP TABLE IF EXISTS `s_users_industries`;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+CREATE TABLE `s_users_industries` (
+  `s_users_industries_id` int(10) unsigned NOT NULL auto_increment,
+  `s_users_id` int(10) unsigned NOT NULL default '0',
+  `industry` varchar(10) NOT NULL default '',
+  PRIMARY KEY  (`s_users_industries_id`),
+  KEY `s_users_id` (`s_users_id`),
+  KEY `industry` (`industry`)
+) ENGINE=InnoDB AUTO_INCREMENT=423 DEFAULT CHARSET=latin1;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Dumping data for table `s_users_industries`
+--
+
+LOCK TABLES `s_users_industries` WRITE;
+/*!40000 ALTER TABLE `s_users_industries` DISABLE KEYS */;
+INSERT INTO `s_users_industries` VALUES (275,0,'advmar'),(347,1,'aero'),(348,1,'bank'),(349,1,'biopharm'),(350,1,'chem'),(351,1,'computer'),(401,1015,'computer'),(402,1015,'engineer');
+/*!40000 ALTER TABLE `s_users_industries` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `s_users_jobtypes`
+--
+
+DROP TABLE IF EXISTS `s_users_jobtypes`;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+CREATE TABLE `s_users_jobtypes` (
+  `s_users_jobtypes_id` int(10) unsigned NOT NULL auto_increment,
+  `s_users_id` int(10) unsigned NOT NULL default '0',
+  `jobtype` varchar(10) NOT NULL default '',
+  PRIMARY KEY  (`s_users_jobtypes_id`),
+  KEY `s_users_id` (`s_users_id`),
+  KEY `jobtype` (`jobtype`)
+) ENGINE=InnoDB AUTO_INCREMENT=295 DEFAULT CHARSET=latin1;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Dumping data for table `s_users_jobtypes`
+--
+
+LOCK TABLES `s_users_jobtypes` WRITE;
+/*!40000 ALTER TABLE `s_users_jobtypes` DISABLE KEYS */;
+INSERT INTO `s_users_jobtypes` VALUES (238,0,'parttime'),(267,1,'fulltime'),(286,1015,'fulltime');
+/*!40000 ALTER TABLE `s_users_jobtypes` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2008-11-03  1:23:46
