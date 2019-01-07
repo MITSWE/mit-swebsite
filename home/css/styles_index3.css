@@ -100,6 +100,7 @@ a.navbar-item:hover{
 
 .navbar-link:hover{
     color: #5a5377;
+
 }
 
 .navbar-dropdown{
@@ -109,5 +110,44 @@ a.navbar-item:hover{
 
 #navbarBasic{
     background-color: #363636;
+}
+
+/*IPAD MEDIA QUERY*/
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)
+and (orientation : portrait){ 
+    #cal{
+            margin-top: 200px;
+    }
+    #swetube{
+            margin-top: 250px;
+    }
     
 }
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px)
+and (orientation : portrait){ 
+    #cal{
+        margin-top: 500px;
+    }
+    #swetube{
+            margin-top: 550px;
+    }
+    
+} 
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px)
+and (orientation : portrait){ 
+    #cal{
+        margin-top: 500px;
+    }
+    #swetube{
+            margin-top: 550px;
+    }
+}
+
