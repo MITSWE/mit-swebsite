@@ -1,0 +1,44 @@
+.navbar-burger{
+    height: 4.25rem;
+}
+
+.navbar-item img{
+    max-height: 2.75rem;
+}
+
+.navbar-brand{
+    height: 70px;
+    left: 100px;
+}
+
+.navbar-item{
+    margin-right: 10px;
+    margin-left: 10px;
+    color:white;
+}
+
+a.navbar-link{
+    color:white;
+}
+
+a.navbar-item:hover{
+    color: #5a5377;
+}
+
+.navbar-link:hover{
+    color: #5a5377;
+
+}
+
+.navbar-dropdown{
+    background-color: #363636;
+    border-top: none;
+}
+
+#navbarBasic{
+    background-color: #363636;
+}
+
+body{
+    font-family:  BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+}
