@@ -2658,7 +2658,7 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
 .navbar {
     position: relative;
     min-height: 50px;
-    margin-bottom: 20px;
+/*    margin-bottom: 20px;*/
     border: 1px solid transparent;
 }
 @media (min-width:768px) {
@@ -2737,8 +2737,8 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
     border-width: 1px 0 0;
 }
 .navbar-brand {
-    float: left;
-    padding: 15px;
+/*    float: left;*/
+/*    padding: 15px;*/
     font-size: 18px;
     line-height: 20px;
     height: 50px;

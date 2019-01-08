@@ -79,11 +79,11 @@ del{text-decoration:line-through}
 
 .text-input:active,.text-input:focus,textarea:active,textarea:focus{cursor:text;outline:0}
 
-body{margin:0;background:#f7f7f7;color:#333;font-family:BrandonText,"Helvetica Neue",Helvetica,Arial,sans-serif;line-height:1.25; overflow-x:hidden;}
+body{margin:0;font-family:BrandonText,Helvetica Neue,"Helvetica Neue",sans-serif;line-height:1.25; overflow-x:hidden; }
 
 body.page--inverse{background:#282B2D}
 
-.h1,.h2,.h3,.h4,.h5,.h6,address,blockquote,dl,fieldset,figure,h1,h2,h3,h4,h5,h6,hgroup,ol,p,pre,table,ul{margin-bottom:1.875rem}
+.h1,.h2,.h3,.h4,.h5,.h6,address,blockquote,dl,fieldset,figure,h1,h2,h3,h4,h5,h6,hgroup,ol,p,pre,table,ul{margin-bottom:.5rem}
 
 .chromeframe{margin:0;padding:15px 0;text-align:center;background:#f0ad4e}
 
