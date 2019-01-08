@@ -6,130 +6,137 @@
 		<title>MIT SWE | Workshop Resources</title>
 		<meta name="keywords" content="MIT SWE, MIT, Society of Women Engineers, MIT Society of Women Engineers" />
 		<meta name="description" content="Massachusetts Institute of Technology Society of Women Engineers is the largest diversity student organization on campus and aims to inspire younger generations about engineering, encourage the notion of diversity in engineering, and determine and advocate for the needs of women engineers at MIT and in the professional world." />
+        <!--navbar styles A-->
+        <link rel="stylesheet" href="../../css/bootstrap.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css">
+        
 		<!-- global styles -->
-		<link rel="stylesheet" href="../../css/bootstrap.css">
 		<link rel="stylesheet" href="../../css/footer-distributed.css">
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
 		<link rel="stylesheet" href="../../css/mt-global.css">
 <!-- 		page specific styles -->
 		<link rel="stylesheet" href="../css/styles_members.css">
+    <!--navbar styles B-->
+        <link rel="stylesheet" href="../../css/nav.css">
 
 </head>
 
 <body class="page  page--home">
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="../">
+      <img src="../../images/SWE_Logo_MIT-horz.png" alt="(MITSWE) SWE Logo">
+    </a>
 
-    <div id="resizeFooter" style="min-height: calc(100vh - 200px);">  
-	<header class="siteHeader  strip">
-	    <div class="wrapper">
-	        <!-- Logo -->
-	        <a href="http://swe.mit.edu/home/" class="branding"><img src="../../images/SWE_Logo_MIT-horz.png" alt="(MITSWE) SWE Logo"></a>
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
 
-	         <!-- Primary site Nav -->
-	        <a href="#siteNav" class="hamburger  js-menuLink">
-			    <span class="hamburger-bun  hamburger-bun--top"></span>
-			    <span class="hamburger-patty"></span>
-			    <span class="hamburger-bun  hamburger-bun--btm"></span>
-			</a>
+  <div id="navbarBasic" class="navbar-menu">
+    <div class="navbar-start">
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a href="../about/" style="text-decoration: none" class="navbar-link">
+          ABOUT
+        </a>
 
-		<nav id="siteNav" class="navbar  primaryNav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-		    <ul class="primaryNav-list">
-
-		        <!-- START: Only visible on mobile -->
-		       <!--  <li class="navItem  navItem--supportNumber">
-		                            <a class="supportNumber" href="tel:+18775784000">877.578.4000</a>
-		                    </li> -->
-		        <!-- <li class="navItem  navItem--login">
-		            <a class="loginLink" href="https://ac.mediatemple.net/login.mt?redirect=home.mt"><span>Members Only</span></a>
-		        </li> -->
-		        <!-- END: Only visible on mobile -->
-
-
-		       	<!-- Web Hosting -->
-		        <!--  About -->
-		        <li class="navItem  hasDropdown  js-hasDropdown">
-		            <a class="js-dropdownTrigger" href="http://swe.mit.edu/about/"><span>About</span></a>
-
-		            <div class="navDropdown">
-		                <ul class="nav  nav--stacked" style="clear:both">
-		                    <li class="navItem"><a href="http://swe.mit.edu/about/board">Board Members</a></li>
-		                    <li class="navItem"><a href="http://swe.mit.edu/about/national_swe_membership">National SWE</a></li>
-                            <li class="navItem"><a href="https://docs.google.com/presentation/d/18lRfIK9OZiP1JhPdA06w2sTWUmZ7444xUYnCKg9V03A/edit">FAQ</a></li>
-		                </ul>
-		            </div>
-		        </li>
-
-		        <!-- Outreach -->
-		        <li class="navItem  hasDropdown  js-hasDropdown ">
-		            <a class="js-dropdownTrigger" href="http://swe.mit.edu/outreach/"><span >Outreach</span></a>
-
-					 <div class="navDropdown">
-		                <ul class="nav  nav--stacked">
-		                    <li class="navItem"><a href="http://swe.mit.edu/outreach/elementary_school">Elementary School</a></li> 
-		                    <li class="navItem"><a href="http://swe.mit.edu/outreach/middle_school">Middle School</a></li> 
-		                    <li class="navItem"><a href="http://swe.mit.edu/outreach/high_school">High School</a></li> 
-		                    <li class="navItem"><a href="http://swe.mit.edu/outreach/special_events">Special Events</a></li>  
-		                    <li class="navItem"><a href="http://swe.mit.edu/outreach/resources">Resources</a></li>
-
-		                </ul>
-		            </div>
-		        </li>
-		        <!-- Corporate -->
-		        <li class="navItem hasDropdown  js-hasDropdown">
-		            <a class="js-dropdownTrigger" href="http://swe.mit.edu/corporate/"><span>Corporate</span></a>
-		            <div class="navDropdown">
-		                <ul class="nav  nav--stacked">
-		                    <li class="navItem"><a href="http://swe.mit.edu/corporate/banquet">Career Fair Banquet</a></li>
-		                    <li class="navItem"><a href="http://swe.mit.edu/corporate/resume_database">Resume Database</a></li>
-		                </ul>
-		            </div>
-		        </li>
-
-		        <!-- Calendar -->
-		        <li class="navItem ">
-		            <a href="http://swe.mit.edu/calendar/"><span>Calendar</span></a>
-		        </li>
-
-		        <!--  News -->
-		        <li class="navItem ">
-		            <a href="http://swe.mit.edu/news/"><span>News</span></a>
-		        </li>
-
-		        <!-- Contact Us -->
-		        <li class="navItem ">
-		            <a href="http://swe.mit.edu/contact/"><span>Contact Us</span></a>
-		        </li>		        
-
-				<!-- Members Only -->
-		        <li class="navItem  hasDropdown  js-hasDropdown">
-		            <a class="js-dropdownTrigger" href="../members/"><span>For Members</span></a>
-		            <div class="navDropdown">
-		                <ul class="nav  nav--stacked">
-		                    <li class="navItem"><a href="../section_resources">Section Resources</a></li>
-                            <li class="navItem"><a href="../workshop_resources">Workshop Resources</a></li>
-		                    <li class="navItem"><a href="../resume_database/">Resume Upload</a></li>
-		                    <li class="navItem"><a href="http://swe.mit.edu/members/swecubator/">SWEcubator</a></li>
-		                    <li class="navItem"><a href="http://swe.mit.edu/wiki">Board Wiki</a></li>
-		                </ul>
-		            </div>
-		        </li>
-		    </ul>
-		</nav>
-
-
-<!-- 
-        <div id="siteNav" class="navbar  primaryNav rightNav">
-		    <ul class="nav  headerNav  u-pullRight">
-				
-		           
-	        </ul>
+        <div class="navbar-dropdown">
+          <a href="../about/board/" style="text-decoration: none" class="navbar-item">
+            Board Members
+          </a>
+          <a href="../about/national_swe_membership/" style="text-decoration: none" class="navbar-item">
+            National SWE
+          </a>
+          <a href="https://docs.google.com/presentation/d/18lRfIK9OZiP1JhPdA06w2sTWUmZ7444xUYnCKg9V03A/edit" style="text-decoration: none" class="navbar-item">
+            FAQ
+          </a>
         </div>
-	    </div> <!-- /.wrapper -->
-	    <div class="navDropdown--background offPage"></div> 
+      </div>
 
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a href="../outreach/" style="text-decoration: none" class="navbar-link">
+          OUTREACH
+        </a>
 
-	</header> <!-- /.siteHeader --> 
+        <div class="navbar-dropdown">
+          <a href="../outreach/elementary_school" style="text-decoration: none" class="navbar-item">
+            Elementary School
+          </a>
+          <a href="../outreach/middle_school" style="text-decoration: none" class="navbar-item">
+            Middle School
+          </a>
+          <a href="../outreach/high_school" style="text-decoration: none" class="navbar-item">
+            High School
+          </a>
+          <a href="../outreach/special_events" style="text-decoration: none" class="navbar-item">
+            Special Events
+          </a>
+          <a href="../outreach/resources" style="text-decoration: none" class="navbar-item">
+            Resources
+          </a>
+        </div>
+      </div>
+        
+       <div class="navbar-item has-dropdown is-hoverable">
+        <a href="../corporate/" style="text-decoration: none" class="navbar-link">
+          CORPORATE
+        </a>
 
+        <div class="navbar-dropdown">
+          <a href="../corporate/resume_database"style="text-decoration: none" class="navbar-item">
+            Resume Upload
+          </a>
+        </div>
+      </div>
+        
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a href="../members/" style="text-decoration: none" class="navbar-link">
+          MEMBERS
+        </a>
+
+        <div class="navbar-dropdown">
+          <a href="../members/workshop_resources" style="text-decoration: none" class="navbar-item">
+            Workshop Resources
+          </a>
+          <a href="http://swe.mit.edu/members/swecubator/" style="text-decoration: none" class="navbar-item">
+            SWEcubator
+          </a>
+          <a href="http://swe.mit.edu/wiki/" style="text-decoration: none" class="navbar-item">
+            Board Wiki
+          </a>
+        </div>
+      </div>
+        
+      <a href="../calendar/" style="text-decoration: none" class="navbar-item">
+        CALENDAR
+      </a>
+        
+      <a href="../contact/" style="text-decoration: none" class="navbar-item">
+        CONTACT
+      </a>
+
+      
+    </div>
+
+<!--
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-primary">
+            <strong>Sign up</strong>
+          </a>
+          <a class="button is-light">
+            Log in
+          </a>
+        </div>
+      </div>
+    </div>
+-->
+  </div>
+</nav>
 
     <div class="jumbotron">
       <div class="container">
@@ -207,8 +214,8 @@
 		</footer>
 	</div>
 
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="../../js/nav.js"></script>
     <script src="../../js/mt-global.js"></script>
 
 
