@@ -65,7 +65,7 @@ $wgDBtype           = "mysql";
 $wgDBserver         = "sql.mit.edu";
 $wgDBname           = "swe+wiki";
 $wgDBuser           = "swe";
-$wgDBpassword       = "zam52fin";
+$wgDBpassword       = "9)5ugWFdBP";
 
 # MySQL specific settings
 $wgDBprefix         = "";
