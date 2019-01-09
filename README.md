@@ -1,2 +1,2 @@
 # mitswe-website
-don't read. don't bother
+official website for MIT SWE

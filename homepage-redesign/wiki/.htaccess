@@ -1,3 +1,0 @@
-AuthType SSLCert
-Require afsgroup system:sweboard16
-ErrorDocument 401 /__scripts/needcerts
