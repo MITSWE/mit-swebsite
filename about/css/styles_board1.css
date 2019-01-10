@@ -127,14 +127,14 @@ h1 {
   opacity: 0.8;
 }
 
-/*.member-text {
+.member-text {
   color: white;
   font-size: 12px;
   position: absolute;
   text-align: center;
   top: 50%;
   transform: translateY(-50%);
-}*/
+}
 
 .member-text {
   color: white;
