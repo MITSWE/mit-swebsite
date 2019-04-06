@@ -4,12 +4,21 @@ var members_info = [];
 var member_names = ["Jocelyn Shen", "Emma Liu", "Annie Zhang", "Megan Wei", "Vaibhavi Shah", "Jenny Zhang", "Lauren Oh", "Aline Vargas", 
 "An Jimenez", "Valerie Chen", "Grace Zheng", "Jamie Geng", "Camellia Huang", "Rovi Porter", "Sohini Kar", "Anna Wong", "Amelia Meles",
 "Fiona Gillespie", "Emily Zhang", "Julia Jia", "Kelly Ho", "Hannah Liu", "Shirley Cao", "Kriti Jain", 
-"Kelly Wu", "Katharina Gschwind", "Shannon Duffy", "Nova Xu", "Ashley Wang", "Haripriya Mehta", "Shushu Fang"];
+"Kelly Wu", "Katharina Gschwind", "Shannon Duffy", "Nova Xu", "Ashley Wang", "Haripriya Mehta", "Shushu Fang", "Priscilla Wong",
+"Rebekah Costello", "Koumani Ntowe", "Julia Pei", "Kaitlyn Hennacy", "Jennifer McCleary", "Ariana Adames", "Joyce Feng",
+"Margaret Bertoni", "Stuti Vishwabhan", "Linnea Rylander", "Rebecca Grekin", "Francisca Vasconcelos", "Rima Rebei", 
+"Amanda Deng", "Dory Shen", "Shana Mathew", "Sabrina Liu", "Laura Huang", "Baula Xu", "Katherine Wang", "Celine Qiu", "Jocelyn Yao",
+"Phi Xu", "Naksha Roy",
+"Jeana Choi", "Shobhita Sundaram", "Elaine Xiao", "Lisa Yoo", "Danica Dong", "Saumya Rawat"];
 var member_courses = ["6-3", "6-3", "6-3", "6-3", "20", "6-3", "6-3", "10B", "6-3",
 "6-2","18", "20", "20", "1", "6-3", "6-3", "6-3", "6-2","6-3, 18","6-3","6-2","18C",
-"2A","6-2/9","10","6-3","6-3","20","6-14","6-2", "6-2"];
+"2A","6-2/9","10","6-3","6-3","20","6-14","6-2", "6-2", "6-3", "20", "20", "20", "10", "6-2",
+"6-14", "6-3, 14-1", "2", "6-3", "6-3", "10", "6-2, 8", "6-3, 9", "6-3, 15", "6-2", "6-2", "6-2", "2", 
+"6-3", "6-3", "6-2", "20", "6", "10", "", "", "", "", "", ""];
 var member_class_year = [2022, 2022, 2022, 2022, 2021, 2021, 2021, 2021, 2021, 2022, 2022, 2022, 2022,
-2022, 2022, 2022, 2022, 2022, 2021, 2022, 2022, 2022, 2022, 2021, 2022, 2020, 2020, 2020, 2021, 2020, 2022];
+2022, 2022, 2022, 2022, 2022, 2021, 2022, 2022, 2022, 2022, 2021, 2022, 2020, 2020, 2020, 2021, 2020, 
+2022, 2020, 2020, 2021, 2020, 2020, 2019, 2022, 2021, 2019, 2020, 2021, 2019, 2021, 2021, 2021, 2020, 2021, 
+2021, 2019, 2019, 2019, 2021, 2021, 2022, 2021, 2022, 2022, 2021, 2022, 2022];
 
 var fun_facts = ["I write novels for fun", "I love Star Wars.", "I like trees.", "I like to eat spicy food.", 
 "I've been to over 30 countries!", "I've never broken a bone.", "I got kicked out of preschool.", "Love to Bike!",
@@ -20,7 +29,17 @@ var fun_facts = ["I write novels for fun", "I love Star Wars.", "I like trees.",
 "I like bullet journaling and calligraphy !!!", "I'm on MIT Bhangra!", "Hiking the swiss alps is on my bucket list",
 "I can speak 6 languages!", "I trained my fish to follow my finger", "I have a twin brother with a different birthday!",
 "I love Hawaii!!", "Unwittingly, I asked Dropbox CEO Drew Houston if he was a current student at MIT. Oops!",
-"I bookmarked MIT confessions submission page"];
+"I bookmarked MIT confessions submission page", "I like to whistle!", "I never watch Marvel movie trailers to avoid any spoilers!",
+"I'm left handed.", "I can fold my tongue into the shape of a three-leaf clover!", " I love experimenting with desserts and coming up with new recipes.",
+"I play League of Legends.", "I have over 30 snow globes of countries across 4 continents of which I've visited (or family/friends have brought me)!",
+"I can say the alphabet quicker backwards than forwards", "I've traveled to four different continents.", "I got to see Pink in concert for free!",
+"I can ride a unicycle!", "I went to 12 countries while backpacking in europe for 2.5 months the summer before college!",
+"I was born on a Friday the 13th on my mom's birthday.", "I was in a hair commercial in Thailand!", "I like trap music.",
+"My favorite type of fried potato is waffle fries.", "I can touch my tongue to my nose!", "I eat apples whole with the core.",
+"I love cheesecake!", "I'm really good at pinching people with my toes!", "I'm obsessed with Duke Basketball.", "I've been to ten countries outside the US!",
+"I carry tiger balm w/ me in my backpack! hmu if you ever need some", "Once I pet 21 dogs in Boston Common",
+"My last name is actually written as and pronounced “Rai” in Bengali but “Roy” in English.", 
+"", "", "", "", "", ""];
 
 var departments = [];
 
@@ -216,23 +235,3 @@ function main() {
 
 main();
 
-
-{/* <div align="center" class="col-md-3 col-sm-3">
-
-<div class="member-container">						
-    <img src="../board_pics/Carol_Wu.jpg" class="member-image" alt="" />
-    
-    <div class="member-overlay"> 
-        <div class="member-text"> 
-            <div><strong style="color: white;"> Course 6-14, 15-3 Class of 2020 </strong>
-            </div> 
-            <br>
-            <div><strong style="color: white;"> Fun fact: </strong> My favorite ice cream flavor is cookies and cream! 
-            </div>
-        </div>
-    </div>
-
-<div class="member-info"> <strong> Carol Wu </strong> <div class="board-pos"> VP Campus Relations </div> </div>
-</div>
-
-</div> */}
