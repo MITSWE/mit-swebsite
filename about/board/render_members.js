@@ -14,7 +14,7 @@ var member_courses = ["6-3", "6-3", "6-3", "6-3", "20", "6-3", "6-3", "10B", "6-
 "6-2","18", "20", "20", "1", "6-3", "6-3", "6-3", "6-2","6-3, 18","6-3","6-2","18C",
 "2A","6-2/9","10","6-3","6-3","20","6-14","6-2", "6-2", "6-3", "20", "20", "20", "10", "6-2",
 "6-14", "6-3, 14-1", "2", "6-3", "6-3", "10", "6-2, 8", "6-3, 9", "6-3, 15", "6-2", "6-2", "6-2", "2", 
-"6-3", "6-3", "6-2", "20", "6", "10", "", "", "", "", "", ""];
+"6-3", "6-3", "6-2", "20", "6", "10", "", "", "", "", "10", ""];
 var member_class_year = [2022, 2022, 2022, 2022, 2021, 2021, 2021, 2021, 2021, 2022, 2022, 2022, 2022,
 2022, 2022, 2022, 2022, 2022, 2021, 2022, 2022, 2022, 2022, 2021, 2022, 2020, 2020, 2020, 2021, 2020, 
 2022, 2020, 2020, 2021, 2020, 2020, 2019, 2022, 2021, 2019, 2020, 2021, 2019, 2021, 2021, 2021, 2020, 2021, 
@@ -39,7 +39,7 @@ var fun_facts = ["I write novels for fun", "I love Star Wars.", "I like trees.",
 "I love cheesecake!", "I'm really good at pinching people with my toes!", "I'm obsessed with Duke Basketball.", "I've been to ten countries outside the US!",
 "I carry tiger balm w/ me in my backpack! hmu if you ever need some", "Once I pet 21 dogs in Boston Common",
 "My last name is actually written as and pronounced “Rai” in Bengali but “Roy” in English.", 
-"", "", "", "", "", ""];
+"", "", "", "", "I hate Broccoli", ""];
 
 var departments = [];
 
