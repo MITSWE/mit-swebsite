@@ -7,6 +7,9 @@ var member_courses = ['2A', 'Undeclared', '6-3', '6-3 & 9', '6-3', '6-3', '3 & 8
 var member_class_year = [2023, 2023, 2022, 2022, 2022, 2023, 2023, 2023, 2022, 2023, 2023, 2023, 2021, 2023, 2022, 2023, 2021, 2023, 2022, 2023, 2022, 2023, 2023, 2023, 2022, 2020, 2021, 2020, 2023, 2021, 2023, 2023, 2023, 2022, 2022, 2021, 2021, 2021, 2022, 2022, 2022, 2022, 2022, 2022, 2022, 2022, 2022, 2021, 2022, 2020, 2020, 2021, 2020, 2022, 2020, 2020, 2021, 2020, 2020, 2019, 2022, 2021, 2019, 2020, 2021, 2019, 2021, 2021, 2021, 2020, 2020, 2021, 2019, 2019, 2019, 2021, 2022, 2021, 2022, 2022, 2022, 2022];
 
 var fun_facts = ['I sneeze up to 9 times in a row.', 'I once won AirPods from a Poker Club event.', 'I love painting with gouache!', 'I painted a mural in the MIT tunnels!', 'I write novels in my free time!', 'My first job was as a park ranger for my city government back in Idaho!', 'I love nature! Everything from horseback riding, growing coffee, and gardening.', 'I love jazz and classic musicals. ', 'I can speak 4 languages: English, Bengali, Hindi, and Spanish!', "I've been to both corgi and shiba cafes in China and held an adorable corgi puppy on my lap! ", 'I can fold origami roses!', 'I love baking and dancing to hip hop! ', "I've never broken a bone.", 'I enjoy drawing, baking, and playing tennis in my free time. ', 'I aspire to be a Yerba Ambassador.', 'I (and my robot) was on the Daily Show for 2 seconds. I can also juggle.', 'My minimum nap time is 4 hours.', 'I love to sing and bullet journal!', "I'm a huge fan of super spicy food.", 'I love bullet journaling and listening to true crime podcasts. ', "I'm running my first half marathon on 10/13!", 'I went cliff jumping last summer off of a 35 ft cliff!', 'I enjoy hiking and running!', 'I like to study to oomsk oomsk oomsk music.', 'I lived in Taiwan for 2 years!', 'I take space photos!', 'I love to bike!', 'I trained my fish to follow my finger.', 'I am the oldest of four sisters and love supporting women in STEM!', 'I can write with both hands!', 'I love playing volleyball and exploring the outdoors!', "I'm a life-long Broncos fan!", "I've hiked all the way down the Grand Canyon.", 'I love Star Wars.', 'I like trees.', "I've been to over 30 countries!", 'I got kicked out of preschool.', 'I am a Zumba instructor!', 'You may catch me eating fries with a fork...', 'I have played piano for 10 years!', 'Loves doing the KenKen and Sudoku in MIT weekly newspapers...', 'I love spicy food!', 'I love corgis :)', 'I love baking cakes :)', 'I can crochet a mini owl!', "I've watched every episode of Friends.", 'I like bullet journaling and calligraphy !!!', "I'm on MIT Bhangra!", 'Hiking the swiss alps is on my bucket list', 'I can speak 6 languages!', 'I have a twin brother with a different birthday!', 'I love Hawaii!!', 'Unwittingly, I asked Dropbox CEO Drew Houston if he was a current student at MIT. Oops!', 'I bookmarked MIT confessions submission page', 'I like to whistle!', 'I never watch Marvel movie trailers to avoid any spoilers!', "I'm left handed.", 'I can fold my tongue into the shape of a three-leaf clover!', ' I love experimenting with desserts and coming up with new recipes.', 'I play League of Legends.', "I have over 30 snow globes of countries across 4 continents of which I've visited (or family/friends have brought me)!", 'I can say the alphabet quicker backwards than forwards', "I've traveled to four different continents.", 'I got to see Pink in concert for free!', 'I can ride a unicycle!', 'I went to 12 countries while backpacking in europe for 2.5 months the summer before college!', "I was born on a Friday the 13th on my mom's birthday.", 'I was in a hair commercial in Thailand!', 'I like trap music.', 'My favorite type of fried potato is waffle fries.', 'I can touch my tongue to my nose!', 'I eat apples whole with the core.', 'I love cheesecake!', "I'm really good at pinching people with my toes!", "I'm obsessed with Duke Basketball.", "I've been to ten countries outside the US!", 'Once I pet 21 dogs in Boston Common', '', '', '', 'I hate Broccoli', ''];
+
+var freshmen_reps = {'Career Development Freshmen Rep': ['Tejal Reddy', 'Jianna Liu'], 'Alumni Relations Freshmen Rep': ['Isabella Pedraza Pineros'], 'Campus Representative Freshmen Rep': ['Crista Falk'], 'Department Liaison Freshmen Rep': ['Mulan Jiang'], 'Marketing & Media Freshmen Rep': ['Haijia Wang'], 'SWETube Freshmen Rep': ['Niki Kim', 'Grace Kim'], 'Innovation Freshmen Rep': ['Elaine Wen'], 'School Off-Campus Freshmen Rep': ['Sylvia Waft', 'Brianna Ryan'], 'High School Off-Campus Freshmen Rep': ['Cami Mejia'], 'Festival Freshmen Rep': ['Louise Lima', 'Lili Sun'], 'WiSE Freshmen Rep': ['Shruti Ravikumar'], 'Girl Scouts Freshmen Rep': ['Shelly Ben-David'], 'Girl Scouts Chair': ['Sarah Lohmar'], 'KEYS Freshmen Rep': ['Varsha Sandadi'], 'High School On-Campus Freshmen Rep': ['Veronica Perdomo'], '#HelloWorld Freshmen Rep': ['Portia Gaitskell'], 'Internal Mentorship Freshmen Rep': ['Christina Patterson'], 'Membership Development Freshmen Rep': ['Amanda Hu'], 'External Relations Freshmen Rep': ['Daniela Velez'], 'Web Freshmen Rep': ['Jocelin Su', 'Adrianna Wojtyna'], 'Technology Freshmen Rep': ['Anjalie Kini']};
+
 var departments = [];
 
 function store_info_department() {
@@ -72,7 +75,7 @@ function store_info_department() {
     department = new Object();
     department.name = "TECHNOLOGY";
     department.positions = {"Technology Chairs": ["Francisca Vasconcelos", "Emily Zhang"],
-                            "Web Chair": ["Shushu Fang"], "Web Reps": ["Jocelin Su"]};
+                            "Web Chair": ["Shushu Fang"]};
     departments.push(department);
 
 }
@@ -103,6 +106,86 @@ function find_person(person_name) {
     return "NOT FOUND";
 }
 
+counter = 0;
+var row_wrapper = document.createElement("div");
+row_wrapper.className = "row";
+
+function build_person_html(position, person) {
+    var person_object = find_person(person);
+    if (person_object=="NOT FOUND") {
+       console.log(person);
+       person_object = new Object();
+       person_object.full_name = person;
+       person_object.photo_url = 'placeholder.jpg';
+       person_object.course = '';
+       person_object.class_year = 2023;
+       person_object.fun_fact = '';
+     }
+    //else {
+       counter += 1;
+       if (counter==5) { //reset row wrapper if reaching the end of row. we keep 4 per rows
+           document.getElementById("container").append(row_wrapper);
+           counter = 1;
+           row_wrapper = document.createElement("div");
+           row_wrapper.className = "row";
+       }
+       //member-container div wraps around image, text and description
+       var center = document.createElement("div");
+       center.className = "col-md-3 col-sm-3";
+       center.align = "center";
+       //add image
+       var member_container = document.createElement("div");
+       member_container.className = "member-container";
+
+       var member_image = document.createElement("img");
+       member_image.src = person_object.photo_url;
+       member_image.className = "member-image";
+       member_image.alt = "";
+       member_image.style="width:200px;height:200px;object-fit:cover;image-orientation:from-image;"
+
+       member_container.appendChild(member_image);
+       //add text
+       var over_lay = document.createElement("div");
+       over_lay.className = "member-overlay";
+       var member_text = document.createElement("div");
+       member_text.className = "member-text";
+
+       var div1 = document.createElement("div");
+       var strong1 = document.createElement("strong");
+       strong1.style = "color: white;"
+       strong1.innerHTML = "Course " + person_object.course + " Class of " + person_object.class_year;
+       div1.appendChild(strong1);
+
+       var div2 = document.createElement("div");
+       var strong2 = document.createElement("strong");
+       strong2.style = "color: white;"
+       strong2.innerHTML = "Fun fact: ";// + person_object.fun_facts;
+
+       div2.appendChild(strong2);
+       div2.innerHTML += person_object.fun_facts;
+
+       member_text.appendChild(div1);
+       member_text.appendChild(document.createElement("br"));
+       member_text.appendChild(div2);
+       over_lay.appendChild(member_text);
+
+       //add description
+       var member_info_div = document.createElement("div");
+       member_info_div.className = "member-info";
+       var strong = document.createElement("strong");
+       strong.innerHTML = person_object.full_name;
+       var div_pos = document.createElement("div");
+       div_pos.className = "board-pos";
+       div_pos.innerHTML = position;
+       member_info_div.appendChild(strong);
+       member_info_div.appendChild(div_pos);
+
+       member_container.appendChild(over_lay);
+       member_container.appendChild(member_info_div);
+       center.appendChild(member_container);
+
+       row_wrapper.appendChild(center);
+}
 function build_html() {
     for (var i = 0; i<departments.length; i++) {
          var header = document.createElement("h2");
@@ -110,85 +193,25 @@ function build_html() {
          document.getElementById("container").append(header);
 
          counter = 0;
-         var row_wrapper = document.createElement("div");
+         row_wrapper = document.createElement("div");
          row_wrapper.className = "row";
          for (const [position, people] of Object.entries(departments[i].positions)) {
-             for (j in people){
-                 var person_object = find_person(people[j]);
-                 if (person_object=="NOT FOUND")
-                    console.log(people[j]);
-                 else {
-                    counter += 1;
-                    if (counter==5) { //reset row wrapper if reaching the end of row. we keep 4 per rows
-                        document.getElementById("container").append(row_wrapper);
-                        counter = 1;
-                        row_wrapper = document.createElement("div");
-                        row_wrapper.className = "row";
-                    }
-                    //member-container div wraps around image, text and description
-                    var center = document.createElement("div");
-                    center.className = "col-md-3 col-sm-3";
-                    center.align = "center";
-                    //add image
-                    var member_container = document.createElement("div");
-                    member_container.className = "member-container";
+             for (const person of people) {
+                 build_person_html(position, person);
+             }
 
-                    var member_image = document.createElement("img");
-                    member_image.src = person_object.photo_url;
-                    member_image.className = "member-image";
-                    member_image.alt = "";
-                    member_image.style="width:200px;height:200px;object-fit:cover;image-orientation:from-image;"
-
-                    member_container.appendChild(member_image);
-                    //add text
-                    var over_lay = document.createElement("div");
-                    over_lay.className = "member-overlay";
-                    var member_text = document.createElement("div");
-                    member_text.className = "member-text";
-
-                    var div1 = document.createElement("div");
-                    var strong1 = document.createElement("strong");
-                    strong1.style = "color: white;"
-                    strong1.innerHTML = "Course " + person_object.course + " Class of " + person_object.class_year;
-                    div1.appendChild(strong1);
-
-                    var div2 = document.createElement("div");
-                    var strong2 = document.createElement("strong");
-                    strong2.style = "color: white;"
-                    strong2.innerHTML = "Fun fact: ";// + person_object.fun_facts;
-
-                    div2.appendChild(strong2);
-                    div2.innerHTML += person_object.fun_facts;
-
-                    member_text.appendChild(div1);
-                    member_text.appendChild(document.createElement("br"));
-                    member_text.appendChild(div2);
-                    over_lay.appendChild(member_text);
-
-                    //add description
-                    var member_info_div = document.createElement("div");
-                    member_info_div.className = "member-info";
-                    var strong = document.createElement("strong");
-                    strong.innerHTML = person_object.full_name;
-                    var div_pos = document.createElement("div");
-                    div_pos.className = "board-pos";
-                    div_pos.innerHTML = position;
-                    member_info_div.appendChild(strong);
-                    member_info_div.appendChild(div_pos);
-
-                    member_container.appendChild(over_lay);
-                    member_container.appendChild(member_info_div);
-                    center.appendChild(member_container);
-
-                    row_wrapper.appendChild(center);
-
-
-                 } //end of else
+             var freshmen_rep_key = position.substring(0, position.indexOf('Chair')) + 'Freshmen Rep'; //check that this gets before Chair
+             console.log(freshmen_rep_key);
+             if (freshmen_rep_key in freshmen_reps) {
+                 const freshmen = freshmen_reps[freshmen_rep_key];
+                 console.log(freshmen);
+                 for (const freshman of freshmen) {
+                     build_person_html(freshmen_rep_key, freshman);
+                 }
              }
          } //end of building for each individual
-         if (counter!=0)
+         if (counter % 5 != 0)
             document.getElementById("container").append(row_wrapper);
-
     }
 }
 
