@@ -62,7 +62,7 @@ h1 {
 
 .jumbotron h1 {
   color: #fff;
-  font-size: 48px;  
+  font-size: 48px;
   /*font-family: 'Shift', sans-serif;*/
   font-weight: bold;
   margin-bottom: 20px;
@@ -84,7 +84,7 @@ h1 {
   font-weight: bold;
   text-align: center;
   padding-bottom: 25px;
-  
+
 }
 .learn-more h3 {
   font-family: 'Shift', sans-serif;
@@ -154,7 +154,7 @@ h1 {
 .member-info {
   background-color: #f1edf2;
   padding: 5px;
-  height: 50px;
+  height: 60px;
   width: 200px;
   text-align: center;
 }
