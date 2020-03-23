@@ -1,10 +1,14 @@
 //this file renders all members
 
 var members_info = [];
-var member_names = ['Madie Wang', 'Christina Patterson', 'Amanda Hu', 'Varnika Sinha', 'Valerie Chen', 'Nicole Munne', 'Amber Li', 'Nghi Nguyen', 'Tanya Yang', 'Lucy Wang', 'Jianna Liu', 'Malobika Syed', 'Naksha Roy', 'Sarah Lohmar', 'Koumani Ntowe', 'Megan Wei', 'Grace Zheng', 'Laurena Huh', 'Mindy Long', 'Jocelin Su', 'Jessica Sun', 'Anna Sun', 'Aliza Rabinovitz', 'Jeana Choi', 'Julia Jia', 'Lauren Oh', 'Seung Hyeon Shim', 'Shruti Ravikumar', 'Kelly Ho', 'Tejal Reddy', 'Jamie Geng', 'Elaine Xiao', 'Fiona Cai', 'Varsha Sandadi', 'Niki Kim', 'Nithya Attaluri', 'Shirley Cao', 'Rovi Porter', 'Meenakshi Singh', 'Haijia Wang', 'Nicole Cybul', 'Tiffany Trinh', 'Anna Wong'];
-var member_courses = ['6-3', '2A-20', '20', '6-3', '6-2', '10', '6-3', '6-3', '6-3', '6-3', '6-3', '6-3', '10-ENG, Environment', '11-6', '20', '6-3', '18, 15-2', '6-14, 15-3', '6-3, 18', '6-3, 18', '6-7', '6-3', '6-3', '6-2', '6-2', '6-3', '20', '6-9', '6-2', '6-3', '6-2', '6-3', '6,9', '20', '6-3', '6-3', '6-3', '1', '6-2', '6-2', '20', '6-2', '6-3'];
-var member_class_year = [2022, 2023, 2023, 2022, 2022, 2022, 2022, 2023, 2022, 2021, 2023, 2023, 2022, 2022, 2021, 2022, 2022, 2023, 2023, 2023, 2021, 2023, 2023, 2021, 2022, 2021, 2023, 2023, 2022, 2023, 2022, 2022, 2023, 2023, 2023, 2023, 2022, 2022, 2023, 2023, 2023, 2022, 2022];
-var fun_facts = ['I was born left handed but trained to be right handed.', 'I have traveled to over 20 countries.', "I'm on the MIT fencing team!", 'I really love chocolate, and once ate 3 pounds of it.', "I'm easily recognizable by the big silver object (my cello) often accompanying me.", 'I know Morse code.', 'I have legally changed my name before.', 'My name is pronounced like "Nee"-- or Knee.', "My name is a combination of my parent's last names - Tan and Yang!", 'I like doing calligraphy and chalk art.', 'I love to bake and dance!', 'I studied abroad in France for a term.', 'I can speak English, Bengali, Hindi and Spanish!', 'I enjoy photography!', 'I have over 30 first cousins.', 'I own a pair of floral crocs.', 'I love music festivals! Ultra is next!', 'I love eating spicy food!', 'I love mountains!', 'I can fold origami roses.', 'I love doing the NYT crossword!', "There's a song named after me by Walk the Moon.", 'I love walking around and exploring cities!', "I run on Dunkin' every morning!", 'I like to crochet!', 'I type with caps lock instead of shift.', 'I love painting, eating chocolate, and "color" transparent.', 'I love being in airports!', "I've watched every episode of Friends.", 'I love hiking!', 'Black sesame makes the best drink.', 'I painted a mural in the MIT tunnels!', "I'm an avid player of KenKen, and I love fruit snacks.", 'I love eating ice cream!', 'My first name is Nicole and last name is Kim, but I go by the first two letters of my first and last name.', 'I love to sing!', 'I enjoy looking at pretty journals!', 'I went to three continents in one summer.', 'I love flowers and my favorite is the cherry blossom!', 'I am from NJ.', 'I have played soccer in 20 states and 5 different countries!', 'I was voted Advanced Procrastinator in high school!', 'I taught in Spain for a month!'];
+
+var member_names = ['Adrianna Wojtyna', 'Aliza Rabinovitz', 'Amanda Hu', 'Amber Li', 'Amelia Meles', 'Anna Sun', 'Anna Wong', 'Annie Zhang', 'Camellia Huang', 'Christina Patterson', 'Elaine Xiao', 'Emma Liu', 'Fiona Cai', 'Fiona Gillespie', 'Grace Zheng', 'Haijia Wang', 'Hannah Liu', 'Jamie Geng', 'Jeana Choi', 'Jessica Sun', 'Jianna Liu', 'Jocelin Su', 'Jocelyn Shen', 'Julia Jia', 'Kelly Ho', 'Kelly Wu', 'Koumani Ntowe', 'Kriti Jain', 'Lauren Oh', 'Laurena Huh', 'Lisa Yoo', 'Lucy Wang', 'Madie Wang', 'Malobika Syed', 'Meenakshi Singh', 'Megan Wei', 'Mindy Long', 'Naksha Roy', 'Nghi Nguyen', 'Nicole Cybul', 'Nicole Munne', 'Niki Kim', 'Nithya Attaluri', 'Rovi Porter', 'Sabrina Liu', 'Sarah Lohmar', 'Seung Hyeon Shim', 'Shirley Cao', 'Shruti Ravikumar', 'Shushu Fang', 'Sylvia Waft', 'Tanya Yang', 'Tejal Reddy', 'Tiffany Trinh', 'Valerie Chen', 'Varnika Sinha', 'Varsha Sandadi'];
+
+var member_courses = ['6-2', '6-3', '20', '6-3', '6-3', '6-3', '6-3', '6-3', '20', '2A-20', '6-3', '6-3', '6,9', '6-2', '18, 15-2', '6-2', '18', '6-2', '6-2', '6-7', '6-3', '6-3, 18', '6-3', '6-2', '6-2', '10', '20', '6-2, 9', '6-3', '6-14, 15-3', '6-3', '6-3', '6-3', '6-3', '6-2', '6-3', '6-3, 18', '10-ENG, Environment', '6-3', '20', '10', '6-3', '6-3', '1', '6-2', '11-6', '20', '6-3', '', '6-9', '6-2', '2', '6-3', '6-3', '6-2', '6-2', '6-3', '20'];
+
+var member_class_year = [2023, 2023, 2023, 2022, 2022, 2023, 2022, 2022, 2022, 2023, 2022, 2022, 2023, 2022, 2022, 2023, 2022, 2022, 2021, 2021, 2023, 2023, 2022, 2022, 2022, 2022, 2021, 2021, 2021, 2023, 2022, 2021, 2022, 2023, 2023, 2022, 2023, 2022, 2023, 2023, 2022, 2023, 2023, 2022, 2021, 2022, 2023, 2022, 2022, 2023, 2022, 2023, 2022, 2023, 2022, 2022, 2022, 2023];
+
+var fun_facts = ['I think silver nanoparticles are super cool and I love synthesizing them.', 'I love walking around and exploring cities!', "I'm on the MIT fencing team!", 'I have legally changed my name before.', 'I love corgis!', "There's a song named after me by Walk the Moon.", 'I taught in Spain for a month!', 'I like trees.', 'I lived in Taiwan for 2 years!', 'I have traveled to over 20 countries.', 'I painted a mural in the MIT tunnels!', 'I love Star Wars.', "I'm an avid player of KenKen, and I love fruit snacks.", 'I love baking cakes!', 'I love music festivals! Ultra is next!', 'I am from NJ.', 'I aspire to be a Yerba Ambassador.', 'Black sesame makes the best drink.', "I run on Dunkin' every morning!", 'I love doing the NYT crossword!', 'I love to bake and dance!', 'I can fold origami roses.', 'I write novels in my free time!', 'I like to crochet!', "I've watched every episode of Friends.", 'Hiking the Swiss alps is on my bucket list.', 'I have over 30 first cousins.', "I'm on MIT Bhangra!", 'I type with caps lock instead of shift.', 'I love eating spicy food!', "I've moved 7 times!", 'I like doing calligraphy and chalk art.', 'I was born left handed but trained to be right handed.', 'I studied abroad in France for a term.', 'I love flowers and my favorite is the cherry blossom!', 'I own a pair of floral crocs.', 'I love mountains!', 'I can speak English, Bengali, Hindi and Spanish!', 'My name is pronounced like "Nee"-- or Knee.', 'I have played soccer in 20 states and 5 different countries!', 'I know Morse code.', 'My first name is Nicole and last name is Kim, but I go by the first two letters of my first and last name.', 'I love to sing!', 'I went to three continents in one summer.', 'I eat apples whole with the core.', 'I enjoy photography!', 'I love painting, eating chocolate, and "color" transparent.', 'I enjoy looking at pretty journals!', '', 'I love being in airports!', 'I bookmarked MIT confessions submission page.', 'I love doing calligraphy, playing the cello, and building things!', "My name is a combination of my parent's last names - Tan and Yang!", 'I love hiking!', 'I was voted Advanced Procrastinator in high school!', "I'm easily recognizable by the big silver object (my cello) often accompanying me.", 'I really love chocolate, and once ate 3 pounds of it.', 'I love eating ice cream!'];
 
 var departments = [];
 
@@ -15,7 +19,7 @@ function store_info_department() {
     "Financial Officer": ["Jocelyn Shen", "Lisa Yoo"],
     "VP Off-Campus Outreach": ["Sabrina Liu"],
     "VP On-Campus Outreach": ["Camellia Huang"],
-    "VP Campus Relations": ["Shobhita Sundaran"],
+    "VP Campus Relations": ["Shobhita Sundaram"],
     "VP Membership": ["Hannah Liu"],
     "VP Career Development": ["Valerie Chen"],
     "VP Technology": ["Shushu Fang"]};
@@ -25,7 +29,7 @@ function store_info_department() {
 
     department = new Object();
     department.name = "OFF-CAMPUS OUTREACH";
-    department.positions = {'Innovation Chairs': ['Emma Liu', 'Fiona Cai'], 'School Off-Campus Chairs': ['Sylvia Waft', 'Naksha Roy', 'Ava Pettit', 'Nicole Cybul', 'Niki Kim'], 'Festival Chairs': ['Madeline Wang', 'Meenakshi Singh'], 'High School Off-Campus Chairs': ['Annie Zhang', 'Kriti Jain'], 'SWETube Chairs': ['Julia Jia', 'Britney Ting', 'Haija Wang']};
+    department.positions = {'Innovation Chairs': ['Emma Liu', 'Fiona Cai'], 'School Off-Campus Chairs': ['Sylvia Waft', 'Naksha Roy', 'Ava Pettit', 'Nicole Cybul', 'Niki Kim'], 'Festival Chairs': ['Madeline Wang', 'Meenakshi Singh'], 'High School Off-Campus Chairs': ['Annie Zhang', 'Kriti Jain']};
     departments.push(department);
 
     department = new Object();
@@ -35,7 +39,7 @@ function store_info_department() {
 
     department = new Object();
     department.name = "CAMPUS RELATIONS";
-    department.positions = {'Campus Representative Chairs': ['Malobika Syed', 'Amelia Meles'], 'Department Liaison Chairs': ['Grace Zheng', 'Nithya Attaluri'], 'Marketing and Media Chairs': ['Elaine Xiao', 'Alicia Guo'], 'SWETube Chairs': ['Julia Jia', 'Britney Ting', 'Haija Wang'], 'SWETube Video Editor Chair': ['Nghi Nguyen']};
+    department.positions = {'Campus Representative Chairs': ['Malobika Syed', 'Amelia Meles'], 'Department Liaison Chairs': ['Grace Zheng', 'Nithya Attaluri'], 'Marketing and Media Chairs': ['Elaine Xiao', 'Alicia Guo'], 'SWETube Chairs': ['Julia Jia', 'Britney Ting', 'Haijia Wang'], 'SWETube Video Editor Chair': ['Nghi Nguyen']};
 
     departments.push(department);
 
@@ -88,9 +92,9 @@ function build_person_html(position, person) {
        person_object = new Object();
        person_object.full_name = person;
        person_object.photo_url = 'placeholder.jpg';
-       person_object.course = '';
-       person_object.class_year = 2023;
-       person_object.fun_fact = '';
+       person_object.course = '--';
+       person_object.class_year = '--';
+       person_object.fun_facts = '--';
      }
     //else {
        counter += 1;
