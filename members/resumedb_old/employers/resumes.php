@@ -33,7 +33,7 @@ $expiration = db_getFirstResult($sql);
 
 if(date("Y-m-d") > $expiration)
 {
-	echo "Thank you for your interest in the MIT Society of Engineers Resume database. Our records show that your access has expired on ". date("M d, Y", strtotime($expiration)).".";
+	echo "Thank you for your interest in the MIT Society of Women Engineers Resume database. Our records show that your access has expired on ". date("M d, Y", strtotime($expiration)).".";
 	echo "To register for continued access, please <A href='mailto: swe-exec@mit.edu?subject=Access to Resume Database'>contact us</a>.";
 	include ("$prepath/src/footer.php");	
 	exit;
