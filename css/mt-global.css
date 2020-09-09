@@ -116,7 +116,7 @@ a.camoLink{color:inherit!important}
 @media (max-width:767px){.h1,h1{font-size:28px;font-size:1.75rem;letter-spacing:2px;letter-spacing:.125rem;line-height:30px;line-height:1.875rem}
 
 }
-.h2,h2{font-size:34px;font-size:2.125rem;letter-spacing:2px;letter-spacing:.125rem;line-height:36px;align-content: center;line-height:2.25rem}
+.h2,h2{font-size:34px;font-size:2.125rem;letter-spacing:2px;letter-spacing:0rem;line-height:36px;align-content: center;line-height:2.25rem}
 .h2 .btn,h2 .btn{letter-spacing:3px;letter-spacing:.1875rem}
 .h2.u-textAllcaps,h2.u-textAllcaps{letter-spacing:2px;letter-spacing:.125rem}
 @media (min-width:481px) and (max-width:767px){.h2,h2{font-size:28px;font-size:1.75rem;letter-spacing:1px;letter-spacing:.0625rem;line-height:30px;line-height:1.875rem}
