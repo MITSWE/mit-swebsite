@@ -1,8 +1,9 @@
 body {
   /* background-color:#c3b4ce; /* #BDB1C6 */ /*teal: #63b0bb  yellow: #dbc554*/
   /* background-image:url("../images/gear-overlay.png");color:#333; */ 
-  background: rgb(201,175,221);
-  background: linear-gradient(0deg, rgba(201,175,221,1) 50%, rgba(97,68,119,1) 90%);
+  /* background: rgb(122, 91, 146); */
+  /* background: rgba(201,175,221,1); */
+  background: linear-gradient(0deg, rgba(201,175,221,1) 50%, rgb(132, 104, 153) 90%);
   margin: 0;
   padding: 0;
   font-size: 1.6rem;
@@ -175,11 +176,13 @@ footer{
 
 
 .changeColor {
-   background-color: #63b0bb;
+   /* background-color: #63b0bb; */
+   background-color: rgba(201,175,221,1);
 }
 
 .changeColor2 {
-   background-color: #dbc554;
+   /* background-color: #dbc554; */
+   background-color: rgba(201,175,221,1);
 }
 
 
