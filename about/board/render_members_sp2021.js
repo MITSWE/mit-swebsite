@@ -7,15 +7,22 @@ var member_names = ['Valerie Chen', 'Sophie Lockton', 'Sabrina Liu', 'Irene Huan
 'Megan Wei', 'Joyce Yuan', 'Helen Hu', 'Anna Wong', 'Ashley Granquist', 'Valerie Yuen',
 'Eugenia Feng', 'Helen Yang', 'Haeri Kim', 'Elissa Ito', 'Hana Ro', 'Kelly Ho',
 'Mindy Long', 'Zoe Wong', 'Fiona Cai', 'Camellia Huang', 'Haijia Wang', 'Amelia Meles',
-'Sylvie Waft', 'Hannah Kim', 'Sadhana Lolla'];
+'Sylvie Waft', 'Hannah Kim', 'Sadhana Lolla', 'Shushu Fang', 'Sarah Lohmar', 'Radha Patel',
+'Shirley Cao', 'Joli Dou', 'Nicole Cybul', 'Adrianna Wojtyna', 'Eileen Li', 'Haeri Kim', 
+'Niki Kim', "Madie Wang", 'Anushka Nair', 'Seung Hyeon Shim', 'Nithya Attaluri', 'Eileen Ito',
+'Sophie Zhang'];
 
 var member_courses = ['6-2', '6-3', '20', '6-3', '6-3', '6-3', '2,21M', '6-2', '6-3',
 '6-3, 15-2', '6-3, 18', '18, 6-3', '6-3, 18', '6-3', '18, 6-3', '6-3', '6-3, 9', '2',
-'2A', '2', '6-2', '6-3', '6-2', '6-3', '20', '6-3', '6-3', '2', '6-3', '6-3, 18'];
+'2A', '2', '6-2', '6-3', '6-2', '6-3', '20', '6-3', '6-3', '2', '6-3', '6-3, 18', '6-3',
+'11-6', '6-3', '6-3', '6-3', '6-3', '6-2', '6-3', '2', '6-2', "6-3", '6-3', '20', '6-3', "-",
+"-"];
 
 var member_class_year = ['2022', '2024', '2024', '2024', '2024', '2023', '2023', '2024',
 '2022', '2022', '2024', '2024', '2022', '2024', '2024', '2024', '2024', '2024', '2023',
-'2024', '2022', '2023', '2023', '2023', '2022', '2023', '2022', '2023', '2024', '2024'];
+'2024', '2022', '2023', '2023', '2023', '2022', '2023', '2022', '2023', '2024', '2024',
+'2022', '2022', '2024', '2022', '2024', '2023', '2023', '2024', '2024', '2023', '2022', '2023',
+'2023', '2023', "-", "-"];
 
 var fun_facts = ['I\'m easily recognizable by the big silver object (my cello) often accompanying me.',
 'I\'ve been playing the harp for 10 years!',
@@ -46,7 +53,23 @@ var fun_facts = ['I\'m easily recognizable by the big silver object (my cello) o
 'I have a pet corgi!',
 'I love calligraphy and baking!',
 'My favorite boba flavor is wintermelon :)',
-'I once baked and delivered fifty cupcakes'];
+'I once baked and delivered fifty cupcakes',
+'I bookmarked MIT confession page.',
+'I want to live in another country some day!',
+'I am a die-hard Harry Potter fan!',
+'I really like plushies and stationery!!!',
+'I can draw a frog in 5 seconds.',
+'My record for juggling a soccer ball is over 1,500!',
+'I think silver nanoparticles are super cool and I love making them.',
+'I love spicy food :)',
+'Despite having a fear of heights, I really want to go skydiving one day!',
+'I love going on adventures and trying new activities',
+'I was born left handed but trained to be right handed.',
+'I love SWE!',
+'I love painting, eating chocolate, and "color" transparent.',
+'I love to sing!',
+'I love SWE!',
+'I love SWE!'];
 
 var departments = [];
 
@@ -188,6 +211,7 @@ function build_person_html(position, person) {
        div_pos.innerHTML = position;
        member_info_div.appendChild(strong);
        member_info_div.appendChild(div_pos);
+       member_info_div.style="width:200px;height:63px;"
 
        member_container.appendChild(over_lay);
        member_container.appendChild(member_info_div);
