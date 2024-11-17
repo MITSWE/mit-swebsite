@@ -2,15 +2,12 @@
 
 var members_info = [];
 
-var member_names = ['Valerie Chen', 'Sophie Lockton', 'Sabrina Liu', 'Irene Huang',
-'Helena Merker', 'Angelina Zhang', 'Christina Patterson', 'Jimin Lee', 'Emma Liu',
-'Megan Wei', 'Joyce Yuan', 'Helen Hu', 'Anna Wong', 'Ashley Granquist', 'Valerie Yuen',
-'Eugenia Feng', 'Helen Yang', 'Haeri Kim', 'Elissa Ito', 'Hana Ro', 'Kelly Ho',
-'Mindy Long', 'Zoe Wong', 'Fiona Cai', 'Camellia Huang', 'Haijia Wang', 'Amelia Meles',
-'Sylvie Waft', 'Hannah Kim', 'Sadhana Lolla', 'Shushu Fang', 'Sarah Lohmar', 'Radha Patel',
-'Shirley Cao', 'Joli Dou', 'Nicole Cybul', 'Adrianna Wojtyna', 'Eileen Li', 'Haeri Kim', 
-'Niki Kim', "Madie Wang", 'Anushka Nair', 'Seung Hyeon Shim', 'Nithya Attaluri', 'Eileen Ito',
-'Sophie Zhang'];
+var member_names = ['Clarise Han', 'Jennifer Zhang', 'Selina Li', 'Emma Dencker',
+'Kristen Si', 'Vanessa Xiao', 'Asmi Kumar', 'Claire Chen', 'Ashley Zhang',
+'Kelly Wu', 'Cathy Chang', 'Lasya Balachandran', 'Vicky Wong', 'Eliska Liang', 'Anna Kim', 'Megan Tian',
+'Jocelyn Zheng', 'Elaine Jiang', 'Kathryn Le', 'Katherine Xie', 'Evelyn Zhu', 'Shweta Shah',
+'Michelle Peng', 'Jessica Zheng', 'Elizabeth Cao', 'Natalie Tan', 'Katherine Zhou', 'Eva Ge', 'Anna Murphy',
+'Michelle Xing'];
 
 var member_courses = ['6-2', '6-3', '20', '6-3', '6-3', '6-3', '2,21M', '6-2', '6-3',
 '6-3, 15-2', '6-3, 18', '18, 6-3', '6-3, 18', '6-3', '18, 6-3', '6-3', '6-3, 9', '2',
@@ -47,7 +44,7 @@ var fun_facts = ['I\'m easily recognizable by the big silver object (my cello) o
 'I like raspberry lemonade',
 'I like spicy food!',
 'I love learning languages!',
-'My favorite fruit is watermelon.', 
+'My favorite fruit is watermelon.',
 'I lived in Taiwan for 2 years!',
 'I like to try new foods!',
 'I have a pet corgi!',
@@ -120,7 +117,7 @@ function store_info_members() {
     for (var i=0; i<member_names.length; i++) {
         var current_member = new Object();
         current_member.full_name = member_names[i];
-        current_member.photo_url = "../2021_board_pics/" + current_member.full_name.replace(/\s+/g, '_') + ".jpg";
+        current_member.photo_url = "../board_pics/" + current_member.full_name.replace(/\s+/g, '') + ".jpg";
         current_member.course = member_courses[i];
         current_member.class_year = member_class_year[i];
         current_member.fun_facts = fun_facts[i];
